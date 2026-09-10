@@ -12,7 +12,7 @@ tags:
   - Rocket Propulsion
 ---
 
-Project Engineer | Boston University Rocket Propulsion Group | Sep 2024 – Present
+Project Engineer | Boston University Rocket Propulsion Group | Sep 2024 – Dec 2024
 
 Designed a converging-diverging rocket nozzle in SolidWorks, applying 1D compressible flow theory to size the throat geometry and expansion contour for an ABS-like resin print.
 

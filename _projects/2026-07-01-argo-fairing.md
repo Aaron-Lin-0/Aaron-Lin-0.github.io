@@ -1,9 +1,9 @@
 ---
 title: "Aerodynamic Fairing Design for ARGO"
 collection: projects
-permalink: /projects/aerocover/
+permalink: /projects/argo-fairing/
 author_profile: true
-date: 2025-01-01
+date: 2026-07-01
 excerpt: 'Designing aerodynamic fairing for externally-mounted downcomer on ARGO rocket'
 tags:
   - ANSYS CFD
@@ -12,7 +12,7 @@ tags:
   - SolidWorks
 ---
 
-Project Engineer | Boston University Rocket Propulsion Group | Ongoing
+Project Engineer | Boston University Rocket Propulsion Group | Jul 2026 – Present
 
 Designing an aerodynamic fairing for an externally-mounted downcomer on our upcoming rocket, ARGO, evaluating supersonic profiles at Mach 2.81 max-Q conditions.
 
