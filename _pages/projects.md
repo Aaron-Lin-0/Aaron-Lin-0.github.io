@@ -4,31 +4,26 @@ permalink: /projects/
 author_profile: true
 ---
 
-Project Engineer | Boston University Rocket Propulsion Group | Sep 2024 – Present
-======
+**Aerodynamic Fairing Design for ARGO** | Boston University Rocket Propulsion Group | Jul 2026 – Present
+- Designing an aerodynamic fairing for an externally-mounted downcomer on our upcoming rocket, ARGO, evaluating supersonic profiles at Mach 2.81 max-Q conditions via ANSYS CFD and OpenRocket trajectory simulation
+[Read more →](/projects/2026-07-01-argo-fairing/)
 
-**Converging-Diverging Rocket Nozzle Design**
+**ME360 Engineering Project** | Boston University | In Progress
+- Project topic to be determined
+[Read more →](/projects/me360/)
+
+**The Deskinator | Autonomous Desk-Cleaning Robot** | Boston University | EK210 | Fall 2025
+- Designed and built an autonomous mobile robot with custom vacuum mechanism, IR edge detection, and gesture-activated control for cleaning 4 ft x 4 ft desk surfaces
+- Modeled full assembly in SolidWorks, developed Arduino firmware, and fabricated functional prototype with S-curve pathing algorithm
+[Read more →](/projects/2025-09-01-ek210-deskinator/)
+
+**Temperature Sensor Prototype** | Boston University | Jan 2025 – May 2025
+- Developed and programmed an Arduino-based room temperature monitor in C++, featuring an LCD display, TMP36 sensor, and an alert system housed in a custom ABS enclosure
+- Authored a technical report evaluating system performance, identifying key limitations and proposing improvements
+[Read more →](/projects/ek131-temp-sensor/)
+
+**Converging-Diverging Rocket Nozzle Design** | Boston University Rocket Propulsion Group | Sep 2024 – Dec 2024
 - Designed a converging-diverging rocket nozzle in SolidWorks, applying 1D compressible flow theory to size the throat geometry and expansion contour for an ABS-like resin print
 - Validated structural integrity via FEA under 80 psi chamber pressures, confirming a 2.11 Factor of Safety across three design reviews
 - Executed a static test-fire integrating the 3D-printed nozzle with a 1-inch NPT chamber, using existing relay and flyback diode circuitry for ignition control
 [Read more →](/projects/rocket-nozzle/)
-
-**Aerodynamic Fairing Design for ARGO**
-- Designing an aerodynamic fairing for an externally-mounted downcomer on our upcoming rocket, ARGO, evaluating supersonic profiles at Mach 2.81 max-Q conditions via ANSYS CFD and OpenRocket trajectory simulation
-[Read more →](/projects/aerocover/)
-
-Academic Projects
-======
-
-**Temperature Sensor Prototype** | Jan 2025 – May 2025
-- Developed and programmed an Arduino-based room temperature monitor in C++, featuring an LCD display, TMP36 sensor, and an alert system housed in a custom ABS enclosure
-- Authored a technical report evaluating system performance, identifying key limitations and proposing improvements
-[Read more →](/projects/temp-sensor/)
-
-**EK210 Engineering Design Project**
-- Engineering design and prototyping course project focused on the full design cycle from concept to validated prototype
-[Read more →](/projects/ek210/)
-
-**ME360 Engineering Project**
-- Mechanical engineering design project applying thermodynamics, fluid mechanics, and computational tools to solve an open-ended engineering problem
-[Read more →](/projects/me360/)

@@ -1,7 +1,7 @@
 ---
 title: "Temperature Sensor Prototype"
 collection: projects
-permalink: /projects/temp-sensor/
+permalink: /projects/ek131-temp-sensor/
 author_profile: true
 date: 2025-01-01
 excerpt: 'Arduino-based room temperature monitoring system with alert system'
