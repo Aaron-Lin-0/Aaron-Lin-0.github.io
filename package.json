@@ -22,8 +22,8 @@
     "node": ">=20"
   },
   "dependencies": {
-    "jquery": "^3.7.1",
-    "plotly.js-dist-min": "^3.6.0"
+    "jquery": "^4.0.0",
+    "plotly.js-dist-min": "^4.1.0"
   },
   "devDependencies": {
     "jslint": "^0.12.1",
