@@ -12,6 +12,11 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    ignore:
+      - dependency-name: jquery
+        update-types: ["version-update:semver-major"]
+      - dependency-name: plotly.js-dist-min
+        update-types: ["version-update:semver-major"]
     groups:
       frontend-dependencies:
         patterns: ["*"]
