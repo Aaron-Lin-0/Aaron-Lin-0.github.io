@@ -1,0 +1,206 @@
+/* Aaron Lin portfolio: warm engineering folio theme. */
+html[data-accent="blue"] {
+  --accent-light: #2f5c8a;
+  --accent-light-hover: #244b72;
+  --accent-dark: #6c9bd1;
+  --accent-dark-hover: #8bb5e2;
+  --selection-light: #cad8e6;
+  --selection-dark: #294562;
+}
+
+html[data-accent="orange"] {
+  --accent-light: #d9622b;
+  --accent-light-hover: #ad451d;
+  --accent-dark: #ea8b57;
+  --accent-dark-hover: #f1aa82;
+  --selection-light: #efd1bf;
+  --selection-dark: #63351f;
+}
+
+html:not([data-theme="dark"]) {
+  color-scheme: light;
+  --bg: #f4f1ea;
+  --surface: #ebe6dc;
+  --text: #1c1b19;
+  --text-muted: #6b655c;
+  --border: #cfc8bc;
+  --border-strong: #9e978c;
+  --footer-bg: #e8e2d7;
+  --accent: var(--accent-light);
+  --accent-hover: var(--accent-light-hover);
+  --selection: var(--selection-light);
+  --global-bg-color: var(--bg);
+  --global-footer-bg-color: var(--footer-bg);
+  --global-border-color: var(--border);
+  --global-dark-border-color: var(--border-strong);
+  --global-text-color: var(--text);
+  --global-text-color-light: var(--text-muted);
+  --global-masthead-link-color: var(--text);
+  --global-masthead-link-color-hover: var(--accent);
+  --global-link-color: var(--accent);
+  --global-link-color-hover: var(--accent-hover);
+  --global-link-color-visited: var(--accent);
+  --global-thead-color: var(--surface);
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #18160f;
+  --surface: #242118;
+  --text: #ede9e0;
+  --text-muted: #9c9484;
+  --border: #454137;
+  --border-strong: #6f685a;
+  --footer-bg: #201d15;
+  --accent: var(--accent-dark);
+  --accent-hover: var(--accent-dark-hover);
+  --selection: var(--selection-dark);
+  --global-bg-color: var(--bg);
+  --global-footer-bg-color: var(--footer-bg);
+  --global-border-color: var(--border);
+  --global-dark-border-color: var(--border-strong);
+  --global-text-color: var(--text);
+  --global-text-color-light: var(--text-muted);
+  --global-masthead-link-color: var(--text);
+  --global-masthead-link-color-hover: var(--accent);
+  --global-link-color: var(--accent);
+  --global-link-color-hover: var(--accent-hover);
+  --global-link-color-visited: var(--accent);
+  --global-thead-color: var(--surface);
+}
+
+:root {
+  --image-matte: #faf8f2;
+  --media-dark: #12100c;
+  --font-display: "Space Grotesk", "Avenir Next", sans-serif;
+  --font-body: "IBM Plex Sans", "Noto Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", "Roboto Mono", monospace;
+}
+
+html { background: var(--bg); scrollbar-color: var(--border-strong) var(--bg); }
+body { background: var(--bg); color: var(--text); caret-color: var(--accent); font-family: var(--font-body); }
+body, input, button, textarea, select { font-family: var(--font-body); }
+h1, h2, h3, h4, h5, h6, .masthead-brand, .greedy-nav a { font-family: var(--font-display); }
+a, a:visited { color: var(--accent); text-underline-offset: .18em; text-decoration-thickness: .08em; }
+a:hover { color: var(--accent-hover); }
+.engineering-site a:not(.portfolio-button):not(.back-link)::after,
+.page__footer a::after { display: inline-block; margin-left: .22em; content: "↗"; text-decoration: none; }
+.engineering-site .project-figure > a::after { content: none; }
+::selection { background: var(--selection); color: var(--text); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+.masthead { border-bottom: 1px solid var(--border); background: var(--bg); }
+.masthead__menu { display: flex; align-items: center; }
+.masthead__menu #site-nav { flex: 1 1 auto; min-width: 0; background: var(--bg); }
+.masthead-brand { display: block; padding: .5rem 0; color: var(--text); font-weight: 700; letter-spacing: -.02em; }
+.greedy-nav .visible-links a::before { height: 2px; background: var(--accent); }
+.greedy-nav .visible-links .selected > a::before { transform: scaleX(1); }
+.greedy-nav .hidden-links { background: var(--bg); border-color: var(--border); box-shadow: 0 10px 28px rgba(28, 27, 25, .12); }
+#theme-toggle { flex: 0 0 auto; margin-left: .65rem; }
+#theme-toggle button { display: flex; align-items: center; min-height: 2rem; gap: .42rem; padding: .35rem .62rem; border: 1px solid var(--border); border-radius: 4px; background: transparent; color: var(--text); font: 500 .76rem/1 var(--font-body); cursor: pointer; transition: border-color .18s ease-out, color .18s ease-out; }
+#theme-toggle button:hover { border-color: var(--accent); color: var(--accent); }
+#theme-toggle .theme-icon { width: 1rem; height: 1rem; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+#theme-toggle .theme-icon-moon { display: none; }
+html[data-theme="dark"] #theme-toggle .theme-icon-sun { display: none; }
+html[data-theme="dark"] #theme-toggle .theme-icon-moon { display: block; }
+
+.engineering-site { max-width: 1220px !important; margin: clamp(3rem, 7vw, 6rem) auto 7rem !important; padding: 0 2rem !important; animation: none !important; }
+.engineering-site .engineering-header { max-width: none; margin-bottom: clamp(3rem, 6vw, 5.25rem); }
+.engineering-site .engineering-shell { display: grid; grid-template-columns: minmax(190px, 220px) minmax(0, 1fr); gap: clamp(3rem, 7vw, 6rem); align-items: start; }
+.engineering-site .engineering-main { min-width: 0; }
+.engineering-site h1 { max-width: 18ch; margin: .7rem 0 1.5rem; font-size: clamp(2.75rem, 6vw, 5.5rem); font-weight: 600; line-height: .98; letter-spacing: -.035em; text-wrap: balance; }
+.engineering-site h2 { margin: 4.5rem 0 1.25rem; font-size: clamp(1.8rem, 3vw, 2.45rem); font-weight: 600; line-height: 1.08; letter-spacing: -.025em; }
+.engineering-site h3 { font-size: 1.4rem; font-weight: 600; line-height: 1.18; letter-spacing: -.018em; }
+.engineering-site p, .engineering-site li { line-height: 1.68; }
+.engineering-site .intro { max-width: 1000px; margin-bottom: 0; color: var(--text-muted); font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.6; }
+.engineering-site .eyebrow { margin: 0 0 .75rem; color: var(--text-muted); font: 600 .71rem/1.4 var(--font-body); letter-spacing: .12em; text-transform: uppercase; }
+.engineering-site .eyebrow::before { content: "•"; margin-right: .55em; color: var(--accent); }
+.engineering-site .project-context, .engineering-site .project-tools { color: var(--text-muted); font-family: var(--font-mono); font-size: .75rem; font-variant-numeric: tabular-nums; }
+.engineering-site .home-intro, .engineering-site .engineering-content > p { max-width: 72ch; }
+.engineering-site .home-intro p:first-child { margin-top: 0; }
+
+.engineering-site .contact-card { position: sticky; top: 6rem; padding-top: 0; font-size: .79rem; }
+.engineering-site .contact-card::before { display: block; width: 3.25rem; height: 1px; margin-bottom: 1.15rem; background: var(--accent); content: ""; }
+.engineering-site .contact-headshot { display: block; width: 112px; height: 112px; margin: 0 0 1.25rem; object-fit: cover; border-radius: 50%; }
+.engineering-site .contact-card p { margin: 0 0 1rem; line-height: 1.5; }
+.engineering-site .contact-card .contact-name { margin-bottom: .35rem; color: var(--text); font-family: var(--font-display); font-size: 1.08rem; font-weight: 600; }
+.engineering-site .contact-card .contact-location { color: var(--text-muted); }
+.engineering-site .contact-card ul { margin: 1.4rem 0; padding: 0; list-style: none; }
+.engineering-site .contact-card li { margin: .5rem 0; line-height: 1.4; }
+.engineering-site .contact-card .contact-skills { padding-top: 1.1rem; border-top: 1px solid var(--border); color: var(--text-muted); font-family: var(--font-mono); font-size: .71rem; }
+
+.engineering-site .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.8rem 0; }
+.engineering-site .portfolio-button { display: inline-block; padding: .72rem 1rem; border: 1px solid var(--border-strong); border-radius: 4px; color: var(--text); font-family: var(--font-body); font-size: .84rem; font-weight: 600; text-decoration: none; transition: border-color .18s ease-out, color .18s ease-out; }
+.engineering-site .portfolio-button.primary { border-color: var(--accent); background: transparent; color: var(--accent); }
+.engineering-site .portfolio-button:hover { border-color: var(--accent-hover); color: var(--accent-hover); text-decoration: none; }
+.engineering-site .experience-highlight { margin: 4rem 0; padding: 1.5rem 0 0; border-top: 1px solid var(--accent); }
+.engineering-site .experience-highlight h3 { margin-top: 0; }
+
+.engineering-site .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4rem 2rem; margin: 2.5rem 0; }
+.engineering-site .project-card { min-width: 0; padding-bottom: 2.2rem; border: 0; border-bottom: 1px solid var(--border); border-radius: 0; background: transparent; overflow: visible; }
+.engineering-site .project-card > img { display: block; width: 100%; height: auto; aspect-ratio: 800 / 520; object-fit: contain; background: var(--image-matte); }
+.engineering-site .project-card-body { padding: 1.35rem 0 0; }
+.engineering-site .project-card-meta { display: flex; align-items: baseline; gap: .8rem; margin-bottom: .8rem; }
+.engineering-site .project-index { flex: 0 0 auto; color: var(--accent); font: 500 .86rem/1 var(--font-mono); font-variant-numeric: tabular-nums; }
+.engineering-site .project-card .eyebrow { margin: 0; font-size: .65rem; }
+.engineering-site .project-card h3 { margin: 0 0 .9rem; font-size: clamp(1.35rem, 2.4vw, 1.75rem); }
+.engineering-site .project-card h3 a { color: var(--text); text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .22em; }
+.engineering-site .project-card p { margin: 0 0 .9rem; font-size: .91rem; }
+.engineering-site .project-card .project-result { color: var(--text); font-family: var(--font-mono); font-size: .78rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.engineering-site .project-card .project-tools { margin-bottom: 0; font-size: .69rem; }
+
+.engineering-project { max-width: 1280px !important; }
+.engineering-project .engineering-header { max-width: 980px; margin-right: auto; margin-left: auto; }
+.engineering-project .engineering-shell { display: block; }
+.engineering-project .engineering-main { --project-prose-width: 48rem; max-width: 1080px; margin: 0 auto; }
+.engineering-project .project-hero { margin: 0 0 clamp(4rem, 8vw, 7rem); }
+.engineering-project .project-hero img { display: block; width: 100%; max-height: 720px; object-fit: contain; background: var(--image-matte); }
+.engineering-project .project-hero figcaption, .engineering-site figcaption { margin-top: .75rem; color: var(--text-muted); font-size: .73rem; line-height: 1.5; }
+.engineering-project .engineering-content > h2,
+.engineering-project .engineering-content > p,
+.engineering-project .engineering-content > ul,
+.engineering-project .engineering-content > ol,
+.engineering-project .engineering-content > table { width: 100%; max-width: var(--project-prose-width); margin-right: auto; margin-left: auto; }
+.engineering-project .engineering-content > ul,
+.engineering-project .engineering-content > ol { box-sizing: border-box; padding-left: 1.15rem !important; padding-inline-start: 1.15rem !important; list-style-position: outside; }
+.engineering-project .engineering-content > h2 { margin-top: clamp(4.5rem, 9vw, 7.5rem); margin-bottom: 1.4rem; color: var(--accent); font: 600 .78rem/1.4 var(--font-body); letter-spacing: .13em; text-transform: uppercase; }
+.engineering-project .engineering-content > h2::before { content: "•"; margin-right: .65em; }
+.engineering-site .project-figure { margin: clamp(3rem, 7vw, 5.5rem) 0; }
+.engineering-site .project-figure img { display: block; width: 100%; max-height: 760px; object-fit: contain; background: var(--image-matte); }
+.engineering-site .video-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin: clamp(3rem, 7vw, 5.5rem) 0; }
+.engineering-site .video-grid figure { display: block; min-width: 0; margin: 0; }
+.engineering-site .video-grid video { display: block; width: 100%; max-height: 640px; background: var(--media-dark); }
+.engineering-site .back-link { display: inline-block; margin-bottom: 3rem; font-family: var(--font-mono); font-size: .73rem; }
+.engineering-site .project-end { display: flex; flex-wrap: wrap; width: 100%; max-width: var(--project-prose-width, 48rem); gap: 1.5rem; margin: 6rem auto 0; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: .82rem; }
+.engineering-site table { display: table; width: 100%; border-color: var(--border); font-family: var(--font-mono); font-size: .76rem; font-variant-numeric: tabular-nums; }
+.engineering-site th { background: var(--surface); color: var(--text); }
+.engineering-site td, .engineering-site th { border-color: var(--border); overflow-wrap: anywhere; }
+
+.page__footer { position: static !important; bottom: auto !important; border-top: 1px solid var(--border) !important; background: var(--footer-bg) !important; color: var(--text-muted) !important; }
+.page__footer footer { padding-top: .35rem; }
+.page__footer-copyright { font-family: var(--font-mono); font-size: .66rem; }
+.page__footer a { color: var(--text-muted) !important; text-decoration: underline; text-underline-offset: 3px; }
+.page__footer a:hover { color: var(--accent) !important; }
+
+@media (max-width: 700px) {
+  #theme-toggle .theme-toggle-label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+  .engineering-site { margin-top: 2.5rem !important; padding: 0 1rem !important; }
+  .engineering-site .engineering-header { margin-bottom: 3rem; }
+  .engineering-site .engineering-shell, .engineering-site .project-grid { grid-template-columns: 1fr; gap: 2.75rem; }
+  .engineering-site .contact-card { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+  .engineering-site .contact-card::before { grid-column: 1 / -1; }
+  .engineering-site .contact-headshot { grid-column: 1 / -1; width: 96px; height: 96px; }
+  .engineering-site .contact-card ul { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .4rem 1rem; margin: .5rem 0 1rem; }
+  .engineering-site .contact-card .contact-skills { grid-column: 1 / -1; }
+  .engineering-site h1 { max-width: 13ch; font-size: clamp(2.6rem, 13vw, 4rem); }
+  .engineering-site h2 { margin-top: 3.5rem; }
+  .engineering-site .project-grid { margin-top: 2rem; }
+  .engineering-site .project-card { padding-bottom: 2rem; }
+  .engineering-project .project-hero { margin-bottom: 4rem; }
+  .engineering-site .video-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}

@@ -1,63 +1,77 @@
 ---
-layout: archive
-title: "CV"
+layout: engineering
+title: "Experience"
+kicker: "Aaron Lin · Mechanical Engineering"
+summary: "Internship, student-team, and project experience alongside a downloadable copy of my resume."
 permalink: /cv/
-author_profile: true
+author_profile: false
 redirect_from:
   - /resume
+  - /resume/
 ---
 
-{% include base_path %}
-
-[Download my CV as PDF](/files/Aaron_Lin_resume_2026.pdf){: .btn btn--primary btn--large}
+[Download my latest resume (PDF)]({{ '/files/Aaron_Lin_resume_2026.pdf' | relative_url }}){: .portfolio-button .primary}
 
 ## Education
 
-**B.S. Mechanical Engineering, Aerospace Concentration**
-Boston University · *Sep 2024 – May 2028 (expected)*
-- GPA: 3.76/4.0 · Dean's List
-- Relevant Coursework: Mechanics of Materials, Energy and Thermodynamics, Differential Equations, Computational Linear Algebra
-- In Progress (Fall 2026): Fluid Mechanics, Engineering Mechanics 2 (Dynamics), Thermodynamics & Statistical Mechanics, Electromechanical Design, Manufacturing Processes
+**[Boston University](https://www.bu.edu/eng/academics/departments-and-divisions/mechanical-engineering/)**<br>
+B.S. Mechanical Engineering, Aerospace Concentration
 
-## Work Experience
+September 2024–May 2028 (expected) · GPA: 3.76/4.0 · Dean's List
 
-### Project Coordinator
-**Residential Addition & ADU Permitting Project** · *Los Altos, CA* · *Jun 2026 – Aug 2026*
+Study abroad: BU Sydney Sophomore Engineering Program, University of Sydney, Spring 2026.
 
-- Coordinated municipal permit revisions for a residential addition and ADU remodel, using Bluebeam Revu to redline construction drawings and Excel to track compliance data
-- Evaluated schematics against California Building Code (CBC) and ANSI standards, resolving layout omissions and communicating design requirements to the owner and architect
+Relevant coursework includes mechanics of materials, energy and thermodynamics, differential equations, and computational linear algebra.
 
-### Mechanical Engineering Intern
-**Culturon** · *Sydney, Australia* · *Feb 2026 – Jun 2026*
+## Engineering experience
 
-- Executed Optical Emission Spectroscopy (OES) experiments using an HR4000 spectrometer and authored technical protocols to evaluate industrial plasma consistency and detect contaminants
-- Developed an automated Python analysis suite (pandas, scipy, astroquery) to process OES spectral data, identify elemental peaks, and cross-reference findings with the NIST atomic database in real-time
-- Authored a technical report benchmarking OES plasma diagnostics against an existing reference chamber system, identifying key emission lines for tracking contamination and process consistency
+### Mechanical Engineering Intern, <a class="org-link" href="https://www.culturon.com.au/">Culturon</a>
 
-### AI Trainer
-**Handshake AI Fellowship** · *Remote* · *Oct 2025 – Dec 2025*
+*Sydney, Australia · February–June 2026*
 
-- Developed and evaluated domain-specific prompts to benchmark LLM accuracy across scientific and engineering subfields
-- Contributed to improving AI understanding of complex biological topics through expert review and feedback
-- Conducted independent research to support prompt development and evaluation tasks
+I ran optical emission spectroscopy experiments with an HR4000 spectrometer and wrote Python tools with pandas, SciPy, and Astroquery to process spectra, locate peaks, and compare candidate lines with the NIST atomic spectra database. I documented the work in a benchmarking report for the engineering team.
 
-### Project Engineer
-**Boston University Rocket Propulsion Group** · *Boston, MA* · *Sep 2024 – Present*
+### Project Engineer, <a class="org-link" href="https://burpg.org/">BU Rocket Propulsion Group</a>
 
-- Designed a converging-diverging rocket nozzle in SolidWorks, applying 1D compressible flow theory to size the throat geometry and expansion contour for an ABS-like resin print
-- Validated structural integrity via FEA under 80 psi chamber pressures, confirming a 2.11 Factor of Safety across three design reviews
-- Executed a static test-fire integrating the 3D-printed nozzle with a 1-inch NPT chamber, using existing relay and flyback diode circuitry for ignition control
-- Designing an aerodynamic fairing for an externally-mounted downcomer on ARGO, evaluating supersonic profiles via ANSYS CFD and OpenRocket trajectory simulation
+*Boston, MA · September 2024–present · Student engineering team*
+
+I designed and fabricated a resin rocket nozzle, evaluated its pressure loading in SolidWorks Simulation, and helped integrate it with the chamber and ignition system for a static fire. I now work on the ARGO rocket's external fairing, using ANSYS Fluent, OpenRocket, and first-principles calculations to compare aerodynamic concepts at a Mach 2.81 design condition.
+
+[Nozzle case study]({{ '/projects/rocket-nozzle/' | relative_url }}) · [ARGO case study]({{ '/projects/argo-fairing/' | relative_url }})
+
+## Additional experience
+
+### AI Trainer, Handshake AI Fellowship
+
+*Remote · October–December 2025*
+
+I evaluated responses to scientific and quantitative prompts and wrote structured feedback on technical accuracy and reasoning errors.
+
+### Summer Intern, Fortemedia
+
+*Milpitas, CA · July–August 2022*
+
+I tested microphone directional sensitivity across an azimuthal sweep and documented polar-pattern deviations for engineering review.
+
+## Selected academic projects
+
+- **[2.5-DOF Cartesian motion system]({{ '/projects/me360/' | relative_url }}) — in progress:** Our ME360 team is developing a portable electromechanical system with multiple linear stages and a task-specific end effector. The class requires at least a 2.5 × 2.5 in work area and a system that fits in a backpack or can be assembled by one person in under ten minutes.
+- **[The Deskinator]({{ '/projects/ek210-deskinator/' | relative_url }}):** I wrote the Arduino navigation firmware and helped assemble and redesign an autonomous cleaning robot. Its final documented trial collected 72 of 95 rice grains.
+- **[Room temperature monitor]({{ '/projects/ek131-temp-sensor/' | relative_url }}):** I built an enclosed Arduino monitor that displays Celsius and Fahrenheit and signals temperatures outside 60–75°F.
 
 ## Skills
 
-- **Software:** SolidWorks (FEA, HSMworks), Onshape, ANSYS CFD, OpenRocket, Python, MATLAB, C++ (Arduino), Java
-- **Engineering:** Supersonic Aerodynamics, 1D Compressible Flow, Thermodynamic Cycle Analysis, Structural Analysis, Experimental Testing
-- **Fabrication:** FDM Additive Manufacturing, CNC Machining, Manual Lathe, Milling Machine, Soldering, Electronics Assembly
-- **Languages:** English (Native), Mandarin Chinese (Conversational)
+- **Design and analysis:** SolidWorks (Simulation, HSMWorks), Onshape, ANSYS Fluent, OpenRocket, mechanical design, FEA, CFD, supersonic aerodynamics, 1D compressible flow, stress analysis, thermodynamic cycle analysis, and GD&T fundamentals.
+- **Programming:** Python, MATLAB, C++ (Arduino), Java.
+- **Fabrication and integration:** FDM and resin additive manufacturing, CNC machining, manual lathe and mill, soldering, electronics assembly.
+- **Engineering practice:** Systems integration, experimental testing, technical writing, and design reviews.
+- **Languages:** English (native) and Mandarin Chinese (conversational).
 
-## Certifications
+## Courses and certifications
 
-- A Hands-On Introduction to Engineering Simulations — edX / CornellX, 2026
-- Aerodynamics Unlocked — Driver61 Education, 2025
-- Machine Learning Specialization — DeepLearning.AI / Stanford University, 2024
+- A Hands-On Introduction to Engineering Simulations — edX / CornellX, 2026.
+- Machine Learning Specialization — DeepLearning.AI / Stanford University, 2024.
+
+## Contact
+
+[aarontylin@gmail.com](mailto:aarontylin@gmail.com) · [LinkedIn](https://www.linkedin.com/in/aarontylin/)

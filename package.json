@@ -1,27 +1,25 @@
 {
-  "name": "academic-pages",
-  "version": "0.8.1.1",
-  "description": "Academic Pages Mistakes Jekyll theme npm build scripts",
+  "name": "aaron-lin-engineering-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build scripts for Aaron Lin's Jekyll engineering portfolio",
   "repository": {
     "type": "git",
-    "url": "https://github.com/academicpages/academicpages.github.io"
+    "url": "https://github.com/Aaron-Lin-0/Aaron-Lin-0.github.io.git"
   },
   "keywords": [
     "jekyll",
     "theme",
     "minimal"
   ],
-  "contributors": [
-    "Michael Rose",
-    "Robert Zupko"
-  ],
+  "author": "Aaron Lin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/academicpages/academicpages.github.io/issues"
+    "url": "https://github.com/Aaron-Lin-0/Aaron-Lin-0.github.io/issues"
   },
-  "homepage": "https://github.com/academicpages/academicpages.github.io",
+  "homepage": "https://aaronlin.space",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">=20"
   },
   "dependencies": {
     "jquery": "^3.7.1",

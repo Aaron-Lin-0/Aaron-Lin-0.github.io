@@ -9,11 +9,12 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+portfolio_accent         : "blue" # Change to "orange" to switch the complete accent palette.
 title                    : "Aaron Lin"
 title_separator          : "-"
 name                     : &name "Aaron Lin"
 description              : &description "Mechanical Engineering student at Boston University, specializing in aerospace and propulsion"
-url                      : https://Aaron-Lin-0.github.io
+url                      : https://aaronlin.space
 baseurl                  : ""
 repository               : "Aaron-Lin-0/Aaron-Lin-0.github.io"
 
@@ -22,7 +23,7 @@ repository               : "Aaron-Lin-0/Aaron-Lin-0.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : ""
   name             : "Aaron Lin"
   pronouns         : 
   bio              : "Mechanical Engineering Student @ Boston University"
@@ -50,7 +51,7 @@ author:
   bitbucket        : 
   codepen          : 
   dribbble         : 
-  github           : "Aaron-Lin-0"
+  github           :
   kaggle           :  
   stackoverflow    :    
 
@@ -165,6 +166,21 @@ include:
   - _pages
   - files
 exclude:
+  - _projects/2026-09-01-me360.md
+  - _pages/terms.md
+  - _pages/year-archive.html
+  - _pages/publications.html
+  - _pages/portfolio.html
+  - _pages/page-archive.html
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - tmp
+  - docs
+  - resume-source
+  - AGENTS.md
+  - talkmap
+  - markdown_generator
+  - scripts
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -189,7 +205,6 @@ exclude:
   - package.json*
   - Rakefile
   - README
-  - tmp
   - vendor
 keep_files:
   - .git
@@ -221,16 +236,16 @@ kramdown:
 # These settings control the types of collections used by the template
 collections:
   publications:
-    output: true
+    output: false
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: false
     permalink: /:collection/:path/
   projects:
     output: true
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 

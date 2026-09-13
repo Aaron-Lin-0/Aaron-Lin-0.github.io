@@ -1,28 +1,16 @@
-<!--
-  Thanks for creating a Pull Request!
-  
-  Before you submit, please make sure you've read the contributing document:
-  - https://github.com/academicpages/academicpages.github.io?tab=contributing-ov-file
--->
+## What changed
 
-<!-- Choose one of the following by uncommenting it. -->
+Describe the user-visible problem and resulting behavior.
 
-<!-- This is a bug fix. -->
-<!-- This is an enhancement or feature. -->
-<!-- This is a documentation change. -->
+## Validation
 
-## Summary
+- [ ] `bundle exec jekyll build --strict_front_matter`
+- [ ] Internal links and media references checked
+- [ ] Desktop and mobile layouts reviewed
+- [ ] Light and dark themes reviewed
+- [ ] New images have descriptive alt text and intrinsic dimensions
+- [ ] Staged files contain no secrets, private notes, local paths, private contact details, or source-document metadata
 
-Provide a description of what your pull request changes.
+## Content evidence
 
-## Context
-
-Is this related to any GitHub issue(s)?
-
-## Version
-
-What commit hash did you branch off of?
-
-<!--
-  Please confirm that you want to submit this Pull Request to Academic Pages by deleting this comment block.
--->
+Identify the public report, drawing, test result, or other source supporting any new engineering claim.

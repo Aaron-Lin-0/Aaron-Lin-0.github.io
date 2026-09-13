@@ -5,9 +5,6 @@ _site/
 # Ignore the directory for local files during development
 local/
 
-# Ignore the Gemfile that is generated
-Gemfile.lock
-
 # Ignore files created by npm
 node_modules
 package-lock.json
@@ -21,4 +18,25 @@ package-lock.json
 
 # Ignore files created by MacOS
 .DS_Store
-images-needed.md
+
+# Keep credentials and local configuration out of the public repository
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Keep resume source and LaTeX build artifacts private
+resume-source/
+*.tex
+*.aux
+*.log
+*.out
+*.synctex.gz
+
+# Local portfolio verification artifacts
+tmp/
+.jekyll-cache/
+.impeccable/
