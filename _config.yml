@@ -143,14 +143,15 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : /images/profile-headshot.jpg
+og_description           : "Mechanical engineering junior seeking Summer 2027 internships. Explore rocket nozzle design, robotics, aerodynamic analysis, and experimental work."
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : Aaron Lin
+  links:
+    - https://www.linkedin.com/in/aarontylin/
 
 
 # Analytics
