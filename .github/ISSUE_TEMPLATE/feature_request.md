@@ -1,20 +1,21 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
-
+name: Portfolio improvement
+about: Suggest a focused improvement to the public portfolio
+title: ""
+labels: enhancement
+assignees: ""
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**Problem**
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+What makes the portfolio harder to understand, navigate, or verify?
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Proposed improvement**
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+Describe the smallest change that would solve the problem.
+
+**Affected pages**
+
+List the public URLs or components involved.
+
+Do not include private contact information or unpublished project material.

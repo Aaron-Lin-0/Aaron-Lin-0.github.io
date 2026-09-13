@@ -226,11 +226,16 @@
     }
 
     #theme-toggle {
-      a {
+      button {
         width: 25px;
         display: flex;
+        align-items: center;
         justify-content: center;
         cursor: pointer;
+        padding: 0;
+        border: 0;
+        color: inherit;
+        background: transparent;
       }
     }
 

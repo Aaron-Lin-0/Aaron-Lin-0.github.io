@@ -1,0 +1,23 @@
+<div class="project-grid">
+{% assign visible_projects = site.projects | where_exp: 'project', 'project.feature_order != nil' %}
+{% if include.order == 'recent' %}
+  {% assign ordered_projects = visible_projects | sort: 'sort_date' | reverse %}
+{% else %}
+  {% assign ordered_projects = visible_projects | sort: 'feature_order' %}
+{% endif %}
+{% for project in ordered_projects %}
+{% if include.limit == nil or forloop.index <= include.limit %}
+  <article class="project-card">
+    {% if project.card_image %}<img src="{{ project.card_image | relative_url }}" alt="{{ project.card_alt }}" width="{{ project.card_image_width | default: 800 }}" height="{{ project.card_image_height | default: 520 }}" loading="lazy">{% endif %}
+    <div class="project-card-body">
+      {% assign project_number = forloop.index | prepend: '0' | slice: -2, 2 %}
+      <div class="project-card-meta"><span class="project-index">{{ project_number }}</span><p class="eyebrow">{{ project.card_category }} &middot; {{ project.status }}</p></div>
+      <h3><a href="{{ project.url | relative_url }}">{{ project.card_title }}</a></h3>
+      <p>{{ project.excerpt }}</p>
+      <p class="project-result">{{ project.result }}</p>
+      <p class="project-tools">{{ project.tools }}</p>
+    </div>
+  </article>
+{% endif %}
+{% endfor %}
+</div>
