@@ -6,6 +6,8 @@ The site is built with Jekyll and GitHub Pages on top of [Academic Pages](https:
 
 ## Site structure
 
+- `AGENTS.md` — starting instructions and source map for AI agents
+- `docs/AGENT_WORKFLOWS.md` — viewing the site and updating resumes, project evidence, and public artifacts
 - `_pages/about.md` — home page and selected projects
 - `_pages/projects.md` — reverse-chronological project index
 - `_pages/cv.md` — education, experience, projects, skills, and résumé download
@@ -13,7 +15,7 @@ The site is built with Jekyll and GitHub Pages on top of [Academic Pages](https:
 - `_includes/` — shared navigation, contact, project-card, and figure components
 - `_layouts/engineering.html` — portfolio page layout
 - `assets/css/engineering.css` — portfolio design tokens, responsive layout, and theme styles
-- `assets/js/theme.js` — persistent light/dark theme behavior
+- `assets/js/_main.js` — persistent light/dark theme behavior; `assets/js/theme.js` supplies Plotly theme definitions
 - `images/projects/` — optimized project images used on the site
 - `files/` — public résumé, reports, drawings, and videos
 - `PRODUCT.md` — audience, purpose, and content principles

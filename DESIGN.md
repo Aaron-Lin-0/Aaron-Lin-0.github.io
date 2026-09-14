@@ -191,7 +191,7 @@ Project images declare intrinsic dimensions and lazy-load below the first projec
 ## Implementation Map
 
 - `assets/css/engineering.css` contains the portfolio tokens, layouts, components, themes, and breakpoints.
-- `assets/js/theme.js` controls persistent light/dark behavior.
+- `assets/js/_main.js` controls persistent light/dark behavior; `_includes/head.html` applies the initial theme before rendering. `assets/js/theme.js` supplies Plotly theme definitions.
 - `_layouts/engineering.html` defines the page shell and project-page structure.
 - `_includes/contact-card.html`, `_includes/project-cards.html`, and `_includes/project-figure.html` provide shared components.
 - `_config.yml` selects the active accent with `portfolio_accent`.

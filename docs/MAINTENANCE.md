@@ -2,6 +2,8 @@
 
 This runbook keeps the public site current, verifiable, and free of unintended private information.
 
+AI agents should start with [AGENTS.md](../AGENTS.md). See [AGENT_WORKFLOWS.md](AGENT_WORKFLOWS.md) for tracing visible content to source and coordinating edits with resumes, drawings, and other artifacts.
+
 ## Content boundaries
 
 Public content may include Aaron's name, professional email, LinkedIn profile, education, general location, resume, and engineering artifacts approved for portfolio use.
@@ -39,9 +41,25 @@ Do not commit:
 
 Install dependencies once with `bundle install`, then run:
 
+PowerShell (Windows):
+
+```powershell
+$env:JEKYLL_ENV = 'production'
+bundle exec jekyll build --strict_front_matter
+Remove-Item Env:JEKYLL_ENV
+```
+
+The final command clears the session override; if it was already set, restore its previous value instead.
+
+Bash (macOS/Linux):
+
 ```bash
 JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter
 ```
+
+Use Ruby 3.2 to match the checked-in CI workflow. To inspect locally, run `bundle exec jekyll serve --livereload` and open `http://127.0.0.1:4000/`; restart after `_config.yml` changes. If Ruby is unavailable, the repository also provides `docker compose up --build`. Report when neither environment is available rather than claiming the build passed.
+
+For JavaScript source changes, install Node dependencies with `npm install` and run `npm run build:js` before Jekyll verification. This regenerates the committed `assets/js/main.min.js` used by the site. GitHub Actions only performs the strict production Jekyll build; it does not regenerate the bundle or perform browser checks.
 
 Review these routes:
 
