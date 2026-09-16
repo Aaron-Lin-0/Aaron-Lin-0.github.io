@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<main id="main" class="engineering-site{% if page.collection == 'projects' %} engineering-project{% endif %}">
+<main id="main" class="engineering-site{% if page.collection == 'projects' %} engineering-project{% endif %}{% if page.utility_page %} engineering-utility{% endif %}">
   {% if page.collection == 'projects' %}<a class="back-link" href="{{ '/projects/' | relative_url }}">&larr; All projects</a>{% endif %}
   <header class="engineering-header">
     {% if page.kicker %}<p class="eyebrow">{{ page.kicker }}</p>{% endif %}
@@ -10,7 +10,9 @@ layout: default
     {% if page.context %}<p class="project-context">{{ page.context }}</p>{% endif %}
   </header>
   <div class="engineering-shell">
-    {% unless page.collection == 'projects' %}{% include contact-card.html %}{% endunless %}
+    {% unless page.collection == 'projects' %}
+      {% unless page.utility_page %}{% include contact-card.html %}{% endunless %}
+    {% endunless %}
     <div class="engineering-main">
       {% if page.collection == 'projects' and page.hero_image %}
         <figure class="project-hero">
