@@ -52,6 +52,9 @@ We chose resin printing because it could produce the internal geometry within th
 
 ## Analysis
 
+<p class="project-table-hint" aria-hidden="true">Swipe to view all columns</p>
+<div class="project-table-region" role="region" aria-label="Nozzle pressure analysis table" tabindex="0" markdown="1">
+
 | Quantity | Design-review value | Use in the model |
 | --- | --- | --- |
 | Chamber pressure | 80 psi | Applied chamber load |
@@ -59,6 +62,8 @@ We chose resin printing because it could produce the internal geometry within th
 | Maximum von Mises stress | 11.90 MPa | Computed stress in the pressure model |
 | Assumed yield strength | 25.20 MPa | Estimated as 70% of resin tensile strength |
 | Minimum factor of safety | **2.12** | Result under those material and boundary assumptions |
+
+</div>
 
 The pressure-only model produced a minimum factor of safety of **2.12**. Before using that result to predict hot-fire performance, I would add temperature-dependent resin properties and heat transfer to the analysis.
 

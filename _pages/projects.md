@@ -7,4 +7,10 @@ permalink: /projects/
 author_profile: false
 ---
 
-{% include project-cards.html order="recent" %}
+## In progress
+
+{% include project-cards.html order="recent" status="In progress" %}
+
+## Completed projects
+
+{% include project-cards.html order="recent" status="Completed" %}

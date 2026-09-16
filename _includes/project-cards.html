@@ -1,5 +1,8 @@
 <div class="project-grid">
 {% assign visible_projects = site.projects | where_exp: 'project', 'project.feature_order != nil' %}
+{% if include.status %}
+  {% assign visible_projects = visible_projects | where: 'status', include.status %}
+{% endif %}
 {% if include.order == 'recent' %}
   {% assign ordered_projects = visible_projects | sort: 'sort_date' | reverse %}
 {% else %}
@@ -8,7 +11,14 @@
 {% for project in ordered_projects %}
 {% if include.limit == nil or forloop.index <= include.limit %}
   <article class="project-card">
-    {% if project.card_image %}<img src="{{ project.card_image | relative_url }}" alt="{{ project.card_alt }}" width="{{ project.card_image_width | default: 800 }}" height="{{ project.card_image_height | default: 520 }}" loading="lazy">{% endif %}
+    {% if project.card_image %}
+      <img src="{{ project.card_image | relative_url }}" alt="{{ project.card_alt }}" width="{{ project.card_image_width | default: 800 }}" height="{{ project.card_image_height | default: 520 }}" loading="lazy">
+    {% else %}
+      <div class="project-card-placeholder" aria-hidden="true">
+        <p class="project-card-placeholder__context">{{ project.context }}</p>
+        <p class="project-card-placeholder__status">Design {{ project.status | downcase }}</p>
+      </div>
+    {% endif %}
     <div class="project-card-body">
       {% assign project_number = forloop.index | prepend: '0' | slice: -2, 2 %}
       <div class="project-card-meta"><span class="project-index">{{ project_number }}</span><p class="eyebrow">{{ project.card_category }} &middot; {{ project.status }}</p></div>
