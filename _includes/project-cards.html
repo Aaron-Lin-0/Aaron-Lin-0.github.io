@@ -11,6 +11,7 @@
 {% for project in ordered_projects %}
 {% if include.limit == nil or forloop.index <= include.limit %}
   <article class="project-card">
+    <a class="project-card-link" href="{{ project.url | relative_url }}" aria-label="View {{ project.card_title }} project">
     {% if project.card_image %}
       <img src="{{ project.card_image | relative_url }}" alt="{{ project.card_alt }}" width="{{ project.card_image_width | default: 800 }}" height="{{ project.card_image_height | default: 520 }}" loading="lazy">
     {% else %}
@@ -22,11 +23,12 @@
     <div class="project-card-body">
       {% assign project_number = forloop.index | prepend: '0' | slice: -2, 2 %}
       <div class="project-card-meta"><span class="project-index">{{ project_number }}</span><p class="eyebrow">{{ project.card_category }} &middot; {{ project.status }}</p></div>
-      <h3><a href="{{ project.url | relative_url }}">{{ project.card_title }}</a></h3>
+      <h3>{{ project.card_title }}</h3>
       <p>{{ project.excerpt }}</p>
       <p class="project-result">{{ project.result }}</p>
       <p class="project-tools">{{ project.tools }}</p>
     </div>
+    </a>
   </article>
 {% endif %}
 {% endfor %}

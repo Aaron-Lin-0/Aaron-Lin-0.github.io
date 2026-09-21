@@ -24,6 +24,8 @@ hero_alt: Side view of the ARGO rocket showing the external downcomer and aft fa
 hero_caption: Side-view packaging model showing the external line and an early aft fairing concept.
 excerpt: I am comparing leading-edge, midsection, and boattail geometries against the previous Icarus aerocover.
 result: Conceptual Design Review completed September 2026
+tldr_role: Project engineer
+tldr_contribution: Fairing geometry and aerodynamic comparison against the previous Icarus aerocover.
 tools: ANSYS Fluent · OpenRocket · Supersonic flow
 ---
 

@@ -6,14 +6,18 @@
         <button type="button" aria-label="Toggle navigation menu"><span class="navicon" aria-hidden="true"></span></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist">
-            <span class="masthead-brand">{{ site.title }}</span>
+            <a class="masthead-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">{{ site.title }}</a>
           </li>
           {% for link in site.data.navigation.main %}
-            <li class="masthead__menu-item {% if link.url == '/' and page.url == '/' %}selected{% elsif link.url == '/' and page.url == '/index.html' %}selected{% elsif link.url != '/' and page.url contains link.url %}selected{% endif %}">
+            {% assign link_current = false %}
+            {% if link.url == '/#about' and page.url == '/' %}{% assign link_current = true %}{% endif %}
+            {% if link.url == '/projects/' and page.url contains '/projects/' %}{% assign link_current = true %}{% endif %}
+            {% if link.url == '/cv/' and page.url contains '/cv/' %}{% assign link_current = true %}{% endif %}
+            <li class="masthead__menu-item{% if link_current %} selected{% endif %}">
               {% if link.url contains 'http' %}
-                <a href="{{ link.url }}">{{ link.title }}</a>
+                <a href="{{ link.url }}"{% if link_current %} aria-current="page"{% endif %}>{{ link.title }}</a>
               {% else %}
-                <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+                <a href="{{ link.url | relative_url }}"{% if link_current %} aria-current="page"{% endif %}>{{ link.title }}</a>
               {% endif %}
             </li>
           {% endfor %}
@@ -21,7 +25,7 @@
         <ul class="hidden-links hidden"></ul>
       </nav>
       <div id="theme-toggle">
-        <button type="button" aria-label="Toggle color theme" title="Toggle color theme">
+        <button type="button" aria-label="Toggle color theme" aria-pressed="false" title="Toggle color theme">
           <span class="theme-toggle-label">Theme</span>
           <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path></svg>
           <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20.2 15.4A8.7 8.7 0 0 1 8.6 3.8 8.7 8.7 0 1 0 20.2 15.4Z"></path></svg>

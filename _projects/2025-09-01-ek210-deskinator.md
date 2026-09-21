@@ -24,6 +24,8 @@ hero_alt: Final Deskinator assembly drawing with front, side, section, and isome
 hero_caption: Final assembly drawing showing the fan, filter, battery, electronics, and nozzle inside the chassis.
 excerpt: I wrote the Arduino navigation firmware and helped assemble and redesign an autonomous desk-cleaning robot.
 result: 'Documented suction trial: 72 of 95 rice grains collected'
+tldr_role: Firmware and integration contributor
+tldr_contribution: Navigation firmware, system assembly, and mechanical and electrical troubleshooting.
 tools: Arduino C++ · Sensors · CAD · Prototype testing
 ---
 

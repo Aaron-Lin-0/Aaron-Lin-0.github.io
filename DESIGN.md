@@ -64,7 +64,9 @@ components:
 
 The site presents engineering work as a calm, deliberate review packet. Warm paper tones, precise typography, wide project imagery, and restrained blueprint blue keep attention on drawings, calculations, prototypes, and test results. The visual system feels technical without imitating CAD software or a laboratory dashboard.
 
-Pages use generous negative space and a clear reading order for fast recruiter scans. Project pages expand beyond the home-page sidebar and give real artifacts room to carry the story. The system avoids decorative stock imagery, artificial material effects, and exaggerated motion.
+The default `bold` portfolio style is a more assertive edition of that same review packet. It adds strong title framing, full-width section rules, larger technical numbering, and accent-topped evidence surfaces while preserving the original palette, typography, square geometry, flat depth, and evidence-first hierarchy. Set `portfolio_style` to `folio` in `_config.yml` to return to the quieter original treatment.
+
+Pages use generous negative space and a clear reading order for fast recruiter scans. Home opens with a split, viewport-scale introduction and then reads as one continuous review sequence. Project pages expand beyond the general-page sidebar and give real artifacts room to carry the story. The system avoids decorative stock imagery, artificial material effects, and exaggerated motion.
 
 **Key Characteristics:**
 
@@ -74,6 +76,7 @@ Pages use generous negative space and a clear reading order for fast recruiter s
 - IBM Plex Mono reserved for tools, values, dates, and project context
 - Flat project entries separated by space and rules
 - Real CAD, drawing, prototype, and test media on a fixed light matte
+- A configurable bold variant that amplifies structure without adding ornamental imagery
 
 ## Colors
 
@@ -119,9 +122,9 @@ The palette combines warm paper and ink with a limited technical accent. Light a
 
 ## Layout
 
-The main container is capped at 1220px with 2rem side padding. General pages use a 190–220px contact rail beside a flexible content column. Project pages remove the rail, center a 1080px reading and media column, and keep narrative sections to a shared 48rem width so headings, paragraphs, and lists align.
+The main container is capped at 1440px with fluid 1–3rem side padding. Home uses a full-width split hero followed by bordered content chapters. Other general pages use a 190–220px contact rail beside a flexible content column. Project pages remove the rail, center a 1240px media column, and keep narrative sections to a shared 48rem width so headings, paragraphs, and lists align. Wide space belongs to project evidence and structure; ordinary prose remains capped at 72ch.
 
-Project indexes use two flat columns with 2rem horizontal and 4rem vertical gaps. At 700px and below, the layout, project list, and media grids collapse to one column; padding falls to 1rem and the contact rail becomes an inline block. Major project sections use a fluid 4.5–7.5rem vertical interval.
+Project indexes use two flat columns with 2rem horizontal and 4rem vertical gaps. At 960px and below, the contact rail moves inline and project lists collapse to one column. At 700px and below, phone-specific padding, typography, navigation, and media rules take over. Major project sections use a fluid 4.5–7.5rem vertical interval.
 
 ## Elevation & Depth
 
@@ -154,7 +157,11 @@ Controls use a restrained 4px radius. Project entries and image surfaces have sq
 
 ### Navigation
 
-The name is a non-interactive wordmark. Page links use Space Grotesk and show a two-pixel accent underline for the active page. The theme control pairs text with authored sun and moon SVG icons; its choice persists across pages.
+The name links to Home. About and Contact link to Home sections, while Projects and Experience remain separate pages. Page links use Space Grotesk and show a two-pixel accent underline for the active page. The theme control pairs text with authored sun and moon SVG icons; its choice persists across pages.
+
+### Home Hero
+
+Home opens with Aaron's positioning, internship availability, project and resume actions, portrait, and immediate contact links in one desktop viewport. The composition stacks naturally on smaller screens and never forces viewport-height sections on mobile.
 
 ### Embedded Text Links
 
@@ -167,6 +174,18 @@ Each entry leads with real project media, then a zero-padded mono number, a shor
 ### Project Section Label
 
 Project narratives use compact uppercase labels such as Objective, Approach, Build, and Test / Results. A small accent bullet anchors each section and repeats the folio’s indexing language.
+
+### Project Summary
+
+Project pages place a compact Role / Contribution / Evidence summary between the header and hero. The summary is a flat definition list with shared rules rather than three separate cards. In-progress projects state the current milestone and leave unverified individual contributions explicitly pending.
+
+### Responsive Contact
+
+The full contact rail remains visible on desktop. At 960px and below it reduces to labeled Email, LinkedIn, and Resume actions so contact stays immediate without delaying the page content with a repeated biography.
+
+### Skills Index
+
+Home and Experience render the same categorized, visible skills source. The list supports fast recruiter scanning and ordinary browser search without hidden keyword text or unsupported claims.
 
 ### Engineering Lists
 
@@ -190,11 +209,12 @@ Project images declare intrinsic dimensions and lazy-load below the first projec
 
 ## Implementation Map
 
-- `assets/css/engineering.css` contains the portfolio tokens, layouts, components, themes, and breakpoints.
+- `assets/css/engineering.css` contains the portfolio tokens, layouts, components, style variants, themes, and breakpoints.
 - `assets/js/_main.js` controls persistent light/dark behavior; `_includes/head.html` applies the initial theme before rendering. `assets/js/theme.js` supplies Plotly theme definitions.
 - `_layouts/engineering.html` defines the page shell and project-page structure.
 - `_includes/contact-card.html`, `_includes/project-cards.html`, and `_includes/project-figure.html` provide shared components.
-- `_config.yml` selects the active accent with `portfolio_accent`.
+- `_data/skills.yml` and `_includes/skills-list.html` provide the shared Home and Experience skills index.
+- `_config.yml` selects the active accent with `portfolio_accent` and the quiet or bold folio treatment with `portfolio_style`.
 - Project front matter supplies card order, media, copy, results, and tools.
 
 ## Do's and Don'ts

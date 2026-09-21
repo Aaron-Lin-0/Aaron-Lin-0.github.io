@@ -24,6 +24,8 @@ hero_alt: Exploded CAD view showing the nozzle, adapter, bolts, and nuts
 hero_caption: Exploded view of the nozzle and six-bolt adapter interface.
 excerpt: I sized the flow path, modeled the nozzle and adapter, and checked the pressure load before fabricating a resin prototype.
 result: 'Pressure FEA: minimum factor of safety 2.12'
+tldr_role: Project engineer
+tldr_contribution: Flow-path sizing, CAD, drawings, pressure FEA, and fabrication planning.
 tools: SolidWorks · FEA · Compressible flow · Resin printing
 ---
 

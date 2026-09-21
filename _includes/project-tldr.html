@@ -1,0 +1,13 @@
+{% if page.tldr_role or page.tldr_contribution or page.result %}
+<dl class="project-tldr" aria-label="Project summary">
+  {% if page.tldr_role %}
+    <div><dt>Role</dt><dd>{{ page.tldr_role }}</dd></div>
+  {% endif %}
+  {% if page.tldr_contribution %}
+    <div><dt>Contribution</dt><dd>{{ page.tldr_contribution }}</dd></div>
+  {% endif %}
+  {% if page.result %}
+    <div><dt>Evidence</dt><dd>{{ page.result }}</dd></div>
+  {% endif %}
+</dl>
+{% endif %}
