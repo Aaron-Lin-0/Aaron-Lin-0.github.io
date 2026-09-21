@@ -22,6 +22,8 @@ hero_alt: Enclosed Arduino temperature monitor displaying Celsius and Fahrenheit
 hero_caption: Working prototype displaying a reading above the configured alert range.
 excerpt: I programmed the sensing and alerts, assembled the electronics, and packaged the circuit in an ABS enclosure.
 result: 'Displays °C/°F and alerts outside 60–75°F'
+tldr_role: Individual course project
+tldr_contribution: Firmware, electronics assembly, and enclosure packaging.
 tools: Arduino C++ · TMP36 · Electronics assembly
 ---
 

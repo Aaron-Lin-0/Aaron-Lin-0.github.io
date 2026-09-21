@@ -1,7 +1,12 @@
 ---
 layout: default
 ---
-<main id="main" class="engineering-site{% if page.collection == 'projects' %} engineering-project{% endif %}{% if page.utility_page %} engineering-utility{% endif %}">
+<main id="main" class="engineering-site engineering-style-{{ site.portfolio_style | default: 'folio' }}{% if page.home_page %} engineering-home{% endif %}{% if page.collection == 'projects' %} engineering-project{% endif %}{% if page.utility_page %} engineering-utility{% endif %}">
+  {% if page.home_page %}
+    <div class="engineering-main engineering-main--home">
+      <div class="engineering-content">{{ content }}</div>
+    </div>
+  {% else %}
   {% if page.collection == 'projects' %}<a class="back-link" href="{{ '/projects/' | relative_url }}">&larr; All projects</a>{% endif %}
   <header class="engineering-header">
     {% if page.kicker %}<p class="eyebrow">{{ page.kicker }}</p>{% endif %}
@@ -14,6 +19,7 @@ layout: default
       {% unless page.utility_page %}{% include contact-card.html %}{% endunless %}
     {% endunless %}
     <div class="engineering-main">
+      {% if page.collection == 'projects' %}{% include project-tldr.html %}{% endif %}
       {% if page.collection == 'projects' and page.hero_image %}
         <figure class="project-hero">
           <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt }}" width="{{ page.hero_width }}" height="{{ page.hero_height }}">
@@ -24,4 +30,5 @@ layout: default
       {% if page.collection == 'projects' %}<div class="project-end"><a href="{{ '/projects/' | relative_url }}">More projects</a> <a href="mailto:{{ site.author.email }}">Ask me about this project</a></div>{% endif %}
     </div>
   </div>
+  {% endif %}
 </main>

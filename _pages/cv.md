@@ -61,11 +61,7 @@ I tested microphone directional sensitivity across an azimuthal sweep and docume
 
 ## Skills
 
-- **Design and analysis:** SolidWorks (Simulation, HSMWorks), Onshape, ANSYS Fluent, OpenRocket, mechanical design, FEA, CFD, supersonic aerodynamics, 1D compressible flow, stress analysis, thermodynamic cycle analysis, and GD&T fundamentals.
-- **Programming:** Python, MATLAB, C++ (Arduino), Java.
-- **Fabrication and integration:** FDM and resin additive manufacturing, CNC machining, manual lathe and mill, soldering, electronics assembly.
-- **Engineering practice:** Systems integration, experimental testing, technical writing, and design reviews.
-- **Languages:** English (native) and Mandarin Chinese (conversational).
+{% include skills-list.html %}
 
 ## Courses and certifications
 

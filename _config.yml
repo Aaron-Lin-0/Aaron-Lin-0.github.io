@@ -10,8 +10,9 @@
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 portfolio_accent         : "blue" # Change to "orange" to switch the complete accent palette.
+portfolio_style          : "bold" # Change to "folio" to use the quieter original portfolio treatment.
 title                    : "Aaron Lin"
-title_separator          : "-"
+title_separator          : "|"
 name                     : &name "Aaron Lin"
 description              : &description "Mechanical Engineering student at Boston University, specializing in aerospace and propulsion"
 url                      : https://aaronlin.space

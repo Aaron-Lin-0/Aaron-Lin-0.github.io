@@ -1,0 +1,8 @@
+<div class="skills-index">
+  {% for group in site.data.skills %}
+    <section class="skills-group">
+      <h3>{{ group.name }}</h3>
+      <p>{{ group.items | join: ' · ' }}</p>
+    </section>
+  {% endfor %}
+</div>

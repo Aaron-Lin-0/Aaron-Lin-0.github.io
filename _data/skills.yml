@@ -1,0 +1,12 @@
+- name: CAD and simulation
+  items: [SolidWorks, SolidWorks Simulation, HSMWorks, Onshape, ANSYS Fluent, OpenRocket]
+- name: Engineering analysis
+  items: [Mechanical design, FEA, CFD, Supersonic aerodynamics, 1D compressible flow, Stress analysis, Thermodynamic cycle analysis, GD&T fundamentals]
+- name: Programming and data
+  items: [Python, pandas, SciPy, Astroquery, MATLAB, Arduino C++, Java]
+- name: Fabrication and electronics
+  items: [FDM printing, Resin printing, CNC machining, Manual lathe, Manual mill, Soldering, Electronics assembly, Sensors]
+- name: Testing and practice
+  items: [Optical emission spectroscopy, HR4000 spectrometer, Experimental testing, Systems integration, Technical writing, Design reviews]
+- name: Languages
+  items: [English (native), Mandarin Chinese (conversational)]

@@ -31,14 +31,21 @@ function setTheme(theme) {
     localStorage.getItem("theme") ||
     $("html").attr("data-theme") ||
     browserPref;
+  const useDark = use_theme === "dark";
 
-  if (use_theme === "dark") {
+  if (useDark) {
     $("html").attr("data-theme", "dark");
     $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
   } else if (use_theme === "light") {
     $("html").removeAttr("data-theme");
     $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
   }
+
+  $('#theme-toggle button').attr({
+    'aria-label': useDark ? 'Switch to light theme' : 'Switch to dark theme',
+    'aria-pressed': useDark,
+    'title': useDark ? 'Switch to light theme' : 'Switch to dark theme'
+  });
 }
 
 // Toggle the theme manually
