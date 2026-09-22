@@ -25,7 +25,7 @@ Visitors commonly skim on a laptop or phone, may arrive from a resume or LinkedI
 - Static Jekyll site hosted with GitHub Pages.
 - Responsive light and dark themes with a persistent manual override.
 - Custom domain: `aaronlin.space`.
-- Primary routes: Home, Projects, Experience, and five detailed project pages.
+- Primary routes: Home, Projects, Experience, Contact, and ten detailed project pages.
 - Projects index is reverse chronological; the home page uses a curated order.
 - Contact information and resume must remain visible near the first viewport on primary pages.
 - Project claims must remain factual and grounded in supplied course or team documents.
@@ -44,6 +44,11 @@ All downloadable files are part of the product surface. Their visible content an
 - The Deskinator — completed
 - Room temperature monitor — completed
 - Converging-diverging rocket nozzle — completed
+- Acrylic truss design and test — completed
+- Structural mechanics laboratory studies — completed
+- Diffusion measurement and curve fitting — completed
+- Commercial chiller system analysis — completed
+- SolidWorks modeling exercises — completed
 
 ## Brand Commitments
 

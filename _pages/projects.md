@@ -2,7 +2,7 @@
 layout: engineering
 title: "Projects"
 kicker: "Aaron Lin · Engineering portfolio"
-summary: "Coursework and student-team projects in propulsion, aerodynamics, robotics, and electronics."
+summary: "Mechanical, aerospace, and electromechanical projects, along with laboratory studies and CAD work."
 permalink: /projects/
 author_profile: false
 ---
@@ -11,6 +11,14 @@ author_profile: false
 
 {% include project-cards.html order="recent" status="In progress" %}
 
-## Completed projects
+## Engineering projects
 
-{% include project-cards.html order="recent" status="Completed" %}
+{% include project-cards.html order="recent" status="Completed" group="engineering" %}
+
+## Laboratory and analytical studies
+
+{% include project-cards.html order="recent" status="Completed" group="laboratory" %}
+
+## CAD exercises
+
+{% include project-cards.html order="recent" status="Completed" group="cad" %}

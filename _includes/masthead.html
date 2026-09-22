@@ -13,6 +13,7 @@
             {% if link.url == '/#about' and page.url == '/' %}{% assign link_current = true %}{% endif %}
             {% if link.url == '/projects/' and page.url contains '/projects/' %}{% assign link_current = true %}{% endif %}
             {% if link.url == '/cv/' and page.url contains '/cv/' %}{% assign link_current = true %}{% endif %}
+            {% if link.url == '/contact/' and page.url contains '/contact/' %}{% assign link_current = true %}{% endif %}
             <li class="masthead__menu-item{% if link_current %} selected{% endif %}">
               {% if link.url contains 'http' %}
                 <a href="{{ link.url }}"{% if link_current %} aria-current="page"{% endif %}>{{ link.title }}</a>

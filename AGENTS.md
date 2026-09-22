@@ -33,7 +33,7 @@ This is Aaron Lin's customized Jekyll website at [aaronlin.space](https://aaronl
 
 - Active portfolio pages explicitly use `layout: engineering`. Project pages also need `collection: projects` for the wide layout, hero, and back links. Collection defaults still specify the older `single` layout.
 - Preserve permalinks and redirects, especially URLs printed in resumes. A filename does not determine an explicit permalink.
-- Both card lists filter out projects without `feature_order`. Home sorts by that field and currently shows two entries; Projects sorts the same eligible set by `sort_date` descending. Removing `feature_order` does not unpublish the detail page.
+- Both card lists filter out projects without `feature_order`. Home sorts by that field and currently shows three entries; Projects sorts the same eligible set by `sort_date` descending. Removing `feature_order` does not unpublish the detail page.
 - Keep individual contributions distinct from team outcomes. Do not turn requirements, plans, simulations, or scheduled dates into completed results. Verify new claims against supplied evidence.
 - Synchronize changed dates, status, availability, skills, and results across the affected project, Home, Experience, contact rail, metadata, and resume as applicable. PDF and page copy are maintained separately.
 - Reuse shared components and design tokens. Preserve alt text, intrinsic image dimensions, keyboard focus, both themes, and useful text without JavaScript or media.

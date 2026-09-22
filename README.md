@@ -11,6 +11,7 @@ The site is built with Jekyll and GitHub Pages on top of [Academic Pages](https:
 - `_pages/about.md` — home page and selected projects
 - `_pages/projects.md` — reverse-chronological project index
 - `_pages/cv.md` — education, experience, projects, skills, and résumé download
+- `_pages/contact.md` — direct email, LinkedIn, and résumé links
 - `_projects/` — one Markdown file per detailed project page
 - `_includes/` — shared navigation, contact, project-card, and figure components
 - `_layouts/engineering.html` — portfolio page layout
@@ -62,12 +63,13 @@ feature_order: 1
 card_title: Short card title
 card_category: Discipline or organization
 status: Completed
+project_group: engineering
 excerpt: Factual contribution summary
 result: Measured or documented result
 tools: Tool · Tool · Process
 ```
 
-`sort_date` controls reverse chronology on the Projects page. `feature_order` controls the selected-project order on the home page; omit it to keep a project out of both card lists. Use the shared `project-figure.html` include for project images so alt text, intrinsic dimensions, lazy loading, and captions stay consistent.
+`sort_date` controls reverse chronology on the Projects page. `project_group` places completed work in the `engineering`, `laboratory`, or `cad` section. `feature_order` controls the selected-project order on the home page; omit it to keep a project out of both card lists. Use the shared `project-figure.html` include for project images so alt text, intrinsic dimensions, lazy loading, and captions stay consistent.
 
 Change `portfolio_accent` in `_config.yml` from `blue` to `orange` to switch the complete accent palette. Do not mix accent palettes in individual components.
 

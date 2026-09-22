@@ -2,7 +2,7 @@
 layout: engineering
 title: "Experience"
 kicker: "Aaron Lin · Mechanical Engineering"
-summary: "Internship, student-team, and project experience alongside a downloadable copy of my resume."
+summary: "My internships, student-team work, academic projects, and current resume."
 permalink: /cv/
 author_profile: false
 redirect_from:

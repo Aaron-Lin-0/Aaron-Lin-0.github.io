@@ -122,7 +122,7 @@ The palette combines warm paper and ink with a limited technical accent. Light a
 
 ## Layout
 
-The main container is capped at 1440px with fluid 1–3rem side padding. Home uses a full-width split hero followed by bordered content chapters. Other general pages use a 190–220px contact rail beside a flexible content column. Project pages remove the rail, center a 1240px media column, and keep narrative sections to a shared 48rem width so headings, paragraphs, and lists align. Wide space belongs to project evidence and structure; ordinary prose remains capped at 72ch.
+The main container is capped at 1440px with fluid 1–3rem side padding. Home uses a full-width split hero followed by bordered content chapters. Other general pages use a 190–220px contact rail beside a flexible content column. Project pages remove the rail, center a 1240px media column, and keep all narrative text and captions to a shared 48rem width. Wide space belongs to project evidence and structure; headings, paragraphs, lists, tables, captions, and closing links share one reading edge.
 
 Project indexes use two flat columns with 2rem horizontal and 4rem vertical gaps. At 960px and below, the contact rail moves inline and project lists collapse to one column. At 700px and below, phone-specific padding, typography, navigation, and media rules take over. Major project sections use a fluid 4.5–7.5rem vertical interval.
 
@@ -157,11 +157,11 @@ Controls use a restrained 4px radius. Project entries and image surfaces have sq
 
 ### Navigation
 
-The name links to Home. About and Contact link to Home sections, while Projects and Experience remain separate pages. Page links use Space Grotesk and show a two-pixel accent underline for the active page. The theme control pairs text with authored sun and moon SVG icons; its choice persists across pages.
+The name links to Home. About links to the Home introduction; Projects, Experience, and Contact each have their own page. Page links use Space Grotesk and show a two-pixel accent underline for the active page. The theme control pairs text with authored sun and moon SVG icons; its choice persists across pages.
 
 ### Home Hero
 
-Home opens with Aaron's positioning, internship availability, project and resume actions, portrait, and immediate contact links in one desktop viewport. The composition stacks naturally on smaller screens and never forces viewport-height sections on mobile.
+Home opens with Aaron's positioning, internship search, project and resume actions, portrait, and immediate contact links in one desktop viewport. A short blueprint-rule and portrait reveal gives the opening one authored motion cue. The composition stacks naturally on smaller screens and never forces viewport-height sections on mobile.
 
 ### Embedded Text Links
 
