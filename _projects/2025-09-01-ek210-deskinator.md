@@ -13,6 +13,7 @@ sort_date: "2025-09-01"
 card_title: The Deskinator
 card_category: Robotics & integration
 status: Completed
+project_group: engineering
 card_image: /images/projects/deskinator/final-assembly-drawing.png
 card_image_width: 1980
 card_image_height: 1530

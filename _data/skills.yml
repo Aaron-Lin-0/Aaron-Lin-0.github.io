@@ -1,5 +1,5 @@
 - name: CAD and simulation
-  items: [SolidWorks, SolidWorks Simulation, HSMWorks, Onshape, ANSYS Fluent, OpenRocket]
+  items: [SolidWorks, SolidWorks Simulation, Autodesk Fusion 360, HSMWorks, Onshape, ANSYS Fluent, OpenRocket]
 - name: Engineering analysis
   items: [Mechanical design, FEA, CFD, Supersonic aerodynamics, 1D compressible flow, Stress analysis, Thermodynamic cycle analysis, GD&T fundamentals]
 - name: Programming and data

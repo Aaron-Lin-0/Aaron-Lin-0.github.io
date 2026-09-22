@@ -66,6 +66,7 @@ Review these routes:
 - `/`
 - `/projects/`
 - `/cv/`
+- `/contact/`
 - every route under `/projects/`
 - `/404.html`
 - `/sitemap/`

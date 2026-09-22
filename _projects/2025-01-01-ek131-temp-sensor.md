@@ -13,6 +13,7 @@ sort_date: "2025-01-01"
 card_title: Room temperature monitor
 card_category: Electronics & prototyping
 status: Completed
+project_group: engineering
 card_image: /images/projects/temperature/prototype.jpg
 card_alt: Enclosed Arduino temperature monitor displaying Celsius and Fahrenheit
 hero_image: /images/projects/temperature/prototype.jpg

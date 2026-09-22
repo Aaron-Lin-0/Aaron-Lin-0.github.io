@@ -13,6 +13,7 @@ sort_date: "2026-07-01"
 card_title: ARGO aerodynamic fairing
 card_category: BURPG · Aerodynamics
 status: In progress
+project_group: engineering
 card_image: /images/projects/argo/side-layout.png
 card_image_width: 2117
 card_image_height: 380
@@ -37,9 +38,11 @@ I am analyzing the vehicle at a **Mach 2.81 design condition** with ANSYS Fluent
 
 ## Approach
 
-- The previous Icarus aerocover as a baseline.
-- Leading-edge profiles, midsection shapes, and trailing-edge or boattail concepts, including tangent-ogive and power-law profiles.
-- Drag and thermal behavior alongside geometry accuracy, cost, attachment, and manufacturing constraints.
+I am comparing:
+
+- the previous Icarus aerocover as a baseline;
+- leading-edge profiles, midsection shapes, and trailing-edge or boattail concepts, including tangent-ogive and power-law profiles; and
+- drag and thermal behavior alongside geometry accuracy, cost, attachment, and manufacturing constraints.
 
 A fairing attached to a rocket body is only a partial revolution, so results from a fully revolved nose cone do not transfer directly. Each comparison therefore uses the installed geometry and the same reference area.
 

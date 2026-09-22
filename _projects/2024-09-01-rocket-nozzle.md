@@ -7,12 +7,13 @@ title: Converging-diverging rocket nozzle
 permalink: /projects/rocket-nozzle/
 kicker: BU Rocket Propulsion Group · Completed
 context: BU Rocket Propulsion Group · Hybrid Intro Project · Project Engineer · Fall 2024
-summary: A small rocket nozzle developed from compressible-flow calculations through CAD, pressure analysis, fabrication, and static-fire integration.
+summary: I designed and built a small rocket nozzle using compressible-flow calculations, CAD, pressure analysis, resin printing, and static-fire integration.
 feature_order: 1
 sort_date: "2024-09-01"
 card_title: Rocket nozzle
 card_category: BURPG · Propulsion
 status: Completed
+project_group: engineering
 card_image: /images/projects/nozzle/exploded.jpg
 card_image_width: 1000
 card_image_height: 445
@@ -31,7 +32,7 @@ tools: SolidWorks · FEA · Compressible flow · Resin printing
 
 ## Objective
 
-I completed the Hybrid Intro Project with the [Boston University Rocket Propulsion Group](https://burpg.org/) (BURPG). New members design, manufacture, and static-fire a small rocket nozzle while learning the group's design-review process.
+I completed the Hybrid Intro Project with the [Boston University Rocket Propulsion Group](https://burpg.org/) (BURPG). New members design, manufacture, and static-fire a small rocket nozzle while learning how the group reviews engineering work.
 
 I led the mechanical work. Using *Rocket Propulsion Elements* as my main reference, I calculated the nozzle performance and geometry, created the part and assembly CAD, produced the drawings, ran the pressure FEA, and planned the resin-printing process. I delivered that work through conceptual, preliminary, and critical design reviews, then helped integrate the nozzle with the team's electrical control and data-acquisition system.
 
@@ -94,4 +95,4 @@ I printed the nozzle, integrated it with the chamber and seals, and helped assem
   </figure>
 </div>
 
-This project took the nozzle from compressible-flow calculations to a manufactured part integrated into a static fire. The pressure model supported the design review and fabrication decision; the hot-fire recording demonstrated system integration rather than quantified nozzle performance. For a second iteration, I would pair a mesh-converged thermal-structural model with chamber-pressure measurements, wall-temperature data, and a documented post-fire inspection so the analysis could be compared directly with the test.
+The pressure model supported the design review and fabrication decision, while the hot-fire recording demonstrated system integration rather than quantified nozzle performance. For a second iteration, I would pair a mesh-converged thermal-structural model with chamber-pressure measurements, wall-temperature data, and a documented post-fire inspection. That would allow a direct comparison between the analysis and the test.

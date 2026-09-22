@@ -13,7 +13,7 @@ redirect_from:
 <section class="home-hero" id="about">
   <div class="home-hero-copy">
     <h1>Hi, I'm Aaron.</h1>
-    <p class="intro">I'm a mechanical engineering junior at <a class="org-link" href="https://www.bu.edu/eng/academics/departments-and-divisions/mechanical-engineering/">Boston University</a>, concentrating in aerospace. I design parts in CAD, check them with analysis, then build and test them through the <a class="org-link" href="https://burpg.org/">Boston University Rocket Propulsion Group (BURPG)</a> and course projects.</p>
+    <p class="intro">I'm a mechanical engineering junior at <a class="org-link" href="https://www.bu.edu/eng/academics/departments-and-divisions/mechanical-engineering/">Boston University</a> with an aerospace concentration. Through the <a class="org-link" href="https://burpg.org/">Boston University Rocket Propulsion Group (BURPG)</a> and course projects, I take designs from CAD and analysis through fabrication and testing.</p>
     <p>I'm seeking a <strong>Summer 2027 internship</strong> in mechanical design, aerospace, or product development. I expect to graduate in May 2028.</p>
     <div class="actions">
       <a class="portfolio-button primary" href="{{ '/projects/' | relative_url }}">See my projects</a>
@@ -21,10 +21,12 @@ redirect_from:
     </div>
   </div>
   <aside class="home-hero-profile" aria-label="Aaron Lin contact information">
-    <img src="{{ '/images/profile-headshot.jpg' | relative_url }}" alt="Headshot of Aaron Lin" width="600" height="600" fetchpriority="high">
+    <div class="home-profile-portrait">
+      <img src="{{ '/images/profile-headshot.jpg' | relative_url }}" alt="Headshot of Aaron Lin" width="600" height="600" fetchpriority="high">
+    </div>
     <div>
       <p class="home-profile-role">Mechanical Engineering<br>Boston University</p>
-      <p class="home-profile-location">Boston, MA · Available Summer 2027</p>
+      <p class="home-profile-location">Boston, MA</p>
       <ul class="home-contact-links">
         <li><a href="mailto:{{ site.author.email }}">Email</a></li>
         <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/">LinkedIn</a></li>
@@ -40,9 +42,9 @@ redirect_from:
   <a href="{{ '/projects/' | relative_url }}">View all projects</a>
 </div>
 
-Rocket hardware, robotics, aerodynamic analysis, and the calculations, drawings, and tests behind them.
+A selection of rocket hardware, robotics, and aerodynamic work, with the calculations, drawings, and tests behind each project.
 
-{% include project-cards.html limit=3 %}
+{% include project-cards.html limit=3 split_links=true %}
 </section>
 
 <section class="home-section" aria-labelledby="recent-experience-title">

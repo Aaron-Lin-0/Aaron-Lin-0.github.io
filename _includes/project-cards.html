@@ -1,17 +1,26 @@
-<div class="project-grid">
 {% assign visible_projects = site.projects | where_exp: 'project', 'project.feature_order != nil' %}
 {% if include.status %}
   {% assign visible_projects = visible_projects | where: 'status', include.status %}
+{% endif %}
+{% if include.group %}
+  {% assign visible_projects = visible_projects | where: 'project_group', include.group %}
 {% endif %}
 {% if include.order == 'recent' %}
   {% assign ordered_projects = visible_projects | sort: 'sort_date' | reverse %}
 {% else %}
   {% assign ordered_projects = visible_projects | sort: 'feature_order' %}
 {% endif %}
+{% if ordered_projects.size > 0 %}
+<div class="project-grid">
 {% for project in ordered_projects %}
 {% if include.limit == nil or forloop.index <= include.limit %}
-  <article class="project-card">
+  <article class="project-card{% if include.split_links %} project-card--split-links{% endif %}">
+    {% if include.split_links %}
+      {% assign project_title_id = 'project-card-title-' | append: project.slug %}
+      <a class="project-card-media-link" href="{{ project.url | relative_url }}" aria-labelledby="{{ project_title_id }}">
+    {% else %}
     <a class="project-card-link" href="{{ project.url | relative_url }}" aria-label="View {{ project.card_title }} project">
+    {% endif %}
     {% if project.card_image %}
       <img src="{{ project.card_image | relative_url }}" alt="{{ project.card_alt }}" width="{{ project.card_image_width | default: 800 }}" height="{{ project.card_image_height | default: 520 }}" loading="lazy">
     {% else %}
@@ -20,16 +29,20 @@
         <p class="project-card-placeholder__status">Design {{ project.status | downcase }}</p>
       </div>
     {% endif %}
+    {% if include.split_links %}</a>{% endif %}
     <div class="project-card-body">
       {% assign project_number = forloop.index | prepend: '0' | slice: -2, 2 %}
       <div class="project-card-meta"><span class="project-index">{{ project_number }}</span><p class="eyebrow">{{ project.card_category }} &middot; {{ project.status }}</p></div>
-      <h3>{{ project.card_title }}</h3>
+      <h3>{% if include.split_links %}<a class="project-card-title-link" id="{{ project_title_id }}" href="{{ project.url | relative_url }}">{% endif %}{{ project.card_title }}{% if include.split_links %}</a>{% endif %}</h3>
       <p>{{ project.excerpt }}</p>
       <p class="project-result">{{ project.result }}</p>
       <p class="project-tools">{{ project.tools }}</p>
     </div>
+    {% unless include.split_links %}
     </a>
+    {% endunless %}
   </article>
 {% endif %}
 {% endfor %}
 </div>
+{% endif %}
