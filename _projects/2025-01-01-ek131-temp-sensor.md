@@ -15,6 +15,8 @@ card_category: Electronics & prototyping
 status: Completed
 project_group: engineering
 card_image: /images/projects/temperature/prototype.jpg
+card_image_width: 466
+card_image_height: 352
 card_alt: Enclosed Arduino temperature monitor displaying Celsius and Fahrenheit
 hero_image: /images/projects/temperature/prototype.jpg
 hero_width: 466
@@ -34,9 +36,17 @@ I built and programmed an Arduino Uno temperature monitor with a TMP36 sensor, 1
 
 I wrote the firmware, assembled the circuit, arranged the components inside an ABS enclosure, and documented the build in a technical report.
 
+## Signal path and controls
+
+The Arduino reads the TMP36's analog voltage, converts that value to Celsius, calculates Fahrenheit, and updates both values on the LCD. The firmware then compares the Fahrenheit reading with the two thresholds. A reading inside the range leaves the green indicator on; a reading below 60°F or above 75°F switches to the red indicator and sounds the buzzer.
+
+I used an I²C display to reduce the number of signal wires between the screen and the Arduino. A two-position switch disconnects the 9 V battery, while the Arduino's regulated 5 V rail supplies the sensor, display, LEDs, and buzzer.
+
 ## Build
 
 I used Arduino header connections and shared power and ground rails so the components could be reused. I arranged the display, sensor, switch, and alerts around a compact ABS enclosure and documented the LED resistor selection in the report.
+
+The red LED uses a **220 Ω** series resistor and the green LED uses **1 kΩ**. Based on the component voltage drops recorded in the report, the corresponding currents were 13.6 mA and 2.8 mA. The larger resistor kept the green indicator within its intended operating range while reducing its share of the battery load.
 
 {% include project-figure.html src="/images/projects/temperature/interior.jpg" alt="Open enclosure showing the Arduino Uno, LCD wiring, battery, and sensor connections" width="478" height="359" caption="Inside the prototype enclosure. Better wire routing and connector retention would be priorities in a second build." %}
 
@@ -44,7 +54,11 @@ I used Arduino header connections and shared power and ground rails so the compo
 
 - **Power:** The circuit drew 76 mA. A 690 mAh battery gives an ideal estimate of about nine hours, though the Arduino would shut down before the battery was fully discharged.
 - **Accuracy:** The TMP36 datasheet lists ±1°C accuracy at 25°C. I did not calibrate the assembled monitor against a reference thermometer.
-- **Next test:** Measure runtime to shutdown, compare readings with a reference thermometer, and check whether the enclosure affects the sensor reading.
+- **Functional check:** The display updated in both units and the red LED and buzzer activated outside the programmed range.
+
+## What I would change
+
+The prototype proved the sensing and alert sequence, but it did not establish calibrated accuracy or real battery endurance. A second build would log the TMP36 reading beside a reference thermometer, test both threshold crossings, and measure runtime until the Arduino shuts down. I would also separate the sensor from the heat produced inside the enclosure and replace the loose internal wiring with retained connectors and shorter runs.
 
 {% include project-figure.html src="/images/projects/temperature/wiring.jpg" alt="Wiring diagram showing Arduino Uno, TMP36, LCD, LEDs, buzzer, and battery" width="672" height="413" caption="Wiring diagram from my report, showing the sensing and alert circuits." %}
 
