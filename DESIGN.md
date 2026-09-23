@@ -3,16 +3,29 @@ name: Aaron Lin Engineering Portfolio
 description: A warm technical folio built around real engineering evidence.
 colors:
   blueprint-light: "#2F5C8A"
+  blueprint-light-hover: "#244B72"
   blueprint-dark: "#6C9BD1"
+  blueprint-dark-hover: "#8BB5E2"
   safety-orange-light: "#D9622B"
+  safety-orange-light-hover: "#AD451D"
   safety-orange-dark: "#EA8B57"
+  safety-orange-dark-hover: "#F1AA82"
   cream: "#F4F1EA"
+  cream-surface: "#EBE6DC"
   warm-ink: "#1C1B19"
-  warm-muted-light: "#6B655C"
+  warm-muted-light: "#625D55"
+  warm-border-light: "#CFC8BC"
+  warm-border-strong-light: "#9E978C"
+  warm-footer-light: "#E8E2D7"
   night: "#18160F"
+  night-surface: "#242118"
   warm-paper: "#EDE9E0"
   warm-muted-dark: "#9C9484"
+  warm-border-dark: "#454137"
+  warm-border-strong-dark: "#6F685A"
+  warm-footer-dark: "#201D15"
   image-matte: "#FAF8F2"
+  media-dark: "#12100C"
 typography:
   display:
     fontFamily: "Space Grotesk, Avenir Next, sans-serif"
@@ -26,6 +39,12 @@ typography:
     fontWeight: 600
     lineHeight: 1.08
     letterSpacing: "-0.025em"
+  title:
+    fontFamily: "Space Grotesk, Avenir Next, sans-serif"
+    fontSize: "clamp(1.35rem, 2.4vw, 1.75rem)"
+    fontWeight: 600
+    lineHeight: 1.18
+    letterSpacing: "-0.018em"
   body:
     fontFamily: "IBM Plex Sans, Noto Sans, sans-serif"
     fontSize: "1rem"
@@ -46,9 +65,14 @@ spacing:
   lg: "2rem"
   section: "clamp(4.5rem, 9vw, 7.5rem)"
 components:
-  button-outline:
+  button-primary:
     backgroundColor: "transparent"
     textColor: "{colors.blueprint-light}"
+    rounded: "{rounded.control}"
+    padding: "0.67rem 0.95rem"
+  button-secondary:
+    backgroundColor: "transparent"
+    textColor: "{colors.warm-ink}"
     rounded: "{rounded.control}"
     padding: "0.72rem 1rem"
   image-surface:
@@ -64,7 +88,7 @@ components:
 
 The site presents engineering work as a calm, deliberate review packet. Warm paper tones, precise typography, wide project imagery, and restrained blueprint blue keep attention on drawings, calculations, prototypes, and test results. The visual system feels technical without imitating CAD software or a laboratory dashboard.
 
-The default `bold` portfolio style is a more assertive edition of that same review packet. It adds strong title framing, full-width section rules, larger technical numbering, and accent-topped evidence surfaces while preserving the original palette, typography, square geometry, flat depth, and evidence-first hierarchy. Set `portfolio_style` to `folio` in `_config.yml` to return to the quieter original treatment.
+The active `bold` portfolio style is a more assertive edition of that same review packet. It adds strong title framing, full-width section rules, larger technical numbering, and accent-topped evidence surfaces while preserving the original palette, typography, square geometry, flat depth, and evidence-first hierarchy. Set `portfolio_style` to `folio` in `_config.yml` to return to the quieter original treatment.
 
 Pages use generous negative space and a clear reading order for fast recruiter scans. Home opens with a split, viewport-scale introduction and then reads as one continuous review sequence. Project pages expand beyond the general-page sidebar and give real artifacts room to carry the story. The system avoids decorative stock imagery, artificial material effects, and exaggerated motion.
 
@@ -92,7 +116,9 @@ The palette combines warm paper and ink with a limited technical accent. Light a
 - **Cream and Warm Ink:** The default page ground and primary copy.
 - **Night and Warm Paper:** The dark-mode page ground and primary copy.
 - **Warm Muted:** Secondary copy, captions, and technical context.
+- **Warm Surfaces and Borders:** Slightly deeper warm tones separate panels, tables, dividers, and the footer without introducing neutral gray.
 - **Image Matte:** A fixed light surface behind every engineering image in both themes.
+- **Media Dark:** Video frames use a warm near-black rather than the page background.
 
 ### Named Rules
 
@@ -110,7 +136,7 @@ The palette combines warm paper and ink with a limited technical accent. Light a
 
 ### Hierarchy
 
-- **Display** (600, fluid 2.75–5.5rem, 0.98): Page titles and the home statement; balanced and limited in width.
+- **Display** (600, fluid 2.75–5.5rem, 0.98): The base page-title scale and home statement; balanced and limited in width. The active bold variant raises page titles to 700 and up to 6rem.
 - **Headline** (600, fluid 1.8–2.45rem, 1.08): Major home and index sections.
 - **Title** (600, fluid 1.35–1.75rem, 1.18): Project entry titles.
 - **Body** (400, 1rem, 1.68): Narrative copy with a maximum line length of 72ch.
@@ -124,7 +150,7 @@ The palette combines warm paper and ink with a limited technical accent. Light a
 
 The main container is capped at 1440px with fluid 1–3rem side padding. Home uses a full-width split hero followed by bordered content chapters. Other general pages use a 190–220px contact rail beside a flexible content column. Project pages remove the rail, center a 1240px media column, and keep all narrative text and captions to a shared 48rem width. Wide space belongs to project evidence and structure; headings, paragraphs, lists, tables, captions, and closing links share one reading edge.
 
-Project indexes use two flat columns with 2rem horizontal and 4rem vertical gaps. At 960px and below, the contact rail moves inline and project lists collapse to one column. At 700px and below, phone-specific padding, typography, navigation, and media rules take over. Major project sections use a fluid 4.5–7.5rem vertical interval.
+Project indexes use two flat columns with 2rem horizontal and 4rem vertical gaps; the home selection uses three columns, drops to two between 961px and 1120px, then becomes one column at 960px. At 960px and below, the contact rail moves inline and general project lists collapse to one column. At 700px and below, phone-specific padding, typography, navigation, and media rules take over. At 340px and below, wide engineering tables become intentionally scrollable. Major project sections use a fluid 4.5–7.5rem vertical interval.
 
 ## Elevation & Depth
 
@@ -224,8 +250,11 @@ Project images declare intrinsic dimensions and lazy-load below the first projec
 - **Do** lead with real CAD, drawing, prototype, or test evidence.
 - **Do** keep engineering media on the fixed light matte in both color themes.
 - **Do** retain descriptive alt text and meaningful HTML headings so the page survives media failure.
+- **Do** give videos adjacent explanatory text and preserve visible keyboard focus for every control and link.
 - **Do** keep the blue/orange choice centralized in `portfolio_accent`.
 - **Do** use simple 180ms ease-out transitions and respect reduced-motion settings.
+- **Do** apply the initial theme in the document head, persist the manual choice, and keep useful content available without JavaScript.
+- **Do** declare intrinsic media dimensions and lazy-load project imagery below the opening hero.
 - **Do** use the automatic `↗` treatment for embedded text links instead of typing arrows into labels.
 - **Do** keep project claims, status labels, dates, and measurements synchronized across cards, detail pages, and Experience.
 - **Do** strip private metadata and local paths from public media before committing it.
