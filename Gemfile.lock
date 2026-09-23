@@ -311,10 +311,8 @@ DEPENDENCIES
   connection_pool (= 3.0.2)
   github-pages
   jekyll
-  jekyll-feed
   jekyll-redirect-from
   jekyll-sitemap
-  jemoji
   webrick (~> 1.8)
 
 CHECKSUMS

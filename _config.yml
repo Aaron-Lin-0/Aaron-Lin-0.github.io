@@ -1,188 +1,44 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
-# server processes.
-
-# Basic Site Settings
+# Core site identity
 locale                   : "en-US"
-site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 portfolio_accent         : "blue" # Change to "orange" to switch the complete accent palette.
 portfolio_style          : "bold" # Change to "folio" to use the quieter original portfolio treatment.
 title                    : "Aaron Lin"
 title_separator          : "|"
-name                     : &name "Aaron Lin"
-description              : &description "Mechanical Engineering student at Boston University, specializing in aerospace and propulsion"
+name                     : "Aaron Lin"
+description              : "Mechanical Engineering student at Boston University, specializing in aerospace and propulsion"
 url                      : https://aaronlin.space
 baseurl                  : ""
 repository               : "Aaron-Lin-0/Aaron-Lin-0.github.io"
 
-# Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
 author:
-  # Biographic information
-  avatar           : ""
-  name             : "Aaron Lin"
-  pronouns         : 
-  bio              : "Mechanical Engineering Student @ Boston University"
-  location         : "Boston, MA"
-  employer         : "Boston University"
-  uri              : 
-  email            : "aarontylin@gmail.com" 
+  name                    : "Aaron Lin"
+  email                   : "aarontylin@gmail.com"
+  linkedin                : "aarontylin"
 
-  # Academic websites
-  academia         : 
-  arxiv            : 
-  googlescholar    : 
-  inspire-hep      : 
-  impactstory      : 
-  orcid            : 
-  semantic         : 
-  ssrn             : 
-  pubmed           : 
-  researchgate     : 
-  scopus           : 
-  zotero           : 
-
-
-  # Repositories and software development
-  bitbucket        : 
-  codepen          : 
-  dribbble         : 
-  github           :
-  kaggle           :  
-  stackoverflow    :    
-
-  # Social media
-  artstation       : 
-  bluesky          : 
-  facebook         : 
-  flickr           : 
-  foursquare       : 
-  goodreads        : 
-  google_plus      : 
-  keybase          : 
-  instagram        : 
-  lastfm           : 
-  linkedin         : "aarontylin"
-  mastodon         : 
-  medium           : 
-  pinterest        : 
-  soundcloud       : 
-  steam            : 
-  telegram         : 
-  tumblr           : 
-  twitter          : 
-  vine             : 
-  weibo            : 
-  wikipedia        : 
-  xing             : 
-  youtube          : 
-  zhihu            : 
-
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
-
-# Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
-breadcrumbs              : false # true, false (default)
-words_per_minute         : 160
-future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
-comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
-  disqus:
-    shortname            :
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-atom_feed:
-  hide                   : true     # hide the RSS feed in the footer
-  path                   : # blank (default) uses feed.xml
-
-
-# SEO Related
-google_site_verification :
-bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
-
-
-# Social Sharing
-twitter:
-  username               : &twitter
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
+# Search and social metadata
 og_image                 : /images/profile-headshot.jpg
 og_description           : "Mechanical engineering junior seeking Summer 2027 internships. Explore rocket nozzle design, robotics, aerodynamic analysis, and experimental work."
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : Person
-  name                   : Aaron Lin
+  type                    : Person
+  name                    : Aaron Lin
   links:
     - https://www.linkedin.com/in/aarontylin/
 
-
-# Analytics
-analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
-  google:
-    tracking_id          :
-
-
-# Reading Files
+# Published sources
 include:
   - .htaccess
   - _pages
   - files
 exclude:
   - _projects/2026-09-01-me360.md
-  - _pages/terms.md
-  - _pages/year-archive.html
-  - _pages/publications.html
-  - _pages/portfolio.html
-  - _pages/page-archive.html
-  - _pages/category-archive.html
-  - _pages/collection-archive.html
   - tmp
   - docs
+  - tools
   - resume-source
   - AGENTS.md
-  - talkmap
-  - markdown_generator
-  - scripts
+  - DESIGN.md
+  - PRODUCT.md
+  - README.md
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -198,6 +54,7 @@ exclude:
   - config
   - Dockerfile
   - Gemfile
+  - Gemfile.lock
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
@@ -206,24 +63,19 @@ exclude:
   - node_modules
   - package.json*
   - Rakefile
-  - README
   - vendor
 keep_files:
   - .git
   - .svn
+
+# Content rendering
 encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-
-# Conversion
 markdown: kramdown
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 highlighter: rouge
+future: true
 lsi: false
-excerpt_separator: "\n\n"
 incremental: false
-
-
-# Markdown Processing
 kramdown:
   input: GFM
   hard_wrap: false
@@ -234,141 +86,38 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-
-# These settings control the types of collections used by the template
 collections:
-  publications:
-    output: false
-    permalink: /:collection/:path/
-  portfolio:
-    output: false
-    permalink: /:collection/:path/
   projects:
     output: true
     permalink: /:collection/:path/
-  talks:
-    output: false
-    permalink: /:collection/:path/
 
-
-# These settings control how pages and collections are included in the site
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
   - scope:
       path: ""
       type: pages
     values:
-      layout: single
-      author_profile: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _projects
+      layout: engineering
   - scope:
       path: ""
       type: projects
     values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
+      layout: engineering
 
-
-# Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
 
-
-# Outputting
 permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
-timezone: Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Etc/UTC
 
-
-# Plugins
 plugins:
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jemoji
 
-# Mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jemoji
 
-
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
-
-# HTML Compression
-# - https://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
