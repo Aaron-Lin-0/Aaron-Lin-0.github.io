@@ -16,7 +16,8 @@ The site is built with Jekyll and GitHub Pages on top of [Academic Pages](https:
 - `_includes/` — shared navigation, contact, project-card, and figure components
 - `_layouts/engineering.html` — portfolio page layout
 - `assets/css/engineering.css` — portfolio design tokens, responsive layout, and theme styles
-- `assets/js/_main.js` — persistent light/dark theme behavior; `assets/js/theme.js` supplies Plotly theme definitions
+- `assets/js/_main.js` — persistent light/dark theme behavior
+- `tools/future/` — excluded references and dormant generators that may support a future evidence page
 - `images/projects/` — optimized project images used on the site
 - `files/` — public résumé, reports, drawings, and videos
 - `PRODUCT.md` — audience, purpose, and content principles
