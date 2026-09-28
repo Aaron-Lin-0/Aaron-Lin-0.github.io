@@ -17,7 +17,7 @@ In addition to the card fields documented in the README:
 
 - `card_image`, `card_alt`, `card_image_width`, and `card_image_height` describe the card image. Supply actual dimensions rather than relying on include defaults.
 - `hero_image`, `hero_alt`, `hero_width`, `hero_height`, and `hero_caption` describe the detail-page hero.
-- Images are optional when no useful evidence exists; ME360 currently has no card image or hero. Do not manufacture imagery to fill the space.
+- Images are optional when no useful evidence exists. ME360 now uses an approved prototype photograph for its card and hero; do not manufacture imagery to fill gaps elsewhere.
 - Body figures use this include pattern (replace example values with actual asset details):
 
 ```liquid
@@ -31,6 +31,7 @@ Label requirements, modeled predictions, measured results, and future work clear
 | Material | Current public location |
 | --- | --- |
 | Resume | `files/Aaron_Lin_resume_2026.pdf` |
+| Engineering portfolio | `files/Aaron_Lin_engineering_portfolio.pdf` |
 | Nozzle drawings | `files/nozzle-part-drawing.pdf`, `files/nozzle-adapter-assembly-drawing.pdf` |
 | Nozzle recordings | `files/nozzle-hotfire-real-time.mp4`, `files/nozzle-hotfire-slow-motion.mp4` |
 | Temperature-monitor report | `files/temp-sensor-report.pdf` |
@@ -46,9 +47,10 @@ When replacing an artifact:
 
 1. Preserve its URL when practical. If renaming, search references with `rg -n 'old-filename' _pages _projects _includes _data _config.yml README.md docs` and update them together.
 2. For resumes, check Home, Experience, and the contact rail. Replacing the PDF does not update page text; editing `_pages/cv.md` does not regenerate the PDF.
-3. For drawings, update corresponding previews and captions when needed. Confirm dimensions, units, revision, and depicted assembly agree across PDF and preview.
-4. Open the final download from the rendered site and confirm the intended version. Check video playback, poster, and nearby explanation when replacing recordings.
-5. Inspect `git status --short` and the exact changed file list for accidental sources, intermediate exports, or unrelated artifacts before committing.
+3. For the engineering portfolio, preserve `files/Aaron_Lin_engineering_portfolio.pdf` and check Home actions and contact links, the shared contact rail, Experience, and Contact. Keep its LaTeX source, logs, and renders under ignored `local/` or `tmp/` paths.
+4. For drawings, update corresponding previews and captions when needed. Confirm dimensions, units, revision, and depicted assembly agree across PDF and preview.
+5. Open the final download from the rendered site and confirm the intended version. Check video playback, poster, and nearby explanation when replacing recordings.
+6. Inspect `git status --short` and the exact changed file list for accidental sources, intermediate exports, or unrelated artifacts before committing.
 
 ## Publication boundaries
 

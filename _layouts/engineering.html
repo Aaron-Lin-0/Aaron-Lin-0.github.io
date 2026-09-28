@@ -22,9 +22,22 @@ layout: default
       {% if page.collection == 'projects' %}{% include project-tldr.html %}{% endif %}
       {% if page.collection == 'projects' and page.hero_image %}
         <figure class="project-hero">
-          <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt }}" width="{{ page.hero_width }}" height="{{ page.hero_height }}">
+          <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt }}" width="{{ page.hero_width }}" height="{{ page.hero_height }}" style="view-transition-name: project-{{ page.slug | slugify }};">
           {% if page.hero_caption %}<figcaption>{{ page.hero_caption }}</figcaption>{% endif %}
         </figure>
+      {% endif %}
+      {% if page.collection == 'projects' %}
+        <div class="project-toc" data-project-toc hidden>
+          <nav class="project-toc__desktop" aria-label="On this page">
+            <span class="project-toc__label">On this page</span>
+            <ol data-project-toc-list></ol>
+          </nav>
+          <details class="project-toc__mobile">
+            <summary>On this page</summary>
+            <nav aria-label="On this page"><ol data-project-toc-list></ol></nav>
+          </details>
+          <div class="project-toc__progress" aria-hidden="true"></div>
+        </div>
       {% endif %}
       <div class="engineering-content">{{ content }}</div>
       {% if page.collection == 'projects' %}<div class="project-end"><a href="{{ '/projects/' | relative_url }}">More projects</a> <a href="mailto:{{ site.author.email }}">Ask me about this project</a></div>{% endif %}
