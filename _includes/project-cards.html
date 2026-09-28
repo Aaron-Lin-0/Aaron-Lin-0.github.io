@@ -22,7 +22,7 @@
     <a class="project-card-link" href="{{ project.url | relative_url }}" aria-label="View {{ project.card_title }} project">
     {% endif %}
     {% if project.card_image %}
-      <img src="{{ project.card_image | relative_url }}" alt="{{ project.card_alt }}" width="{{ project.card_image_width | default: 800 }}" height="{{ project.card_image_height | default: 520 }}" loading="lazy">
+      <img src="{{ project.card_image | relative_url }}" alt="{{ project.card_alt }}" width="{{ project.card_image_width | default: 800 }}" height="{{ project.card_image_height | default: 520 }}" loading="lazy" style="view-transition-name: project-{{ project.slug | slugify }};">
     {% else %}
       <div class="project-card-placeholder" aria-hidden="true">
         <p class="project-card-placeholder__context">{{ project.context }}</p>

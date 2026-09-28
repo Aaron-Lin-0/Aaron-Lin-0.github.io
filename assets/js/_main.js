@@ -36,6 +36,61 @@ function toggleTheme() {
   setTheme(new_theme);
 }
 
+function initProjectToc() {
+  var toc = document.querySelector('[data-project-toc]');
+  var content = document.querySelector('.engineering-project .engineering-content');
+  if (!toc || !content) return;
+
+  var headings = Array.prototype.slice.call(content.querySelectorAll(':scope > h2'));
+  if (headings.length < 3) return;
+
+  var lists = toc.querySelectorAll('[data-project-toc-list]');
+  var linksById = {};
+
+  headings.forEach(function (heading, index) {
+    if (!heading.id) heading.id = 'project-section-' + (index + 1);
+    linksById[heading.id] = [];
+
+    Array.prototype.forEach.call(lists, function (list) {
+      var item = document.createElement('li');
+      var link = document.createElement('a');
+      link.href = '#' + heading.id;
+      link.textContent = heading.textContent;
+      link.addEventListener('click', function () {
+        var disclosure = toc.querySelector('.project-toc__mobile');
+        if (disclosure && window.matchMedia('(max-width: 960px)').matches) {
+          disclosure.removeAttribute('open');
+        }
+      });
+      item.appendChild(link);
+      list.appendChild(item);
+      linksById[heading.id].push(link);
+    });
+  });
+
+  function setActiveSection(id) {
+    Object.keys(linksById).forEach(function (sectionId) {
+      linksById[sectionId].forEach(function (link) {
+        if (sectionId === id) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    });
+  }
+
+  setActiveSection(headings[0].id);
+  toc.hidden = false;
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      var visible = entries.filter(function (entry) { return entry.isIntersecting; });
+      visible.sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
+      if (visible.length) setActiveSection(visible[0].target.id);
+    }, { rootMargin: '-18% 0px -68% 0px', threshold: 0 });
+
+    headings.forEach(function (heading) { observer.observe(heading); });
+  }
+}
+
 /* ==========================================================================
    Actions that should occur when the page has been fully loaded
    ========================================================================== */
@@ -52,6 +107,9 @@ $(document).ready(function () {
 
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);
+
+  // Add progressive navigation for longer project case studies
+  initProjectToc();
 
   // Enable the sticky footer
   var bumpIt = function () {

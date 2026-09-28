@@ -19,7 +19,7 @@ The site is built with Jekyll and GitHub Pages on top of [Academic Pages](https:
 - `assets/js/_main.js` — persistent light/dark theme behavior
 - `tools/future/` — excluded references and dormant generators that may support a future evidence page
 - `images/projects/` — optimized project images used on the site
-- `files/` — public résumé, reports, drawings, and videos
+- `files/` — public résumé, engineering portfolio, reports, drawings, and videos
 - `PRODUCT.md` — audience, purpose, and content principles
 - `DESIGN.md` — visual system and component rules
 - `docs/MAINTENANCE.md` — content, privacy, validation, and publishing workflow

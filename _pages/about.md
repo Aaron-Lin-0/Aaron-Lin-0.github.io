@@ -19,6 +19,7 @@ redirect_from:
       <a class="portfolio-button primary" href="{{ '/projects/' | relative_url }}">See my projects</a>
       <a class="portfolio-button" href="{{ '/files/Aaron_Lin_resume_2026.pdf' | relative_url }}">Download my resume</a>
     </div>
+    <p class="home-brief-link"><a href="{{ '/files/Aaron_Lin_engineering_portfolio.pdf' | relative_url }}">5-page engineering brief · PDF · 1.2 MB</a></p>
   </div>
   <aside class="home-hero-profile" aria-label="Aaron Lin contact information">
     <div class="home-profile-portrait">
@@ -36,6 +37,17 @@ redirect_from:
   </aside>
 </section>
 
+<section class="home-section home-section--in-progress" aria-labelledby="in-progress-title" markdown="1">
+<div class="home-section-heading">
+  <h2 id="in-progress-title">In progress</h2>
+  <a href="{{ '/projects/#in-progress' | relative_url }}">View current work</a>
+</div>
+
+ME360 has reached coordinated square and circle path testing; ARGO has completed its Conceptual Design Review. Both projects remain in progress.
+
+{% include project-cards.html order="recent" status="In progress" split_links=true %}
+</section>
+
 <section class="home-section" aria-labelledby="selected-projects-title" markdown="1">
 <div class="home-section-heading">
   <h2 id="selected-projects-title">Selected projects</h2>
@@ -44,7 +56,7 @@ redirect_from:
 
 A selection of rocket hardware, robotics, and aerodynamic work, with the calculations, drawings, and tests behind each project.
 
-{% include project-cards.html limit=3 split_links=true %}
+{% include project-cards.html limit=3 status="Completed" split_links=true %}
 </section>
 
 <section class="home-section" aria-labelledby="recent-experience-title">

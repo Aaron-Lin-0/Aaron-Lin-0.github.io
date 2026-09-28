@@ -11,6 +11,7 @@ redirect_from:
 ---
 
 [Download my latest resume (PDF)]({{ '/files/Aaron_Lin_resume_2026.pdf' | relative_url }}){: .portfolio-button .primary}
+[Engineering brief (5-page PDF)]({{ '/files/Aaron_Lin_engineering_portfolio.pdf' | relative_url }}){: .portfolio-button}
 
 ## Education
 
@@ -55,7 +56,7 @@ I tested microphone directional sensitivity across an azimuthal sweep and docume
 
 ## Selected academic projects
 
-- **[2.5-DOF Cartesian motion system]({{ '/projects/me360/' | relative_url }}) — in progress:** Our ME360 team is developing a portable electromechanical system with multiple linear stages and a task-specific end effector. The class requires at least a 2.5 × 2.5 in work area and a system that fits in a backpack or can be assembled by one person in under ten minutes.
+- **[2.5-DOF Cartesian motion system]({{ '/projects/me360/' | relative_url }}) — in progress:** Our ME360 team built an early X-Y pen plotter with lead-screw stages and a motorized pen lift. We ran programmed square and circle path tests; calibration and structural refinement are still in progress.
 - **[The Deskinator]({{ '/projects/ek210-deskinator/' | relative_url }}):** I wrote the Arduino navigation firmware and helped assemble and redesign an autonomous cleaning robot. Its final documented trial collected 72 of 95 rice grains.
 - **[Room temperature monitor]({{ '/projects/ek131-temp-sensor/' | relative_url }}):** I built an enclosed Arduino monitor that displays Celsius and Fahrenheit and signals temperatures outside 60–75°F.
 
