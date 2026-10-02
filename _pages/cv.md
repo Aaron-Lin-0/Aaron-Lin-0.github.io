@@ -22,7 +22,7 @@ September 2024–May 2028 (expected) · GPA: 3.76/4.0 · Dean's List
 
 Study abroad: BU Sydney Sophomore Engineering Program, University of Sydney, Spring 2026.
 
-Relevant coursework includes mechanics of materials, energy and thermodynamics, differential equations, and computational linear algebra.
+Selected completed coursework: ME 304 Energy and Thermodynamics, ME 305 Mechanics of Materials, ME 306 Introduction to Materials Science, ME 357 Introduction to CAD and Machine Components, EK 307 Electric Circuits, and EK 381 Probability, Statistics, and Data Science for Engineers. Selected current coursework (Fall 2026): ME 303 Fluid Mechanics, ME 358 Manufacturing Processes, ME 360 Electromechanical Design, and ME 505 Thermodynamics and Statistical Mechanics.
 
 ## Engineering experience
 

@@ -19,7 +19,7 @@ redirect_from:
       <a class="portfolio-button primary" href="{{ '/projects/' | relative_url }}">See my projects</a>
       <a class="portfolio-button" href="{{ '/files/Aaron_Lin_resume_2026.pdf' | relative_url }}">Download my resume</a>
     </div>
-    <p class="home-brief-link"><a href="{{ '/files/Aaron_Lin_engineering_portfolio.pdf' | relative_url }}">5-page engineering brief · PDF · 1.2 MB</a></p>
+    <p class="home-brief-link"><a href="{{ '/files/Aaron_Lin_engineering_portfolio.pdf' | relative_url }}">5-page engineering brief · PDF · 1.6 MB</a></p>
   </div>
   <aside class="home-hero-profile" aria-label="Aaron Lin contact information">
     <div class="home-profile-portrait">
