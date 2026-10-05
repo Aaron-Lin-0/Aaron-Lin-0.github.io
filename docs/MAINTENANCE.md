@@ -90,6 +90,16 @@ The intentional public identifiers are limited to the contact details described 
 
 ## Release
 
+### Crawler guidance
+
+`robots.txt` allows public portfolio crawling, points to `/sitemap.xml`, and asks AhrefsBot and SemrushBot to skip the site to reduce bulk SEO crawling. These voluntary rules do not prevent spam, email harvesting, or access by bots that ignore them. Keep search and recruiting crawlers allowed when adjusting this policy.
+
+`llms.txt` provides a concise, factual candidate overview and links to evidence. The shared head links to it with `rel="describedby"`. This is an optional convention for AI tools, not a guarantee of discovery, ranking, or recommendation. Keep its internship target, graduation date, project status, and contribution summaries synchronized with Home, Experience, and project pages. Use supported facts rather than instructions to endorse or rank Aaron.
+
+After building, check that `/robots.txt` and `/llms.txt` are plain text without front matter or an HTML layout, their links resolve, and `/sitemap.xml` remains available. After publishing, check those same URLs on the live domain.
+
+### Publishing steps
+
 1. Run the production Jekyll build and browser checks.
 2. Review `git diff --check`, `git status --short`, and `git diff --cached --stat`.
 3. Stage only files required by the site or its maintenance documentation.

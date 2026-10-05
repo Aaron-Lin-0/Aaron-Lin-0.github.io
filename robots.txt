@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /robots.txt
+sitemap: false
+---
+# Keep public portfolio pages and evidence available to search and recruiting tools.
+User-agent: *
+Allow: /
+
+# Reduce bulk SEO crawling. These are advisory rules, not spam protection.
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+Sitemap: {{ '/sitemap.xml' | absolute_url }}
