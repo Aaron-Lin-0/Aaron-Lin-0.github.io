@@ -113,10 +113,6 @@ body:hover .visually-hidden button {
 
 .cf { clear: both; }
 
-.wrapper {
-  @include container();
-}
-
 /* Source: http://snipplr.com/view/10979/css-cross-browser-word-wrap */
 .wordwrap { 
   white-space: pre-wrap;      /* CSS3 */   
@@ -137,7 +133,7 @@ body:hover .visually-hidden button {
   margin-left: auto;
   margin-right: auto;
 
-  @include breakpoint($small) {
+  @media (min-width: 37.5em) {
     float: left;
     margin-right: 1em;
   }
@@ -150,7 +146,7 @@ body:hover .visually-hidden button {
   margin-left: auto;
   margin-right: auto;
 
-  @include breakpoint($small) {
+  @media (min-width: 37.5em) {
     float: right;
     margin-left: 1em;
   }
@@ -162,14 +158,6 @@ body:hover .visually-hidden button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* file page content container */
-
-.full {
-  @include breakpoint($large){
-    margin-right: -1 * span(2.5 of 12) !important;
-  }
 }
 
 /*
@@ -253,7 +241,7 @@ body:hover .visually-hidden button {
    ========================================================================== */
 
 .sticky {
-  @include breakpoint($large) {
+  @media (min-width: 57.8125em) {
     @include clearfix();
     position: -webkit-sticky;
     position: sticky;

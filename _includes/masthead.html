@@ -1,9 +1,8 @@
-{% include base_path %}
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button type="button" aria-label="Toggle navigation menu"><span class="navicon" aria-hidden="true"></span></button>
+        <button type="button" class="hidden" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav-hidden-links"><span class="navicon" aria-hidden="true"></span></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist">
             <a class="masthead-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">{{ site.title }}</a>
@@ -23,7 +22,7 @@
             </li>
           {% endfor %}
         </ul>
-        <ul class="hidden-links hidden"></ul>
+        <ul id="site-nav-hidden-links" class="hidden-links hidden"></ul>
       </nav>
       <div id="theme-toggle">
         <button type="button" aria-label="Toggle color theme" aria-pressed="false" title="Toggle color theme">

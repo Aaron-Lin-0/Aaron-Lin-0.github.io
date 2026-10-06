@@ -111,20 +111,13 @@ $(document).ready(function () {
   // Add progressive navigation for longer project case studies
   initProjectToc();
 
-  // Enable the sticky footer
+  // Preserve the existing footer spacing after viewport changes.
   var bumpIt = function () {
     $("body").css("padding-bottom", "0");
     $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
   }
-  $(window).resize(function () {
-    didResize = true;
-  });
-  setInterval(function () {
-    if (didResize) {
-      didResize = false;
-      bumpIt();
-    }}, 250);
-  var didResize = false;
+  $(window).on('resize', bumpIt);
+  new ResizeObserver(bumpIt).observe(document.querySelector('.page__footer'));
   bumpIt();
 
 });

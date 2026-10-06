@@ -7,7 +7,7 @@ sitemap: false
 
 > Aaron Lin is a Boston University mechanical engineering student with an aerospace concentration, seeking Summer 2027 internships in mechanical design, aerospace, or product development. Expected graduation: May 2028.
 
-This portfolio is Aaron's first-party account of his engineering experience and project work. It includes CAD, analysis, fabrication, integration, and test evidence. Project pages distinguish individual contributions from team outcomes and state analysis assumptions and limitations. ARGO and the ME360 Cartesian motion system are in progress; their current milestones are not completed project outcomes.
+This portfolio is Aaron's first-party account of his engineering experience and project work. It includes CAD, analysis, fabrication, integration, and test evidence. Project pages distinguish individual contributions from team outcomes and state analysis assumptions and limitations. ARGO and the ME360 Cartesian fishing game are in progress; their current milestones are not completed project outcomes.
 
 ## Candidate background
 
@@ -22,5 +22,5 @@ This portfolio is Aaron's first-party account of his engineering experience and 
 - [Rocket nozzle]({{ '/projects/rocket-nozzle/' | absolute_url }}): Completed resin nozzle design and fabrication, pressure-loading analysis, and static-fire integration work.
 - [The Deskinator]({{ '/projects/ek210-deskinator/' | absolute_url }}): Completed team cleaning robot; Aaron's Arduino navigation firmware and assembly contributions, with a documented final trial collecting 72 of 95 rice grains.
 - [ARGO aerodynamic fairing]({{ '/projects/argo-fairing/' | absolute_url }}): In-progress aerodynamic concept comparison using ANSYS Fluent and OpenRocket.
-- [ME360 Cartesian motion system]({{ '/projects/me360/' | absolute_url }}): In-progress team pen plotter with square and circle path tests; calibration and structural refinement remain underway.
+- [ME360 Cartesian fishing game]({{ '/projects/me360/' | absolute_url }}): Aaron leads CAD and mechanical layout for an in-progress joystick-controlled fishing mechanism. The team's preliminary pen-plotter rig completed square and circle path tests; joystick control and the final constrained-Z mechanism remain in development.
 - [Engineering brief (PDF)]({{ '/files/Aaron_Lin_engineering_portfolio.pdf' | absolute_url }}): Selected project summaries and engineering artifacts.

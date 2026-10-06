@@ -12,8 +12,14 @@ var $hlinks = $('#site-nav .hidden-links');
 
 var breaks = [];
 
+function setNavOpen(open) {
+  $hlinks.toggleClass('hidden', !open);
+  $btn.toggleClass('close', open).attr('aria-expanded', String(open));
+}
+
 function updateNav() {
 
+  var focusedLink = document.activeElement;
   var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
 
   // The visible list is overflowing the nav
@@ -44,14 +50,18 @@ function updateNav() {
 
     // Hide the dropdown btn if hidden list is empty
     if (breaks.length < 1) {
+      if ($btn.is(':focus')) $vlinks.find('a').first().trigger('focus');
       $btn.addClass('hidden');
-      $btn.removeClass('close');
-      $hlinks.addClass('hidden');
+      setNavOpen(false);
     }
   }
 
-  // Keep counter updated
-  $btn.attr("count", breaks.length);
+  // Resizing can move the focused link into the closed menu.
+  if ($hlinks.hasClass('hidden') && $hlinks[0].contains(focusedLink)) {
+    $btn.trigger('focus');
+  } else if (($vlinks[0].contains(focusedLink) || $hlinks[0].contains(focusedLink)) && focusedLink !== document.activeElement) {
+    $(focusedLink).trigger('focus');
+  }
 
   // update masthead height and the body top padding
   var mastheadHeight = $('.masthead').height();
@@ -64,13 +74,24 @@ function updateNav() {
 $(window).on('resize', function () {
   updateNav();
 });
-screen.orientation.addEventListener("change", function () {
+if (screen.orientation) screen.orientation.addEventListener("change", function () {
   updateNav();
 });
 
 $btn.on('click', function () {
-  $hlinks.toggleClass('hidden');
-  $(this).toggleClass('close');
+  setNavOpen($hlinks.hasClass('hidden'));
+});
+
+$nav.on('keydown', function (event) {
+  if (event.key === 'Escape' && !$hlinks.hasClass('hidden')) {
+    setNavOpen(false);
+    $btn.trigger('focus');
+  }
+});
+
+$hlinks.on('click', 'a', function () {
+  setNavOpen(false);
+  $btn.trigger('focus');
 });
 
 updateNav();

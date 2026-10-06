@@ -34,7 +34,7 @@
     max-width: 100%;
     padding: 0 1em 1em;
 
-    @include breakpoint($x-large) {
+    @media (min-width: 80em) {
       max-width: $x-large;
     }
   }

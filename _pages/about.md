@@ -19,7 +19,7 @@ redirect_from:
       <a class="portfolio-button primary" href="{{ '/projects/' | relative_url }}">See my projects</a>
       <a class="portfolio-button" href="{{ '/files/Aaron_Lin_resume_2026.pdf' | relative_url }}">Download my resume</a>
     </div>
-    <p class="home-brief-link"><a href="{{ '/files/Aaron_Lin_engineering_portfolio.pdf' | relative_url }}">5-page engineering brief · PDF · 1.6 MB</a></p>
+    <p class="home-brief-link"><a href="{{ '/files/Aaron_Lin_engineering_portfolio.pdf' | relative_url }}">5-page engineering brief · PDF · 2.1 MB</a></p>
   </div>
   <aside class="home-hero-profile" aria-label="Aaron Lin contact information">
     <div class="home-profile-portrait">
@@ -43,9 +43,9 @@ redirect_from:
   <a href="{{ '/projects/#in-progress' | relative_url }}">View current work</a>
 </div>
 
-ME360 has reached coordinated square and circle path testing; ARGO has completed its Conceptual Design Review. Both projects remain in progress.
+ARGO has completed its Conceptual Design Review; ME360's fishing-game mechanism is in CAD development after preliminary square and circle path tests. Both projects remain in progress.
 
-{% include project-cards.html order="recent" status="In progress" split_links=true %}
+{% include project-cards.html status="In progress" split_links=true %}
 </section>
 
 <section class="home-section" aria-labelledby="selected-projects-title" markdown="1">

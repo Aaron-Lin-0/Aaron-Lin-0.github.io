@@ -2,6 +2,10 @@
 
 This directory holds references that may support future engineering evidence but are not part of the production website. Jekyll excludes the entire `tools/` tree.
 
+## Cleanup snapshot
+
+`cleanup-2026-10-05.zip` preserves the source files from before the Sass and template cleanup, including the retired Susy/Breakpoint libraries and inactive SEO options. See [the change and rollback record](../../docs/CLEANUP_2026-10-05.md) before restoring files or reusing a feature.
+
 ## Plotly and Mermaid
 
 Interactive plots may be justified when a reader benefits from inspecting a real dataset. Mermaid may be justified for a genuine control flow or system architecture. Neither renderer should load globally: add a page-level opt-in, load the library only on opted-in pages, preserve a useful text or static-image fallback, and verify both color themes and keyboard access.

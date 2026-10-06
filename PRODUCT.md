@@ -39,7 +39,7 @@ All downloadable files are part of the product surface. Their visible content an
 
 ## Current Project Set
 
-- 2.5-DOF Cartesian motion system — in progress
+- 2.5-DOF Cartesian fishing game — in progress
 - ARGO aerodynamic fairing — in progress
 - The Deskinator — completed
 - Room temperature monitor — completed

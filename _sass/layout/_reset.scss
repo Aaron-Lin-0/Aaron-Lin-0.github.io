@@ -2,7 +2,11 @@
    STYLE RESETS
    ========================================================================== */
 
-@include border-box-sizing;
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 html {
   /* apply a natural box layout model to all elements */
@@ -10,7 +14,7 @@ html {
   background-color: var(--global-bg-color);
   font-size: 16px;
 
-  @include breakpoint($medium) {
+  @media (min-width: 48em) {
     font-size: 18px;
   }
 
