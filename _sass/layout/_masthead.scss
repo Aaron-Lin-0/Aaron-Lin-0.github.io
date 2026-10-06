@@ -25,12 +25,14 @@
   }
 
   &__inner-wrap {
-    @include container;
+    max-width: $large;
+    margin-left: auto;
+    margin-right: auto;
     @include clearfix;
     padding: 0.5em 1em;
     font-family: $sans-serif-narrow;
 
-    @include breakpoint($x-large) {
+    @media (min-width: 80em) {
       max-width: $x-large;
     }
 

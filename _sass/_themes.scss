@@ -47,8 +47,6 @@ $caption-font-family        : $serif;
    Breakpoints
    ========================================================================== */
 
-@include breakpoint-set("to ems", true);
-
 $small                      : 600px !default;
 $medium                     : 768px !default;
 $medium-wide                : 900px !default;
@@ -62,15 +60,3 @@ $x-large                    : 1280px !default;
 $right-sidebar-width-narrow : auto;
 $right-sidebar-width        : auto;
 $right-sidebar-width-wide   : auto;
-
-$susy: (
-    columns: 12,
-    column-width: 120px,
-    gutters: 1/4,
-    math: fluid,
-    output: float,
-    gutter-position: after,
-    container: $large,
-    global-box-sizing: border-box,
-);
-
