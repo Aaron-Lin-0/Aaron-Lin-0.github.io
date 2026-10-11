@@ -13,11 +13,12 @@ redirect_from:
 <section class="home-hero" id="about">
   <div class="home-hero-copy">
     <h1>Hi, I'm Aaron.</h1>
-    <p class="intro">I'm a mechanical engineering junior at <a class="org-link" href="https://www.bu.edu/eng/academics/departments-and-divisions/mechanical-engineering/">Boston University</a> with an aerospace concentration. Through the <a class="org-link" href="https://burpg.org/">Boston University Rocket Propulsion Group (BURPG)</a> and course projects, I take designs from CAD and analysis through fabrication and testing.</p>
-    <p>I'm seeking a <strong>Summer 2027 internship</strong> in mechanical design, aerospace, or product development. I expect to graduate in May 2028.</p>
+    <p class="intro">I take mechanical designs from CAD and analysis through fabrication and testing, with work in rocket hardware, aerodynamics, and robotics.</p>
+    <p>I'm a mechanical engineering junior at <a class="org-link" href="https://www.bu.edu/eng/academics/departments-and-divisions/mechanical-engineering/">Boston University</a>, concentrating in aerospace. I'm seeking a <strong>Summer 2027 internship</strong> in mechanical design, aerospace, or product development. Expected graduation: May 2028.</p>
     <div class="actions">
-      <a class="portfolio-button primary" href="{{ '/projects/' | relative_url }}">See my projects</a>
-      <a class="portfolio-button" href="{{ '/files/Aaron_Lin_resume_2026.pdf' | relative_url }}">Download my resume</a>
+      <a class="portfolio-button primary" href="{{ '/files/Aaron_Lin_resume_2026.pdf' | relative_url }}">Resume (PDF)</a>
+      <a class="portfolio-button" href="{{ '/projects/' | relative_url }}">Explore projects</a>
+      <a class="portfolio-button" href="mailto:{{ site.author.email }}">Email me</a>
     </div>
     <p class="home-brief-link"><a href="{{ '/files/Aaron_Lin_engineering_portfolio.pdf' | relative_url }}">5-page engineering brief · PDF · 2.1 MB</a></p>
   </div>
@@ -43,7 +44,7 @@ redirect_from:
   <a href="{{ '/projects/#in-progress' | relative_url }}">View current work</a>
 </div>
 
-ARGO has completed its Conceptual Design Review; ME360's fishing-game mechanism is in CAD development after preliminary square and circle path tests. Both projects remain in progress.
+I compare aerodynamic fairing geometries for ARGO and lead CAD and mechanical layout for ME360's fishing-game mechanism.
 
 {% include project-cards.html status="In progress" split_links=true %}
 </section>
@@ -54,7 +55,7 @@ ARGO has completed its Conceptual Design Review; ME360's fishing-game mechanism 
   <a href="{{ '/projects/' | relative_url }}">View all projects</a>
 </div>
 
-A selection of rocket hardware, robotics, and aerodynamic work, with the calculations, drawings, and tests behind each project.
+Completed work in mechanical design, robotics, and electronics, with drawings, analysis, and documented tests.
 
 {% include project-cards.html limit=3 status="Completed" split_links=true %}
 </section>

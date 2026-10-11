@@ -80,14 +80,14 @@ I printed the nozzle, integrated it with the chamber and seals, and helped assem
 
 <div class="video-grid">
   <figure>
-    <video controls preload="metadata" playsinline poster="{{ '/images/projects/nozzle/hotfire-poster.jpg' | relative_url }}">
+    <video controls preload="none" playsinline poster="{{ '/images/projects/nozzle/hotfire-poster.jpg' | relative_url }}">
       <source src="{{ '/files/nozzle-hotfire-real-time.mp4' | relative_url }}" type="video/mp4">
       <a href="{{ '/files/nozzle-hotfire-real-time.mp4' | relative_url }}">Download the real-time hot-fire video</a>.
     </video>
     <figcaption>Hot fire at real-time playback.</figcaption>
   </figure>
   <figure>
-    <video controls preload="metadata" playsinline poster="{{ '/images/projects/nozzle/hotfire-poster.jpg' | relative_url }}">
+    <video controls preload="none" playsinline poster="{{ '/images/projects/nozzle/hotfire-poster.jpg' | relative_url }}">
       <source src="{{ '/files/nozzle-hotfire-slow-motion.mp4' | relative_url }}" type="video/mp4">
       <a href="{{ '/files/nozzle-hotfire-slow-motion.mp4' | relative_url }}">Download the slow-motion hot-fire video</a>.
     </video>

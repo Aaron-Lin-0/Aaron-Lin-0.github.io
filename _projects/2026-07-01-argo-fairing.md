@@ -17,7 +17,7 @@ project_group: engineering
 card_image: /images/projects/argo/side-layout.png
 card_image_width: 2117
 card_image_height: 380
-card_alt: Side view of the ARGO rocket showing the external downcomer and aft fairing concept
+card_alt: Detail view of ARGO's aft downcomer connection and fairing concept
 hero_image: /images/projects/argo/side-layout.png
 hero_width: 2117
 hero_height: 380

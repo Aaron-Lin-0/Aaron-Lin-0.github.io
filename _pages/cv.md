@@ -13,17 +13,6 @@ redirect_from:
 [Download my latest resume (PDF)]({{ '/files/Aaron_Lin_resume_2026.pdf' | relative_url }}){: .portfolio-button .primary}
 [Engineering brief (5-page PDF)]({{ '/files/Aaron_Lin_engineering_portfolio.pdf' | relative_url }}){: .portfolio-button}
 
-## Education
-
-**[Boston University](https://www.bu.edu/eng/academics/departments-and-divisions/mechanical-engineering/)**<br>
-B.S. Mechanical Engineering, Aerospace Concentration
-
-September 2024–May 2028 (expected) · GPA: 3.76/4.0 · Dean's List
-
-Study abroad: BU Sydney Sophomore Engineering Program, University of Sydney, Spring 2026.
-
-Selected completed coursework: ME 304 Energy and Thermodynamics, ME 305 Mechanics of Materials, ME 306 Introduction to Materials Science, ME 357 Introduction to CAD and Machine Components, EK 307 Electric Circuits, and EK 381 Probability, Statistics, and Data Science for Engineers. Selected current coursework (Fall 2026): ME 303 Fluid Mechanics, ME 358 Manufacturing Processes, ME 360 Electromechanical Design, and ME 505 Thermodynamics and Statistical Mechanics.
-
 ## Engineering experience
 
 ### Mechanical Engineering Intern, <a class="org-link" href="https://www.culturon.com.au/">Culturon</a>
@@ -39,6 +28,17 @@ I ran optical emission spectroscopy experiments with an HR4000 spectrometer and 
 I designed and fabricated a resin rocket nozzle, evaluated its pressure loading in SolidWorks Simulation, and helped integrate it with the chamber and ignition system for a static fire. I now work on the ARGO rocket's external fairing, using ANSYS Fluent, OpenRocket, and first-principles calculations to compare aerodynamic concepts at a Mach 2.81 design condition.
 
 [Nozzle case study]({{ '/projects/rocket-nozzle/' | relative_url }}) · [ARGO case study]({{ '/projects/argo-fairing/' | relative_url }})
+
+## Education
+
+**[Boston University](https://www.bu.edu/eng/academics/departments-and-divisions/mechanical-engineering/)**<br>
+B.S. Mechanical Engineering, Aerospace Concentration
+
+September 2024–May 2028 (expected) · GPA: 3.76/4.0 · Dean's List
+
+Study abroad: BU Sydney Sophomore Engineering Program, University of Sydney, Spring 2026.
+
+Selected completed coursework: ME 304 Energy and Thermodynamics, ME 305 Mechanics of Materials, ME 306 Introduction to Materials Science, ME 357 Introduction to CAD and Machine Components, EK 307 Electric Circuits, and EK 381 Probability, Statistics, and Data Science for Engineers. Selected current coursework (Fall 2026): ME 303 Fluid Mechanics, ME 358 Manufacturing Processes, ME 360 Electromechanical Design, and ME 505 Thermodynamics and Statistical Mechanics.
 
 ## Additional experience
 

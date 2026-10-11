@@ -52,7 +52,7 @@ typography:
     lineHeight: 1.68
   technical:
     fontFamily: "IBM Plex Mono, Roboto Mono, monospace"
-    fontSize: "0.75rem"
+    fontSize: "0.875rem"
     fontWeight: 400
     lineHeight: 1.5
 rounded:
@@ -63,7 +63,9 @@ spacing:
   sm: "0.75rem"
   md: "1rem"
   lg: "2rem"
-  section: "clamp(4.5rem, 9vw, 7.5rem)"
+  section: "clamp(3.75rem, 7.5vw, 6rem)"
+  figure: "clamp(2.5rem, 6vw, 4.5rem)"
+  home-chapter: "clamp(3.25rem, 6vw, 5rem)"
 components:
   button-primary:
     backgroundColor: "transparent"
@@ -97,7 +99,7 @@ Pages use generous negative space and a clear reading order for fast recruiter s
 - Warm neutral grounds in both color themes
 - Blueprint blue used for links, focus, numbering, and one structural detail at a time
 - Large Space Grotesk headings with readable IBM Plex Sans copy
-- IBM Plex Mono reserved for tools, values, dates, and project context
+- IBM Plex Mono reserved for tools, values, dates, captions, and project context
 - Flat project entries separated by space and rules
 - Real CAD, drawing, prototype, and test media on a fixed light matte
 - A configurable bold variant that amplifies structure without adding ornamental imagery
@@ -140,7 +142,7 @@ The palette combines warm paper and ink with a limited technical accent. Light a
 - **Headline** (600, fluid 1.8–2.45rem, 1.08): Major home and index sections.
 - **Title** (600, fluid 1.35–1.75rem, 1.18): Project entry titles.
 - **Body** (400, 1rem, 1.68): Narrative copy with a maximum line length of 72ch.
-- **Technical** (400–600, 0.69–0.86rem): Tools, results, dates, numbering, and captions.
+- **Supporting text** (400–600, 0.875rem): Tools, results, project context, captions, and contents links use IBM Plex Mono; contents labels and disclosure controls keep IBM Plex Sans. This is 14px at the phone root size and 15.75px at the desktop root size. Dates, numbering, and section labels retain their own scales.
 
 ### Named Rules
 
@@ -150,7 +152,9 @@ The palette combines warm paper and ink with a limited technical accent. Light a
 
 The main container is capped at 1440px with fluid 1–3rem side padding. Home uses a full-width split hero followed by bordered content chapters. Other general pages use a 190–220px contact rail beside a flexible content column. Project pages remove the rail, center a 1240px media column, and keep all narrative text and captions to a shared 48rem width. Wide space belongs to project evidence and structure; headings, paragraphs, lists, tables, captions, and closing links share one reading edge.
 
-Project indexes use two flat columns with 2rem horizontal and 4rem vertical gaps; the home selection uses three columns, drops to two between 961px and 1120px, then becomes one column at 960px. At 960px and below, the contact rail moves inline and general project lists collapse to one column. At 700px and below, phone-specific padding, typography, navigation, and media rules take over. At 340px and below, wide engineering tables become intentionally scrollable. Major project sections use a fluid 4.5–7.5rem vertical interval.
+Project indexes use two flat columns; the active bold variant has 2.5rem horizontal and 4.25rem vertical gaps, reduced to 3.5rem between stacked entries. The home selection uses three columns, drops to two between 961px and 1120px, then becomes one column at 960px. At 960px and below, the contact rail moves inline and general project lists collapse to one column. At 700px and below, phone-specific padding, typography, navigation, and media rules take over.
+
+Major project sections use a fluid 3.75–6rem vertical interval, and figures use 2.5–4.5rem. Headers leave 2.5–4.25rem before content. Project summaries and contents menus leave 2.5–4rem, fixed at 2.5rem on phones. Heroes retain complete images with `object-fit: contain`, a maximum height of 640px, and 3.5–5.75rem below them (3.5rem on phones). Captions align to the shared 48rem narrative column.
 
 ## Elevation & Depth
 
@@ -187,7 +191,7 @@ The name links to Home. About links to the Home introduction; Projects, Experien
 
 ### Home Hero
 
-Home opens with Aaron's positioning, internship search, project and resume actions, portrait, and immediate contact links in one desktop viewport. A short blueprint-rule and portrait reveal gives the opening one authored motion cue. The composition stacks naturally on smaller screens and never forces viewport-height sections on mobile.
+Home opens with Aaron's positioning, internship search, project and resume actions, portrait, and immediate contact links. Its desktop minimum height is the smaller of 41rem and `calc(90svh - 70px)`, with fluid 3–4.5rem vertical padding; content can make it taller. Chapters use 3.25–5rem vertical padding, reduced to 3rem on phones. A short blueprint-rule and portrait reveal gives the opening one authored motion cue. The composition stacks naturally on smaller screens and never forces viewport-height sections on mobile. Phone profiles keep the tablet's two-column grid with a 7rem portrait and 1rem gap, allowing role and contact text to wrap.
 
 ### Embedded Text Links
 
@@ -196,6 +200,18 @@ Text links within page content, the contact rail, project summaries, and the foo
 ### Project Entry
 
 Each entry leads with real project media, then a zero-padded mono number, a short context label, title, factual description, measured or documented result, and tools. Entries remain flat and avoid nested borders.
+
+ARGO's card crops the existing side-layout drawing to the aft connection and fairing area; its alt text identifies this detail. The project hero retains the complete drawing. Scope this crop through the shared card's project identity attribute.
+
+### Engineering Media and Tables
+
+Hero and body images link directly to their originals in the same tab. Hero captions include an explicit “Open full-size image” link. Use the shared `project-image-link` class to omit the text-link arrow from image links while retaining it on ordinary text links. Keep intrinsic dimensions, descriptive alt text, light mattes, and existing image transitions.
+
+All engineering tables use labeled, keyboard-focusable `project-table-region` wrappers. At 700px and below, show “Swipe to view all columns,” allow horizontal scrolling within the wrapper, and retain a 36rem minimum table width. Cells wrap at spaces without breaking words into single characters; numeric alignment stays intact. The page itself must not scroll horizontally.
+
+### Project Contents
+
+The desktop contents menu stays below the masthead. Section tracking and native anchor offsets use the masthead and visible contents-menu heights. The current section is the last heading above the reading position, with the first selected before the narrative and the last at the document bottom. The phone contents menu uses a native disclosure with a decorative chevron that rotates over 180ms; reduced motion disables that transition. Both lists expose the same current location.
 
 ### Project Section Label
 
@@ -232,6 +248,8 @@ Lists on detailed project pages share the 48rem narrative width. Markers sit out
 The first theme decision runs in the document head so page navigation does not flash the wrong color scheme. The choice is stored locally and falls back to the operating-system preference when no override exists.
 
 Project images declare intrinsic dimensions and lazy-load below the first project hero. Text, navigation, project order, captions, and contact information remain available without JavaScript. Engineering media is supplemental evidence; no core claim depends on an image or video loading.
+
+Hot-fire players load playback data on request with `preload="none"`. Viewing copies use H.264 video at 30fps, AAC audio, and MP4 fast-start metadata, retaining playback timing and portrait orientation. Originals remain in ignored, build-excluded local storage.
 
 ## Implementation Map
 

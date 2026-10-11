@@ -37,6 +37,7 @@ resume-source/
 *.synctex.gz
 
 # Local portfolio verification artifacts
+output/
 tmp/
 .jekyll-cache/
 .impeccable/

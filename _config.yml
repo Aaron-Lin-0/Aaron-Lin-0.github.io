@@ -30,6 +30,7 @@ include:
   - _pages
   - files
 exclude:
+  - output
   - _projects/2026-09-01-me360.md
   - tmp
   - docs

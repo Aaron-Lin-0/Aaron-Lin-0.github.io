@@ -9,6 +9,7 @@ This is Aaron Lin's customized Jekyll website at [aaronlin.space](https://aaronl
 3. Inspect `git status --short` and the relevant diff before editing. Preserve unrelated user work.
 4. Trace visible content using the source map below. Edit source files, never generated `_site/` output.
 5. For resumes, PDFs, drawings, images, videos, and private source documents, follow [docs/AGENT_WORKFLOWS.md](docs/AGENT_WORKFLOWS.md).
+6. If present, read `local/AGENT_NOTES.md` for machine-specific verification pitfalls and known issues. Keep those notes local; this `AGENTS.md` is tracked and public when committed.
 
 ## Source map
 

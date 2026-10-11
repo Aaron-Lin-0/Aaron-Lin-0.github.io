@@ -16,6 +16,13 @@ This portfolio is Aaron's first-party account of his engineering experience and 
 - [Resume (PDF)]({{ '/files/Aaron_Lin_resume_2026.pdf' | absolute_url }}): Downloadable resume.
 - [Contact]({{ '/contact/' | absolute_url }}): Professional email and LinkedIn profile.
 
+## Skills
+
+The following skills are also listed on the [portfolio]({{ '/#skills' | absolute_url }}) and [Experience page]({{ '/cv/#skills' | absolute_url }}). Project and experience descriptions provide context for their use.
+{% for group in site.data.skills %}
+- **{{ group.name }}:** {{ group.items | join: '; ' }}.
+{% endfor %}
+
 ## Engineering evidence
 
 - [Project index]({{ '/projects/' | absolute_url }}): Current and completed work with links to detailed case studies.

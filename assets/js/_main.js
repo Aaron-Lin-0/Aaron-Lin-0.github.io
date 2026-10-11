@@ -6,13 +6,19 @@
 
 // Detect OS/browser preference
 const browserPref = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+let savedTheme;
+try {
+  savedTheme = localStorage.getItem("theme");
+} catch (error) {
+  // Keep theme controls usable when browser storage is blocked.
+}
 
 // Set the theme on page load or when explicitly called
 function setTheme(theme) {
   const use_theme = theme ||
-    localStorage.getItem("theme") ||
+    savedTheme ||
     $("html").attr("data-theme") ||
-    browserPref;
+    (browserPref ? "dark" : "light");
   const useDark = use_theme === "dark";
 
   if (useDark) {
@@ -32,7 +38,12 @@ function setTheme(theme) {
 function toggleTheme() {
   const current_theme = $("html").attr("data-theme");
   const new_theme = current_theme === "dark" ? "light" : "dark";
-  localStorage.setItem("theme", new_theme);
+  savedTheme = new_theme;
+  try {
+    localStorage.setItem("theme", new_theme);
+  } catch (error) {
+    // The manual choice still applies for this page.
+  }
   setTheme(new_theme);
 }
 
@@ -46,6 +57,7 @@ function initProjectToc() {
 
   var lists = toc.querySelectorAll('[data-project-toc-list]');
   var linksById = {};
+  var activeId;
 
   headings.forEach(function (heading, index) {
     if (!heading.id) heading.id = 'project-section-' + (index + 1);
@@ -69,6 +81,8 @@ function initProjectToc() {
   });
 
   function setActiveSection(id) {
+    if (id === activeId) return;
+    activeId = id;
     Object.keys(linksById).forEach(function (sectionId) {
       linksById[sectionId].forEach(function (link) {
         if (sectionId === id) link.setAttribute('aria-current', 'location');
@@ -77,17 +91,66 @@ function initProjectToc() {
     });
   }
 
-  setActiveSection(headings[0].id);
   toc.hidden = false;
+  var project = content.closest('.engineering-project');
+  var masthead = document.querySelector('.masthead');
+  var desktopMenu = toc.querySelector('.project-toc__desktop');
+  var framePending = false;
 
-  if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      var visible = entries.filter(function (entry) { return entry.isIntersecting; });
-      visible.sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
-      if (visible.length) setActiveSection(visible[0].target.id);
-    }, { rootMargin: '-18% 0px -68% 0px', threshold: 0 });
+  function updateSection() {
+    framePending = false;
+    var mastheadHeight = masthead.getBoundingClientRect().height;
+    var readingPosition = mastheadHeight + 16;
+    if (desktopMenu.offsetHeight) readingPosition += toc.offsetHeight + 8;
+    project.style.setProperty('--project-toc-top', (mastheadHeight + 8) + 'px');
+    project.style.setProperty('--project-scroll-offset', readingPosition + 'px');
 
-    headings.forEach(function (heading) { observer.observe(heading); });
+    var active = headings[0];
+    headings.forEach(function (heading) {
+      if (heading.getBoundingClientRect().top <= readingPosition + 1) active = heading;
+    });
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+      active = headings[headings.length - 1];
+    }
+    setActiveSection(active.id);
+  }
+
+  function queueUpdate() {
+    if (framePending) return;
+    framePending = true;
+    window.requestAnimationFrame(updateSection);
+  }
+
+  updateSection();
+  window.addEventListener('scroll', queueUpdate, { passive: true });
+  ['resize', 'hashchange', 'pageshow', 'popstate', 'load'].forEach(function (event) {
+    window.addEventListener(event, queueUpdate);
+  });
+  if (document.fonts) document.fonts.ready.then(queueUpdate);
+  var layoutObserver = new ResizeObserver(queueUpdate);
+  layoutObserver.observe(project);
+  layoutObserver.observe(masthead);
+
+  // Revealing the contents menu can move a fragment target after native arrival.
+  var navigation = window.performance.getEntriesByType('navigation')[0];
+  var initialTarget = headings.filter(function (heading) { return '#' + heading.id === window.location.hash; })[0];
+  if (initialTarget && navigation && navigation.type === 'navigate') {
+    ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(function (event) {
+      window.addEventListener(event, function () { initialTarget = null; }, { once: true, passive: true });
+    });
+    var alignInitialTarget = function () {
+      if (!initialTarget) return;
+      updateSection();
+      initialTarget.scrollIntoView({ behavior: 'instant', block: 'start' });
+      initialTarget = null;
+      queueUpdate();
+    };
+    var layoutReady = function () {
+      if (document.fonts) document.fonts.ready.then(alignInitialTarget);
+      else alignInitialTarget();
+    };
+    if (document.readyState === 'complete') layoutReady();
+    else window.addEventListener('load', layoutReady, { once: true });
   }
 }
 
@@ -100,7 +163,7 @@ $(document).ready(function () {
   setTheme();
   window.matchMedia('(prefers-color-scheme: dark)')
         .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
+          if (!savedTheme) {
             setTheme(e.matches ? "dark" : "light");
           }
         });

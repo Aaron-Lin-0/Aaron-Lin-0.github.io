@@ -14,7 +14,7 @@
 <div class="project-grid">
 {% for project in ordered_projects %}
 {% if include.limit == nil or forloop.index <= include.limit %}
-  <article class="project-card{% if include.split_links %} project-card--split-links{% endif %}">
+  <article class="project-card{% if include.split_links %} project-card--split-links{% endif %}" data-project="{{ project.slug | escape }}">
     {% if include.split_links %}
       {% assign project_title_id = 'project-card-title-' | append: project.slug %}
       <a class="project-card-media-link" href="{{ project.url | relative_url }}" aria-labelledby="{{ project_title_id }}">
