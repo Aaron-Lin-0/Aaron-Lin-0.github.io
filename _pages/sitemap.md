@@ -11,7 +11,7 @@ author_profile: false
 
 ## Project case studies
 
-{% assign ordered_projects = site.projects | where_exp: 'project', 'project.feature_order != nil' | sort: 'feature_order' %}
+{% assign ordered_projects = site.projects | where_exp: 'project', 'project.feature_order != nil' | sort: 'sort_date' | reverse %}
 {% for project in ordered_projects %}
 - [{{ project.title }}]({{ project.url | relative_url }})
 {% endfor %}

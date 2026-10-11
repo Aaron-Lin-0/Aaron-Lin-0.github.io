@@ -201,7 +201,7 @@ Text links within page content, the contact rail, project summaries, and the foo
 
 Each entry leads with real project media, then a zero-padded mono number, a short context label, title, factual description, measured or documented result, and tools. Entries remain flat and avoid nested borders.
 
-ARGO's card crops the existing side-layout drawing to the aft connection and fairing area; its alt text identifies this detail. The project hero retains the complete drawing. Scope this crop through the shared card's project identity attribute.
+ARGO's card crops the fairing geometry prepared for ANSYS analysis around the leading edge and aft body. The project hero retains the complete side-layout drawing.
 
 ### Engineering Media and Tables
 
