@@ -14,7 +14,7 @@ redirect_from:
   <div class="home-hero-copy">
     <h1>Hi, I'm Aaron.</h1>
     <p class="intro">I take mechanical designs from CAD and analysis through fabrication and testing, with work in rocket hardware, aerodynamics, and robotics.</p>
-    <p>I'm a mechanical engineering junior at <a class="org-link" href="https://www.bu.edu/eng/academics/departments-and-divisions/mechanical-engineering/">Boston University</a>, concentrating in aerospace. I'm seeking a <strong>Summer 2027 internship</strong> in mechanical design, aerospace, or product development. Expected graduation: May 2028.</p>
+    <p>I'm a mechanical engineering junior at <a class="org-link" href="https://www.bu.edu/eng/academics/departments-and-divisions/mechanical-engineering/">Boston University</a>, with an aerospace concentration and a Materials Science &amp; Engineering minor. I'm seeking a <strong>Summer 2027 internship</strong> in mechanical design, aerospace, or product development. Expected graduation: May 2028.</p>
     <div class="actions">
       <a class="portfolio-button primary" href="{{ '/files/Aaron_Lin_resume_2026.pdf' | relative_url }}">Resume (PDF)</a>
       <a class="portfolio-button" href="{{ '/projects/' | relative_url }}">Explore projects</a>
@@ -44,8 +44,6 @@ redirect_from:
   <a href="{{ '/projects/#in-progress' | relative_url }}">View current work</a>
 </div>
 
-I compare aerodynamic fairing geometries for ARGO and lead CAD and mechanical layout for ME360's fishing-game mechanism.
-
 {% include project-cards.html status="In progress" split_links=true %}
 </section>
 
@@ -54,8 +52,6 @@ I compare aerodynamic fairing geometries for ARGO and lead CAD and mechanical la
   <h2 id="selected-projects-title">Selected projects</h2>
   <a href="{{ '/projects/' | relative_url }}">View all projects</a>
 </div>
-
-Completed work in mechanical design, robotics, and electronics, with drawings, analysis, and documented tests.
 
 {% include project-cards.html limit=3 status="Completed" split_links=true %}
 </section>

@@ -32,7 +32,8 @@ I designed and fabricated a resin rocket nozzle, evaluated its pressure loading 
 ## Education
 
 **[Boston University](https://www.bu.edu/eng/academics/departments-and-divisions/mechanical-engineering/)**<br>
-B.S. Mechanical Engineering, Aerospace Concentration
+B.S. Mechanical Engineering, Aerospace Concentration<br>
+Materials Science & Engineering minor
 
 September 2024–May 2028 (expected) · GPA: 3.76/4.0 · Dean's List
 

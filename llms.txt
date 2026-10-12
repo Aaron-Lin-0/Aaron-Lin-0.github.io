@@ -5,7 +5,7 @@ sitemap: false
 ---
 # Aaron Lin - Engineering Portfolio
 
-> Aaron Lin is a Boston University mechanical engineering student with an aerospace concentration, seeking Summer 2027 internships in mechanical design, aerospace, or product development. Expected graduation: May 2028.
+> Aaron Lin is a Boston University mechanical engineering student with an aerospace concentration and a Materials Science & Engineering minor, seeking Summer 2027 internships in mechanical design, aerospace, or product development. Expected graduation: May 2028.
 
 This portfolio is Aaron's first-party account of his engineering experience and project work. It includes CAD, analysis, fabrication, integration, and test evidence. Project pages distinguish individual contributions from team outcomes and state analysis assumptions and limitations. ARGO and the ME360 Cartesian fishing game are in progress; their current milestones are not completed project outcomes.
 

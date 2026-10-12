@@ -7,7 +7,7 @@ layout: default
       <div class="engineering-content">{{ content }}</div>
     </div>
   {% else %}
-  {% if page.collection == 'projects' %}<a class="back-link" href="{{ '/projects/' | relative_url }}">&larr; All projects</a>{% endif %}
+  {% if page.collection == 'projects' %}<div class="project-entry-links"><a class="back-link" href="{{ '/projects/' | relative_url }}">&larr; All projects</a><a href="{{ '/files/Aaron_Lin_resume_2026.pdf' | relative_url }}">Resume (PDF)</a></div>{% endif %}
   <header class="engineering-header">
     {% if page.kicker %}<p class="eyebrow">{{ page.kicker }}</p>{% endif %}
     <h1>{{ page.title }}</h1>
@@ -19,13 +19,6 @@ layout: default
       {% unless page.utility_page %}{% include contact-card.html %}{% endunless %}
     {% endunless %}
     <div class="engineering-main">
-      {% if page.collection == 'projects' %}{% include project-tldr.html %}{% endif %}
-      {% if page.collection == 'projects' and page.hero_image %}
-        <figure class="project-hero">
-          <a class="project-image-link" href="{{ page.hero_image | relative_url }}"><img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt }}" width="{{ page.hero_width }}" height="{{ page.hero_height }}" style="view-transition-name: project-{{ page.slug | slugify }};"></a>
-          <figcaption>{% if page.hero_caption %}{{ page.hero_caption }}{% endif %}<a class="project-hero__full-size" href="{{ page.hero_image | relative_url }}">Open full-size image</a></figcaption>
-        </figure>
-      {% endif %}
       {% if page.collection == 'projects' %}
         <div class="project-toc" data-project-toc hidden>
           <nav class="project-toc__desktop" aria-label="On this page">
@@ -38,6 +31,13 @@ layout: default
           </details>
           <div class="project-toc__progress" aria-hidden="true"></div>
         </div>
+      {% endif %}
+      {% if page.collection == 'projects' %}{% include project-tldr.html %}{% endif %}
+      {% if page.collection == 'projects' and page.hero_image %}
+        <figure class="project-hero">
+          <a class="project-image-link" href="{{ page.hero_image | relative_url }}"><img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt }}" width="{{ page.hero_width }}" height="{{ page.hero_height }}" style="view-transition-name: project-{{ page.slug | slugify }};"></a>
+          <figcaption>{% if page.hero_caption %}{{ page.hero_caption }}{% endif %}<a class="project-hero__full-size" href="{{ page.hero_image | relative_url }}">Open full-size image</a></figcaption>
+        </figure>
       {% endif %}
       <div class="engineering-content">{{ content }}</div>
       {% if page.collection == 'projects' %}<div class="project-end"><a href="{{ '/projects/' | relative_url }}">More projects</a> <a href="mailto:{{ site.author.email }}">Ask me about this project</a></div>{% endif %}

@@ -51,11 +51,13 @@ The high-strength variants carried more load but failed at lower strain. The ste
 
 ## Curvature and strain
 
+{% include project-figure.html src="/images/projects/civl2201/bending-lab-setup.jpg" alt="Steel channel in a symmetric two-point bending setup with three dial gauges" width="1600" height="1200" caption="Steel-channel bending setup with three dial gauges and symmetric loading points." %}
+
 For the channel-section study, we calculated the centroid and second moment of area with both square and rounded corner models. The square-corner approximation produced **87,141 mm⁴**, 3.25% above the rounded-corner value of **84,395 mm⁴**.
 
 At the largest applied load, the strain gauge measured **71.44 µε** and the curvature calculation predicted **72.63 µε**, a 1.63% difference. The result supported the plane-sections relationship within the accuracy of the geometry and instrumentation.
 
-{% include project-figure.html src="/images/projects/civl2201/strain-comparison.png" alt="Measured strain plotted against strain calculated from curvature for a steel channel" width="1800" height="1602" caption="The previous cover now accompanies the strain analysis. Measured and curvature-derived strain remained close across the applied load range." %}
+{% include project-figure.html src="/images/projects/civl2201/strain-comparison.png" alt="Measured strain plotted against strain calculated from curvature for a steel channel" width="1800" height="1602" caption="Measured and curvature-derived strain remained close across the applied load range." %}
 
 The direct gauge reading is the better estimate of local strain because the curvature result compounds dial-gauge spacing, centroid location, and second-moment calculations. The agreement improved at higher loads, where the signal was larger relative to zeroing and instrument resolution.
 

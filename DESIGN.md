@@ -152,7 +152,7 @@ The palette combines warm paper and ink with a limited technical accent. Light a
 
 The main container is capped at 1440px with fluid 1–3rem side padding. Home uses a full-width split hero followed by bordered content chapters. Other general pages use a 190–220px contact rail beside a flexible content column. Project pages remove the rail, center a 1240px media column, and keep all narrative text and captions to a shared 48rem width. Wide space belongs to project evidence and structure; headings, paragraphs, lists, tables, captions, and closing links share one reading edge.
 
-Project indexes use two flat columns; the active bold variant has 2.5rem horizontal and 4.25rem vertical gaps, reduced to 3.5rem between stacked entries. The home selection uses three columns, drops to two between 961px and 1120px, then becomes one column at 960px. At 960px and below, the contact rail moves inline and general project lists collapse to one column. At 700px and below, phone-specific padding, typography, navigation, and media rules take over.
+Project indexes use two flat columns; the active bold variant has 2.5rem horizontal and 4.25rem vertical gaps, reduced to 2.5rem between stacked entries. The home selection uses three columns, drops to two between 961px and 1120px, then becomes one column at 960px. At 960px and below, the contact rail moves inline and general project lists collapse to one column. At 700px and below, phone-specific padding, typography, navigation, and media rules take over.
 
 Major project sections use a fluid 3.75–6rem vertical interval, and figures use 2.5–4.5rem. Headers leave 2.5–4.25rem before content. Project summaries and contents menus leave 2.5–4rem, fixed at 2.5rem on phones. Heroes retain complete images with `object-fit: contain`, a maximum height of 640px, and 3.5–5.75rem below them (3.5rem on phones). Captions align to the shared 48rem narrative column.
 
@@ -191,7 +191,7 @@ The name links to Home. About links to the Home introduction; Projects, Experien
 
 ### Home Hero
 
-Home opens with Aaron's positioning, internship search, project and resume actions, portrait, and immediate contact links. Its desktop minimum height is the smaller of 41rem and `calc(90svh - 70px)`, with fluid 3–4.5rem vertical padding; content can make it taller. Chapters use 3.25–5rem vertical padding, reduced to 3rem on phones. A short blueprint-rule and portrait reveal gives the opening one authored motion cue. The composition stacks naturally on smaller screens and never forces viewport-height sections on mobile. Phone profiles keep the tablet's two-column grid with a 7rem portrait and 1rem gap, allowing role and contact text to wrap.
+Home opens with Aaron's positioning, internship search, project and resume actions, portrait, and immediate contact links. The hero follows its content height, with fluid 2–3rem vertical padding and 2rem above / 3rem below on phones. Chapters use 2.5–3.5rem vertical padding, reduced to 2.5rem on phones. A short blueprint-rule and portrait reveal gives the opening one authored motion cue. The composition stacks naturally on smaller screens and never forces viewport-height sections on mobile. Phone profiles keep the tablet's two-column grid with a 7rem portrait and 1rem gap, allowing role and contact text to wrap.
 
 ### Embedded Text Links
 
@@ -211,7 +211,7 @@ All engineering tables use labeled, keyboard-focusable `project-table-region` wr
 
 ### Project Contents
 
-The desktop contents menu stays below the masthead. Section tracking and native anchor offsets use the masthead and visible contents-menu heights. The current section is the last heading above the reading position, with the first selected before the narrative and the last at the document bottom. The phone contents menu uses a native disclosure with a decorative chevron that rotates over 180ms; reduced motion disables that transition. Both lists expose the same current location.
+The contents menu appears before the role/contribution summary and hero. On desktop it stays below the masthead when scrolling. Project pages also place a resume link beside the opening back link. Section tracking and native anchor offsets use the masthead and visible contents-menu heights. The current section is the last heading above the reading position, with the first selected before the narrative and the last at the document bottom. The phone contents menu uses a native disclosure with a decorative chevron that rotates over 180ms; reduced motion disables that transition. Both lists expose the same current location.
 
 ### Project Section Label
 

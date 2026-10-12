@@ -208,6 +208,8 @@ html[data-theme="dark"] #theme-toggle .theme-icon-moon { display: block; }
 .engineering-site .video-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin: clamp(2.5rem, 6vw, 4.5rem) 0; }
 .engineering-site .video-grid figure { display: block; min-width: 0; margin: 0; }
 .engineering-site .video-grid video { display: block; width: 100%; height: auto; max-height: 640px; aspect-ratio: 16 / 9; background: var(--media-dark); }
+.engineering-site .project-entry-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 1.5rem; margin-bottom: 3rem; font-size: .82rem; }
+.engineering-site .project-entry-links .back-link { margin-bottom: 0; }
 .engineering-site .back-link { display: inline-block; margin-bottom: 3rem; font-family: var(--font-mono); font-size: .73rem; }
 .engineering-site .project-end { display: flex; flex-wrap: wrap; width: 100%; max-width: var(--project-prose-width, 48rem); gap: 1.5rem; margin: 6rem auto 0; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: .82rem; }
 .engineering-site table { display: table; width: 100%; border-color: var(--border); font-family: var(--font-mono); font-size: .76rem; font-variant-numeric: tabular-nums; }
@@ -254,7 +256,7 @@ html[data-theme="dark"] #theme-toggle .theme-icon-moon { display: block; }
 /* Home: a continuous review sequence with a strong opening viewport. */
 .engineering-home { margin-top: 0 !important; }
 .engineering-home .engineering-main--home { max-width: none; }
-.engineering-home .home-hero { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(250px, .65fr); min-height: min(41rem, calc(90svh - 70px)); gap: clamp(3rem, 8vw, 8rem); align-items: center; padding: clamp(3rem, 5vw, 4.5rem) 0; scroll-margin-top: 5rem; }
+.engineering-home .home-hero { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(250px, .65fr); gap: clamp(3rem, 8vw, 8rem); align-items: center; padding: clamp(2rem, 4vw, 3rem) 0; scroll-margin-top: 5rem; }
 .engineering-home .home-hero-copy { max-width: 50rem; }
 .engineering-home .home-brief-link { margin: -.65rem 0 0; color: var(--text-muted); font: 500 .72rem/1.5 var(--font-mono); }
 .engineering-home .home-hero h1 { max-width: 12ch; margin-top: 0; }
@@ -267,7 +269,7 @@ html[data-theme="dark"] #theme-toggle .theme-icon-moon { display: block; }
 .engineering-home .home-profile-location { margin: 0; color: var(--text-muted); font-size: .85rem; }
 .engineering-home .home-contact-links { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.25rem 0 0; padding: 0; list-style: none; }
 .engineering-home .home-contact-links li { margin: 0; font-size: .82rem; font-weight: 600; }
-.engineering-home .home-section { padding: clamp(3.25rem, 6vw, 5rem) 0; border-top: 1px solid var(--border-strong); scroll-margin-top: 5rem; }
+.engineering-home .home-section { padding: clamp(2.5rem, 5vw, 3.5rem) 0; border-top: 1px solid var(--border-strong); scroll-margin-top: 5rem; }
 .engineering-home .home-section > p { max-width: 72ch; }
 .engineering-home .home-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 2rem; }
 .engineering-home .home-section-heading h2,
@@ -311,7 +313,7 @@ html[data-theme="dark"] #theme-toggle .theme-icon-moon { display: block; }
   .engineering-site .contact-card li a:hover { border-color: var(--accent); color: var(--accent); }
   .engineering-site .contact-link-detail { display: none; }
   .engineering-site .project-grid { margin-top: 2rem; }
-  .engineering-style-bold .project-grid { gap: 3.5rem; }
+  .engineering-style-bold .project-grid { gap: 2.5rem; }
   .engineering-home .home-hero { grid-template-columns: 1fr; min-height: 0; }
   .engineering-home .home-hero-profile { --home-profile-size: 10rem; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2rem; align-items: center; justify-self: stretch; width: 100%; }
   .engineering-home .home-profile-portrait img { margin: 0; }
@@ -355,9 +357,9 @@ html[data-theme="dark"] #theme-toggle .theme-icon-moon { display: block; }
   .engineering-style-bold .project-card-meta { align-items: baseline; }
   .engineering-style-bold .experience-highlight,
   .engineering-style-bold .contact-panel { margin-right: -1rem; margin-left: -1rem; padding: 1.5rem 1rem; }
-  .engineering-home .home-hero { gap: 2.5rem; padding: 3rem 0 4.5rem; }
+  .engineering-home .home-hero { gap: 2.5rem; padding: 2rem 0 3rem; }
   .engineering-home .home-hero-profile { --home-profile-size: 7rem; gap: 1rem; }
-  .engineering-home .home-section { padding: 3rem 0; }
+  .engineering-home .home-section { padding: 2.5rem 0; }
   .engineering-home .home-section.contact-panel { padding: 2.5rem 1rem; }
   .engineering-home .home-section-heading { display: block; }
   .engineering-home .home-section-heading > a { display: inline-block; margin-bottom: 1rem; }

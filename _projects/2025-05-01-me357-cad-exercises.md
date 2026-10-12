@@ -6,7 +6,7 @@ share: false
 title: SolidWorks modeling exercises
 permalink: /projects/me357-cad-exercises/
 kicker: CAD coursework · Completed
-context: Boston University · ME357 · Individual in-class exercises · Spring 2025
+context: Boston University · ME357 · Individual coursework · Spring 2025
 summary: SolidWorks parts and assemblies recreated from instructor-provided engineering drawings.
 feature_order: 10
 sort_date: "2025-05-01"
@@ -32,7 +32,7 @@ tools: SolidWorks · Part modeling · Assemblies · Drawings · Motion studies
 
 ## Scope
 
-I recreated mechanical parts and assemblies in SolidWorks from instructor-provided engineering drawings. These exercises demonstrate CAD fluency; they are not original product designs.
+This collection includes in-class exercises and homework from ME357. I recreated mechanical parts and assemblies in SolidWorks from instructor-provided engineering drawings. The models and drawings demonstrate CAD fluency; the underlying designs were supplied by the course.
 
 The course work included:
 
@@ -56,8 +56,54 @@ The ball valve exercise combined a housing, ball, shaft, covers, handle, reducer
 
 The section view made the stack of the ball, shaft, housing, covers, and fasteners legible in one frame. The exterior view then confirmed the handle position and the relationship between the two reducers and the main body. Together, the views document both the assembled form and the internal arrangement.
 
-## Other exercises
+{% include project-figure.html src="/images/projects/me357/ball-valve-exploded.jpg" alt="Exploded ball valve model with covers, reducers, ball, shaft, handle, and fasteners separated from the housing" width="1290" height="910" caption="Still from the ball valve exploded-view animation." %}
 
-Other classwork covered a wheel assembly and bill of materials, individual machined parts, a universal joint, and linkage assemblies. Each exercise started with a supplied drawing and ended with a constrained model, assembly, or production drawing.
+{% include project-figure.html src="/images/projects/me357/ball-valve-handle.jpg" alt="Ball valve model with a transparent housing exposing the ball beneath the handle and shaft" width="1010" height="730" caption="Still from the handle-motion study, with the housing transparent to expose the ball." %}
 
-The wheel exercise added purchased-component callouts and a bill of materials. The universal-joint and linkage exercises focused more on mate selection and motion, where an over-constrained assembly can appear complete but fail when a component is driven. These were modeling and documentation exercises, so I do not present the geometry as original design work.
+## Wheel assembly and bill of materials
+
+The wheel exercise combined a purchased rubber wheel with a screw, washers, and a locknut. The drawing identifies the components in a bill of materials and shows their assembled arrangement.
+
+{% include project-figure.html src="/images/projects/me357/wheel-assembly.jpg" alt="Wheel assembly drawing with shaded isometric view, orthographic views, fastener callouts, and bill of materials" width="1800" height="1391" caption="Wheel assembly coursework: purchased components, drawing views, and a bill of materials." %}
+
+## Linkage assemblies
+
+The rocker and four-bar exercises used exploded views to show links, pins, bearings, and fasteners. The assembled four-bar drawing shows the relationship between the links and their supports.
+
+{% include project-figure.html src="/images/projects/me357/rocker-exploded.png" alt="Exploded rocker linkage drawing showing three links, a base plate, interlocking pins, and a bill of materials" width="1800" height="1165" caption="Rocker assembly recreated from the supplied exercise, with exploded component callouts." %}
+
+{% include project-figure.html src="/images/projects/me357/four-bar-exploded.png" alt="Exploded four-bar linkage drawing with links, bearings, washers, fasteners, and a bill of materials" width="1800" height="1165" caption="Four-bar linkage exploded view and bill of materials." %}
+
+{% include project-figure.html src="/images/projects/me357/four-bar-assembly.png" alt="Assembled four-bar linkage in front, side, and top drawing views" width="1800" height="1165" caption="Orthographic views of the assembled four-bar linkage." %}
+
+{% include project-figure.html src="/images/projects/me357/four-bar-motion.jpg" alt="Shaded four-bar linkage model in an angled position with a circular path trace beside the mechanism" width="1410" height="950" caption="Still from the four-bar motion study, showing the linkage position and path trace." %}
+
+{% include project-figure.html src="/images/projects/me357/four-bar-path.png" alt="Coursework plot of the four-bar linkage motion path, with X and Y displacement axes in inches" width="1224" height="1584" caption="Motion-path plot exported for the four-bar coursework. This is a simulation result, not a measured mechanism trajectory." %}
+
+## Gearbox assembly
+
+The gearbox coursework used supplied components. These stills from the assembly animation show the supporting plates and the gear arrangement with the plates hidden.
+
+{% include project-figure.html src="/images/projects/me357/gearbox-assembly.jpg" alt="Close-up of the gearbox model with a motor, support plate, bearings, and visible gears" width="700" height="720" caption="Gearbox assembly close-up from the coursework animation." %}
+
+{% include project-figure.html src="/images/projects/me357/gearbox-gears.jpg" alt="Close-up of the gearbox with its support plates hidden to expose gears, shafts, and motor" width="700" height="720" caption="Gear arrangement with the support plates hidden. Components were supplied for the course assembly exercise." %}
+
+## Part models and drawings
+
+These drawings pair modeled geometry with dimensions, sections, and detail views. Each part follows an instructor-provided exercise; the images document my modeling and drawing work.
+
+{% include project-figure.html src="/images/projects/me357/cam-drawing.png" alt="Cam part drawing with a shaded yellow model, dimensioned orthographic views, and a longitudinal section" width="1800" height="1391" caption="Cam model with dimensioned views and a section through the internal geometry." %}
+
+{% include project-figure.html src="/images/projects/me357/cap-drawing.png" alt="Cap drawing with a shaded model, circular and side views, two sections, and an edge detail" width="1800" height="1391" caption="Cap model with section and detail views." %}
+
+{% include project-figure.html src="/images/projects/me357/gauge-block-drawing.png" alt="Gauge block drawing showing a shaded model, angled faces, hole callouts, and a section view" width="1800" height="1391" caption="Gauge block model with hole callouts and a section view." %}
+
+{% include project-figure.html src="/images/projects/me357/flange-drawing.png" alt="Circular flange drawing with repeated bolt holes, a central hub, a shaded model, and a section view" width="1800" height="1165" caption="Flange exercise documenting the repeated hole pattern and hub geometry." %}
+
+{% include project-figure.html src="/images/projects/me357/bored-block-drawing.png" alt="Basic block part drawing with a large through bore, orthographic and section views, and a shaded model" width="1800" height="1165" caption="Basic part-modeling coursework: block with a through bore and section view." %}
+
+{% include project-figure.html src="/images/projects/me357/plate-drawing.png" alt="Rectangular plate drawing with a central through hole, dimensioned orthographic views, and a shaded model" width="1800" height="1165" caption="Basic part-modeling coursework: rectangular plate with a central through hole." %}
+
+## Insert assembly
+
+{% include project-figure.html src="/images/projects/me357/insert-assembly.png" alt="Assembly drawing of a rectangular plate with circular, triangular, and hexagonal inserts, dimensioned views, and a bill of materials" width="1800" height="1165" caption="Plate and insert assembly recreated from the supplied drawing, with component callouts and a bill of materials." %}

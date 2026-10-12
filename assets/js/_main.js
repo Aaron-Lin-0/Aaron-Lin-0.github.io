@@ -73,6 +73,7 @@ function initProjectToc() {
         if (disclosure && window.matchMedia('(max-width: 960px)').matches) {
           disclosure.removeAttribute('open');
         }
+        updateSection();
       });
       item.appendChild(link);
       list.appendChild(item);
@@ -107,7 +108,8 @@ function initProjectToc() {
 
     var active = headings[0];
     headings.forEach(function (heading) {
-      if (heading.getBoundingClientRect().top <= readingPosition + 1) active = heading;
+      // Native anchor/history restoration can round fractional layout positions.
+      if (heading.getBoundingClientRect().top <= readingPosition + 2) active = heading;
     });
     if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
       active = headings[headings.length - 1];

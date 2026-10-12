@@ -44,9 +44,9 @@ I used one-dimensional isentropic-flow relations to size the throat and exit. Th
 
 We chose resin printing because it could produce the internal geometry within the project schedule. The material's temperature sensitivity meant that the structural simulation could only address the pressure load.
 
-{% include project-figure.html src="/images/projects/nozzle/assembly-drawing.png" alt="Updated nozzle and adapter engineering drawing with section, detail, assembled, and exploded views" width="2720" height="1760" caption="Updated nozzle and adapter assembly drawing with section, detail, assembled, and exploded views." %}
+{% include project-figure.html src="/images/projects/nozzle/assembly-drawing.png" alt="Nozzle and adapter engineering drawing with section, detail, assembled, and exploded views" width="2720" height="1760" caption="Nozzle and adapter assembly drawing with section, detail, assembled, and exploded views." %}
 
-{% include project-figure.html src="/images/projects/nozzle/part-drawing.png" alt="Engineering drawing of the nozzle with section, detail, front, and isometric views" width="2200" height="1424" caption="Updated nozzle part drawing showing the internal flow path without the attaching adapter." %}
+{% include project-figure.html src="/images/projects/nozzle/part-drawing.png" alt="Engineering drawing of the nozzle with section, detail, front, and isometric views" width="2200" height="1424" caption="Nozzle part drawing showing the internal flow path without the attaching adapter." %}
 
 <div class="actions">
   <a class="portfolio-button" href="{{ '/files/nozzle-adapter-assembly-drawing.pdf' | relative_url }}">Open assembly drawing (PDF)</a>
