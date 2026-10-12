@@ -142,7 +142,7 @@ The palette combines warm paper and ink with a limited technical accent. Light a
 - **Headline** (600, fluid 1.8–2.45rem, 1.08): Major home and index sections.
 - **Title** (600, fluid 1.35–1.75rem, 1.18): Project entry titles.
 - **Body** (400, 1rem, 1.68): Narrative copy with a maximum line length of 72ch.
-- **Supporting text** (400–600, 0.875rem): Tools, results, project context, captions, and contents links use IBM Plex Mono; contents labels and disclosure controls keep IBM Plex Sans. This is 14px at the phone root size and 15.75px at the desktop root size. Dates, numbering, and section labels retain their own scales.
+- **Supporting text** (400–600, 0.875rem): Tools, results, project context, and captions use IBM Plex Mono; contents links, labels, and disclosure controls keep IBM Plex Sans. This is 14px at the phone root size and 15.75px at the desktop root size. Dates, numbering, and section labels retain their own scales.
 
 ### Named Rules
 
@@ -154,7 +154,7 @@ The main container is capped at 1440px with fluid 1–3rem side padding. Home us
 
 Project indexes use two flat columns; the active bold variant has 2.5rem horizontal and 4.25rem vertical gaps, reduced to 2.5rem between stacked entries. The home selection uses three columns, drops to two between 961px and 1120px, then becomes one column at 960px. At 960px and below, the contact rail moves inline and general project lists collapse to one column. At 700px and below, phone-specific padding, typography, navigation, and media rules take over.
 
-Major project sections use a fluid 3.75–6rem vertical interval, and figures use 2.5–4.5rem. Headers leave 2.5–4.25rem before content. Project summaries and contents menus leave 2.5–4rem, fixed at 2.5rem on phones. Heroes retain complete images with `object-fit: contain`, a maximum height of 640px, and 3.5–5.75rem below them (3.5rem on phones). Captions align to the shared 48rem narrative column.
+Major project sections use a fluid 3.75–6rem vertical interval, and figures use 2.5–4.5rem. Headers leave 2.5–4.25rem before content. Project summaries and inline contents menus leave 2.5–4rem, fixed at 2.5rem on phones. Heroes retain complete images with `object-fit: contain`, a maximum height of 640px, and 3.5–5.75rem below them (3.5rem on phones). Captions align to the shared 48rem narrative column.
 
 ## Elevation & Depth
 
@@ -211,7 +211,16 @@ All engineering tables use labeled, keyboard-focusable `project-table-region` wr
 
 ### Project Contents
 
-The contents menu appears before the role/contribution summary and hero. On desktop it stays below the masthead when scrolling. Project pages also place a resume link beside the opening back link. Section tracking and native anchor offsets use the masthead and visible contents-menu heights. The current section is the last heading above the reading position, with the first selected before the narrative and the last at the document bottom. The phone contents menu uses a native disclosure with a decorative chevron that rotates over 180ms; reduced motion disables that transition. Both lists expose the same current location.
+Projects with at least three narrative sections generate a contents menu. Above 960px it occupies a 190–220px left column beside the main content, separated by a 2rem gutter; the title and opening links align with that main column. Contents links use proportional body type, compact row padding, and a 1.4 line height. Same-page links omit the decorative arrow so short labels fit naturally. The vertical menu sticks flush beneath the measured masthead, with 1rem of padding inside. Its height is limited to the remaining viewport and overflowing links scroll internally. The project shell bounds the sidebar before the footer. Pages without a generated menu, including the no-JavaScript fallback, retain full content width.
+
+Native anchor offsets and section tracking use only the masthead height plus 16px of reading space. The current section is the last heading above that position, with the first selected before the narrative and the last at the document bottom. At 960px and below the menu stays inline before the summary and hero, using a native disclosure with a decorative chevron that rotates over 180ms; reduced motion disables that transition. Both lists expose the same current location. There is no reading-progress strip.
+
+When tuning or troubleshooting this component:
+
+- Check usable link width before widening the sidebar. Monospace text, decorative arrows, row padding, and a permanently reserved scrollbar gutter previously forced unnecessary wrapping. Keep proportional body type and natural wrapping; longer labels can still wrap in the narrower desktop column.
+- Keep links block-level and the row line height explicit. Inline links previously inherited the surrounding list's taller line box, creating loose spacing despite a smaller link font. Current rows use `.35rem` vertical padding and links use a 1.4 line height.
+- Preserve stable fragment targets during resizing. Academic Pages applies `transition: all` to text, headers, figures, and images; project overrides limit these transitions to colors so font sizes, margins, and media dimensions change immediately. Do not compensate for animated geometry with extra anchor offsets.
+- Verify initial fragments, native section clicks, back/forward restoration, the 960px breakpoint, and scrolling to the footer. Wait for fonts and finite animations before judging screenshots; the masthead's startup fade can otherwise look like a missing header. The reusable regression commands are documented in [AGENTS.md](AGENTS.md#contents-and-navigation-regression-checks).
 
 ### Project Section Label
 

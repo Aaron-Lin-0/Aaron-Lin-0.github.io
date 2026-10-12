@@ -88,13 +88,11 @@ const { chromium } = require('playwright');
     const desktopContents = page.locator('.project-toc__desktop');
     await desktopContents.locator('a[href="#analysis"]').click();
     await checkSection('analysis', true);
-    for (const width of [1024, 390, 1440]) {
+    for (const width of [1024, 960, 390, 1440]) {
       await page.setViewportSize({ width, height: 844 });
       await page.waitForFunction(() => {
         const heading = document.querySelector('.engineering-content > h2');
-        const nav = document.querySelector('.project-toc__desktop');
-        const toc = document.querySelector('.project-toc');
-        const offset = document.querySelector('.masthead').getBoundingClientRect().height + 16 + (nav.offsetHeight ? toc.offsetHeight + 8 : 0);
+        const offset = document.querySelector('.masthead').getBoundingClientRect().height + 16;
         return Math.abs(parseFloat(getComputedStyle(heading).scrollMarginTop) - offset) < 1;
       });
       await jumpToSection('analysis');
@@ -130,6 +128,19 @@ const { chromium } = require('playwright');
     await disclosure.locator('a[href="#analysis"]').click();
     await checkSection('analysis', true);
 
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.setViewportSize({ width: 1440, height: 844 });
+    await jumpToSection('analysis');
+    assert.equal(await page.locator('.engineering-project').evaluate(el => el.classList.contains('has-project-toc')), true);
+    await page.waitForFunction(() => Math.abs(document.querySelector('.project-toc').getBoundingClientRect().top - document.querySelector('.masthead').getBoundingClientRect().height) < 1);
+    await page.setViewportSize({ width: 1024, height: 220 });
+    const sidebar = page.locator('.project-toc');
+    assert.equal(await sidebar.evaluate(el => el.scrollHeight > el.clientHeight), true);
+    await desktopContents.locator('a').last().focus();
+    assert.equal(await sidebar.evaluate(el => el.scrollTop > 0 && el.contains(document.activeElement)), true);
+    await page.setViewportSize({ width: 1440, height: 844 });
+    await page.evaluate(() => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'instant' }));
+    assert.equal(await sidebar.evaluate(el => el.getBoundingClientRect().bottom <= document.querySelector('.engineering-shell').getBoundingClientRect().bottom + 1), true);
     const noScript = await browser.newPage({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
     await noScript.route('**/*', route => ['image', 'media'].includes(route.request().resourceType()) ? route.abort() : route.continue());
     await noScript.goto(projectUrl);
@@ -138,7 +149,19 @@ const { chromium } = require('playwright');
     assert.equal(await noScript.locator('.project-hero__full-size').isVisible(), true);
     assert.equal(await noScript.locator('.project-table-region').getAttribute('tabindex'), '0');
     assert.match(await noScript.locator('.engineering-content').innerText(), /minimum factor of safety/i);
+    await noScript.setViewportSize({ width: 1440, height: 844 });
+    assert.equal(await noScript.locator('.engineering-shell').evaluate(el => getComputedStyle(el).display), 'block');
+    assert.equal(await noScript.locator('.engineering-project').evaluate(el => el.classList.contains('has-project-toc')), false);
     await noScript.close();
+    await page.setViewportSize({ width: 1024, height: 400 });
+    await page.goto(new URL('/projects/me357-cad-exercises/', base).href);
+    const cadSidebar = page.locator('.project-toc');
+    assert.equal(await cadSidebar.evaluate(el => el.scrollHeight > el.clientHeight), true);
+    const lastCadLink = page.locator('.project-toc__desktop a').last();
+    await lastCadLink.focus();
+    assert.equal(await cadSidebar.evaluate(el => el.scrollTop > 0 && el.contains(document.activeElement)), true);
+    await lastCadLink.press('Enter');
+    assert.equal(await page.evaluate(() => location.hash), await lastCadLink.evaluate(el => el.hash));
     assert.deepEqual(errors, []);
     console.log('Motion and contents checks passed: menu focus, reduced motion, fragments, large jumps, page bottom, native anchors, resizing, history restoration, disclosure keyboard control, and no-JS/media fallback.');
   } finally {

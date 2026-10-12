@@ -95,15 +95,14 @@ function initProjectToc() {
   toc.hidden = false;
   var project = content.closest('.engineering-project');
   var masthead = document.querySelector('.masthead');
-  var desktopMenu = toc.querySelector('.project-toc__desktop');
+  project.classList.add('has-project-toc');
   var framePending = false;
 
   function updateSection() {
     framePending = false;
     var mastheadHeight = masthead.getBoundingClientRect().height;
     var readingPosition = mastheadHeight + 16;
-    if (desktopMenu.offsetHeight) readingPosition += toc.offsetHeight + 8;
-    project.style.setProperty('--project-toc-top', (mastheadHeight + 8) + 'px');
+    project.style.setProperty('--project-toc-top', mastheadHeight + 'px');
     project.style.setProperty('--project-scroll-offset', readingPosition + 'px');
 
     var active = headings[0];

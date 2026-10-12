@@ -23,6 +23,7 @@ This is Aaron Lin's customized Jekyll website at [aaronlin.space](https://aaronl
 | Contact rail and shared resume link | `_includes/contact-card.html` |
 | Email, LinkedIn, metadata and accent | `_config.yml`; also search hardcoded page copy |
 | Portfolio shell and project hero | `_layouts/engineering.html`, wrapped by `_layouts/default.html` |
+| Project contents sidebar, section tracking and anchor offsets | `_layouts/engineering.html`, `assets/css/engineering.css`, `initProjectToc()` in `assets/js/_main.js` |
 | Portfolio styling | `assets/css/engineering.css`, loaded by `_includes/head/custom.html` |
 | Theme startup and toggle | `_includes/head.html`, `assets/js/_main.js`, `_includes/masthead.html` |
 | Browser JavaScript bundle | `assets/js/main.min.js`, loaded by `_includes/scripts.html` |
@@ -42,11 +43,20 @@ This is Aaron Lin's customized Jekyll website at [aaronlin.space](https://aaronl
 - For JavaScript changes, edit source and run `npm install` if needed, then `npm run build:js`. Include the regenerated `assets/js/main.min.js`; review CSS/JS cache-version query strings in the loading includes when releasing asset changes.
 - Dormant generators and optional visualization references live under `tools/future/`. They are excluded from Jekyll and are not production dependencies.
 - Keep private sources and temporary exports out of commits. Git ignore rules and Jekyll exclusions serve different purposes; neither makes tracked files private.
+- Read and write source documents explicitly as UTF-8 when using scripts. Windows default encodings can fail on punctuation or silently corrupt it; inspect the diff before continuing.
 
 ## Verification and handoff
 
 Use the shell-specific commands and browser checklist in [docs/MAINTENANCE.md](docs/MAINTENANCE.md). A Jekyll build checks rendering, not every link, visual layout, binary metadata field, or factual claim.
 
 For documentation-only edits, verify references and commands against the repository and run `git diff --check`; a full build is unnecessary unless rendering or configuration changes. For site or artifact changes, check affected routes and downloads, and broaden browser checks for shared components.
+
+### Contents and navigation regression checks
+
+- Run `node tools/check-theme.cjs` for theme initialization and storage failure handling. Against a served final build, run `node tools/check-motion.cjs http://127.0.0.1:4000`, substituting the preview URL as needed. The latter requires an available Playwright runtime and uses Edge by default; report missing tools rather than adding site dependencies for verification.
+- For shared project layout changes, inspect all project routes at 390, 960, 1024, and 1440px in both themes. Check the long CAD contents list, a short desktop viewport, keyboard focus and internal scrolling, footer boundaries, and missing-media/no-JavaScript fallbacks.
+- Keep the two-column layout conditional on the generated `has-project-toc` class. Contents generation requires at least three direct narrative `h2` headings; without a generated menu, preserve full content width.
+- If native anchor checks fail after resizing, inspect inherited layout transitions before changing offsets or loosening assertions. The theme's `transition: all` previously moved headings after fragment arrival; project text and images now transition colors only. See [DESIGN.md](DESIGN.md#project-contents) for the offset and wrapping rules.
+- Capture settled layouts: wait for fonts and finite masthead/navigation animations before screenshots. A screenshot taken during the masthead's delayed fade can make a working header appear absent. Build completion must precede preview checks; test the same destination produced by that build.
 
 Report what changed, what was verified, and unavailable tools or missing evidence. Do not claim a local change is live without checking deployment. Commit or publish when requested by the user; the release runbook describes the procedure rather than granting standing authorization to push.
