@@ -98,12 +98,6 @@ These drawings pair modeled geometry with dimensions, sections, and detail views
 
 {% include project-figure.html src="/images/projects/me357/gauge-block-drawing.png" alt="Gauge block drawing showing a shaded model, angled faces, hole callouts, and a section view" width="1800" height="1391" caption="Gauge block model with hole callouts and a section view." %}
 
-{% include project-figure.html src="/images/projects/me357/flange-drawing.png" alt="Circular flange drawing with repeated bolt holes, a central hub, a shaded model, and a section view" width="1800" height="1165" caption="Flange exercise documenting the repeated hole pattern and hub geometry." %}
-
-{% include project-figure.html src="/images/projects/me357/bored-block-drawing.png" alt="Basic block part drawing with a large through bore, orthographic and section views, and a shaded model" width="1800" height="1165" caption="Basic part-modeling coursework: block with a through bore and section view." %}
-
-{% include project-figure.html src="/images/projects/me357/plate-drawing.png" alt="Rectangular plate drawing with a central through hole, dimensioned orthographic views, and a shaded model" width="1800" height="1165" caption="Basic part-modeling coursework: rectangular plate with a central through hole." %}
-
 ## Insert assembly
 
 {% include project-figure.html src="/images/projects/me357/insert-assembly.png" alt="Assembly drawing of a rectangular plate with circular, triangular, and hexagonal inserts, dimensioned views, and a bill of materials" width="1800" height="1165" caption="Plate and insert assembly recreated from the supplied drawing, with component callouts and a bill of materials." %}
