@@ -59,7 +59,7 @@ I tested microphone directional sensitivity across an azimuthal sweep and docume
 
 ## Selected academic projects
 
-- **[2.5-DOF Cartesian fishing game]({{ '/projects/me360/' | relative_url }}) — in progress:** I lead CAD and mechanical layout for our team's joystick-controlled fishing mechanism. The earlier pen-plotter rig completed square and circle path tests; joystick control and the final constrained-Z mechanism remain in development.
+- **[2.5-DOF Cartesian fishing game]({{ '/projects/me360/' | relative_url }}) — in progress:** I lead CAD and mechanical layout for our team's joystick-controlled fishing mechanism. The team has tested X-Y motion and the fishing mechanism; the Z component is being made for the upcoming final demonstration.
 - **[The Deskinator]({{ '/projects/ek210-deskinator/' | relative_url }}):** I wrote the Arduino navigation firmware and helped assemble and redesign an autonomous cleaning robot. Its final documented trial collected 72 of 95 rice grains.
 - **[Room temperature monitor]({{ '/projects/ek131-temp-sensor/' | relative_url }}):** I built an enclosed Arduino monitor that displays Celsius and Fahrenheit and signals temperatures outside 60–75°F.
 

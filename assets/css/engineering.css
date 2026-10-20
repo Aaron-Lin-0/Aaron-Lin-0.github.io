@@ -215,6 +215,9 @@ html[data-theme="dark"] #theme-toggle .theme-icon-moon { display: block; }
 .engineering-site .video-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin: clamp(2.5rem, 6vw, 4.5rem) 0; }
 .engineering-site .video-grid figure { display: block; min-width: 0; margin: 0; }
 .engineering-site .video-grid video { display: block; width: 100%; height: auto; max-height: 640px; aspect-ratio: 16 / 9; background: var(--media-dark); }
+.engineering-site .video-feature { display: block; width: min(100%, 40rem); margin: clamp(2.5rem, 6vw, 4.5rem) auto; }
+.engineering-site .video-feature video { display: block; width: 100%; height: auto; aspect-ratio: 31 / 30; background: var(--media-dark); }
+.engineering-site .video-feature figcaption { width: 100%; }
 .engineering-site .project-entry-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 1.5rem; margin-bottom: 3rem; font-size: .82rem; }
 .engineering-site .project-entry-links .back-link { margin-bottom: 0; }
 .engineering-site .back-link { display: inline-block; margin-bottom: 3rem; font-family: var(--font-mono); font-size: .73rem; }
