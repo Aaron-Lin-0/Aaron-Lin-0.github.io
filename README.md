@@ -95,7 +95,7 @@ The Jekyll verification workflow runs on pushes to `master` and on pull requests
 
 ## Privacy
 
-Only information intended for recruiter contact should be public: Aaron's name, professional email, LinkedIn profile, education, general location, résumé, and documented project work. Do not commit credentials, private contact details, unpublished team documents, local filesystem paths, raw résumé source, temporary exports, or files containing author-machine metadata.
+Only information intended for recruiter contact should be public: Aaron's name, professional email, LinkedIn profile, education, general location, résumé, and documented project work. Aaron has approved the professional phone number contained in the public résumé PDF; do not repeat it elsewhere without separate approval. Do not commit credentials, other private contact details, unpublished team documents, local filesystem paths, raw résumé source, temporary exports, or files containing author-machine metadata.
 
 ## Attribution
 

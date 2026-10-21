@@ -33,7 +33,7 @@ Visitors commonly skim on a laptop or phone, may arrive from a resume or LinkedI
 
 ## Public Content Boundary
 
-The site publishes only information useful for professional evaluation: Aaron's name, professional email, LinkedIn profile, education, general location, resume, and approved engineering artifacts. Private phone numbers, physical addresses, credentials, local paths, source-document comments, machine metadata, raw resume source, and unpublished team material do not belong in the repository.
+The site publishes only information useful for professional evaluation: Aaron's name, professional email, LinkedIn profile, education, general location, resume, and approved engineering artifacts. Aaron has also approved the professional phone number contained in the public resume PDF; do not repeat it in page copy or other artifacts without separate approval. Other phone numbers, physical addresses, credentials, local paths, source-document comments, machine metadata, raw resume source, and unpublished team material do not belong in the repository.
 
 All downloadable files are part of the product surface. Their visible content and embedded metadata require the same review as page copy.
 

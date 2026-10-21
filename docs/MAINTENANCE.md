@@ -6,12 +6,12 @@ AI agents should start with [AGENTS.md](../AGENTS.md). See [AGENT_WORKFLOWS.md](
 
 ## Content boundaries
 
-Public content may include Aaron's name, professional email, LinkedIn profile, education, general location, resume, and engineering artifacts approved for portfolio use.
+Public content may include Aaron's name, professional email, LinkedIn profile, education, general location, resume, and engineering artifacts approved for portfolio use. Aaron has explicitly approved the professional phone number embedded in `files/Aaron_Lin_resume_2026.pdf`; that approval does not extend to page copy or other artifacts.
 
 Do not commit:
 
 - passwords, tokens, API keys, cookies, or `.env` files;
-- phone numbers or private addresses;
+- unapproved phone numbers or private addresses;
 - local paths, hostnames, usernames, or document comments;
 - raw LaTeX resume source or build logs;
 - assignment files, team requirements, or reports that were not selected for public use;
@@ -96,7 +96,7 @@ At minimum, verify:
 
 Before staging, search the working tree for common secret and private-data patterns. After staging, repeat the audit against the exact staged file list. Inspect PDF properties and extracted text, image EXIF, and video metadata separately; text search does not cover binaries. Remember that deleting a file in a new commit does not remove it from Git history.
 
-The intentional public identifiers are limited to the contact details described above. Treat any additional email address, phone number, physical address, account identifier, machine name, or local path as a release blocker until reviewed.
+The intentional public identifiers are limited to the contact details described above, including the approved phone number inside the public resume PDF. Treat any additional email address, phone number elsewhere, physical address, account identifier, machine name, or local path as a release blocker until reviewed.
 
 ## Release
 
