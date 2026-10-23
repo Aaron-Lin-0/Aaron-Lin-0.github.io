@@ -1,5 +1,5 @@
 # Base image: Ruby with necessary dependencies for Jekyll
-FROM ruby:3.2
+FROM ruby:3.3.12-trixie
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
@@ -21,15 +21,12 @@ RUN chown -R vscode:vscode /usr/src/app
 # Switch to the non-root user
 USER vscode
 
-# Copy Gemfile into the container (necessary for `bundle install`)
-COPY Gemfile ./
+# Copy the locked Ruby dependencies into the container
+COPY Gemfile Gemfile.lock ./
 
-
-
-# Install bundler and dependencies
-RUN gem install connection_pool:3.0.2
-RUN gem install bundler:2.3.26
+# Install the lockfile's Bundler version and exact dependencies
+RUN gem install bundler:4.0.20
 RUN bundle install
 
 # Command to serve the Jekyll site
-CMD ["jekyll", "serve", "-H", "0.0.0.0", "-w", "--config", "_config.yml,_config_docker.yml"]
+CMD ["bundle", "exec", "jekyll", "serve", "-H", "0.0.0.0", "-w", "--config", "_config.yml,_config_docker.yml"]

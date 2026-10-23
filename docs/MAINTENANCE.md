@@ -57,7 +57,7 @@ Bash (macOS/Linux):
 JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter
 ```
 
-Use Ruby 3.3.8 to match the checked-in CI workflow and the verified local build. To inspect locally, run `bundle exec jekyll serve --livereload` and open `http://127.0.0.1:4000/`; restart after `_config.yml` changes. If Ruby is unavailable, the repository also provides `docker compose up --build`. Report when neither environment is available rather than claiming the build passed.
+Use Ruby 3.3.12 to match the checked-in CI workflow. To inspect locally, run `bundle exec jekyll serve --livereload` and open `http://127.0.0.1:4000/`; restart after `_config.yml` changes. If Ruby is unavailable, the repository also provides `docker compose up --build`. Report when neither environment is available rather than claiming the build passed.
 
 If the local `vendor/bundle` contains Linux native gems, run the build in WSL rather than loading them with Windows Ruby. From the repository root in PowerShell:
 
@@ -65,11 +65,11 @@ If the local `vendor/bundle` contains Linux native gems, run the build in WSL ra
 wsl --distribution Ubuntu --cd "$PWD" -- env BUNDLE_PATH=vendor/bundle JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter
 ```
 
-The verified WSL environment uses Ruby 3.3.8, matching the verification workflow. Windows and Linux native gem bundles are not interchangeable.
+Ruby 3.3.12 is the verification baseline. Confirm `ruby --version` before claiming an exact local match; Windows and Linux native gem bundles are not interchangeable.
 
 GitHub Pages publishes this repository from the root of `master` using its managed Jekyll build. The verification workflow checks compatibility separately; its Ruby version does not select the Pages builder's Ruby version. Ruby generates static HTML, CSS, and JavaScript before publication; it does not run in visitors' browsers. When upgrading the tested Ruby baseline, update the workflow, these instructions, and the pre-push skill together, then repeat the production build and relevant browser checks.
 
-For JavaScript source changes, install Node dependencies with `npm install` and run `npm run build:js` before Jekyll verification. This regenerates the committed `assets/js/main.min.js` used by the site. GitHub Actions only performs the strict production Jekyll build; it does not regenerate the bundle or perform browser checks.
+For JavaScript source changes, install the locked Node dependencies with `npm ci` and run `npm run build:js` before Jekyll verification. This regenerates the committed `assets/js/main.min.js` used by the site. GitHub Actions performs the strict production Jekyll build and validates the Docker configuration and image; it does not regenerate the bundle or perform browser checks.
 
 Review these routes:
 
