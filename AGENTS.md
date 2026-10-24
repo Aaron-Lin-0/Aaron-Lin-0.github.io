@@ -40,7 +40,7 @@ This is Aaron Lin's customized Jekyll website at [aaronlin.space](https://aaronl
 - Synchronize changed dates, status, availability, skills, and results across the affected project, Home, Experience, contact rail, metadata, and resume as applicable. PDF and page copy are maintained separately.
 - Reuse shared components and design tokens. Preserve alt text, intrinsic image dimensions, keyboard focus, both themes, and useful text without JavaScript or media.
 - Use `relative_url` for internal URLs. Search references before renaming public files.
-- For JavaScript changes, edit source and run `npm install` if needed, then `npm run build:js`. Include the regenerated `assets/js/main.min.js`; review CSS/JS cache-version query strings in the loading includes when releasing asset changes.
+- For JavaScript changes, edit source and run `npm ci` if needed, then `npm run build:js`. Include the regenerated `assets/js/main.min.js`; review CSS/JS cache-version query strings in the loading includes when releasing asset changes.
 - Dormant generators and optional visualization references live under `tools/future/`. They are excluded from Jekyll and are not production dependencies.
 - Keep private sources and temporary exports out of commits. Git ignore rules and Jekyll exclusions serve different purposes; neither makes tracked files private.
 - Read and write source documents explicitly as UTF-8 when using scripts. Windows default encodings can fail on punctuation or silently corrupt it; inspect the diff before continuing.

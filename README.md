@@ -26,7 +26,7 @@ The site is built with Jekyll and GitHub Pages on top of [Academic Pages](https:
 
 ## Run locally
 
-Install Ruby 3.3.8 and Bundler to match the verification workflow, then run:
+Install Ruby 3.3.12 and Bundler 4.0.20 to match the verification workflow, then run:
 
 ```bash
 bundle install
