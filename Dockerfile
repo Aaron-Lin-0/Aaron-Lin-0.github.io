@@ -22,7 +22,7 @@ RUN chown -R vscode:vscode /usr/src/app
 USER vscode
 
 # Copy the locked Ruby dependencies into the container
-COPY Gemfile Gemfile.lock ./
+COPY --chown=vscode:vscode Gemfile Gemfile.lock ./
 
 # Install the lockfile's Bundler version and exact dependencies
 RUN gem install bundler:4.0.20
