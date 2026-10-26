@@ -25,7 +25,7 @@ Visitors commonly skim on a laptop or phone, may arrive from a resume or LinkedI
 - Static Jekyll site hosted with GitHub Pages.
 - Responsive light and dark themes with a persistent manual override.
 - Custom domain: `aaronlin.space`.
-- Primary routes: Home, Projects, Experience, Contact, and ten detailed project pages.
+- Primary routes: Home, Projects, Experience, Contact, and 10+ detailed project pages.
 - Projects index is reverse chronological; the home page uses a curated order.
 - Contact information and resume must remain visible near the first viewport on primary pages.
 - Project claims must remain factual and grounded in supplied course or team documents.
@@ -39,7 +39,8 @@ All downloadable files are part of the product surface. Their visible content an
 
 ## Current Project Set
 
-- 2.5-DOF Cartesian fishing game — in progress
+- 2.5-DOF Cartesian fishing game — completed
+- Cartesian pen plotter exercise — completed
 - ARGO aerodynamic fairing — in progress
 - The Deskinator — completed
 - Room temperature monitor — completed

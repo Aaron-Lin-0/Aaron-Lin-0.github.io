@@ -8,7 +8,7 @@ permalink: /projects/argo-fairing/
 kicker: BU Rocket Propulsion Group · In progress
 context: Project Engineer · July 2026–present · Status updated September 12, 2026
 summary: Ongoing aerodynamic design work for a cover around ARGO's external downcomer and wiring.
-feature_order: 3
+feature_order: 0
 sort_date: "2026-07-01"
 card_title: ARGO aerodynamic fairing
 card_category: BURPG · Aerodynamics
@@ -45,6 +45,8 @@ I am comparing:
 - drag and thermal behavior alongside geometry accuracy, cost, attachment, and manufacturing constraints.
 
 A fairing attached to a rocket body is only a partial revolution, so results from a fully revolved nose cone do not transfer directly. Each comparison therefore uses the installed geometry and the same reference area.
+
+{% include project-figure.html src="/images/projects/argo/ansys-model-transparent.png" alt="Transparent side view of the ARGO fairing concept showing the external downcomer and wiring beneath the cover" width="1920" height="998" caption="Transparent installed-geometry view showing the protected routing beneath the preliminary fairing concept." %}
 
 ## Current status
 
