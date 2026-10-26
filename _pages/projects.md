@@ -9,7 +9,7 @@ author_profile: false
 
 Choose a starting point for your review:
 
-- **Mechanical design:** [Cartesian fishing game]({{ '/projects/me360/' | relative_url }}) — CAD and mechanical layout; in progress.
+- **Mechanical design:** [Cartesian fishing game]({{ '/projects/me360/' | relative_url }}) — CAD, mechanical layout, fabrication, controls, and completed classroom demonstration.
 - **Aerospace analysis:** [ARGO fairing]({{ '/projects/argo-fairing/' | relative_url }}) — aerodynamic geometry comparisons at a Mach 2.81 design condition; in progress.
 - **Design through fabrication:** [Rocket nozzle]({{ '/projects/rocket-nozzle/' | relative_url }}) — flow calculations, drawings, pressure FEA, resin printing, and team static-fire integration; completed.
 
