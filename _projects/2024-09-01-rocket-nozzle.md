@@ -24,7 +24,7 @@ hero_height: 445
 hero_alt: Exploded CAD view showing the nozzle, adapter, bolts, and nuts
 hero_caption: Exploded view of the nozzle and six-bolt adapter interface.
 excerpt: I sized the flow path, modeled the nozzle and adapter, and checked the pressure load before fabricating a resin prototype.
-result: 'Pressure FEA: minimum factor of safety 2.12'
+result: 'Calculated thrust: 7.87 lbf · Pressure-only FEA: minimum factor of safety 2.12'
 tldr_role: Project engineer
 tldr_contribution: Flow-path sizing, CAD, drawings, pressure FEA, and fabrication planning.
 tools: SolidWorks · FEA · Compressible flow · Resin printing
@@ -68,7 +68,7 @@ We chose resin printing because it could produce the internal geometry within th
 
 </div>
 
-The pressure-only model produced a minimum factor of safety of **2.12**. Before using that result to predict hot-fire performance, I would add temperature-dependent resin properties and heat transfer to the analysis.
+My flow calculations predicted **7.87 lbf (35.0 N) of thrust** under optimal conditions. The pressure-only model produced a minimum factor of safety of **2.12**. Before using that result to predict hot-fire performance, I would add temperature-dependent resin properties and heat transfer to the analysis.
 
 {% include project-figure.html src="/images/projects/nozzle/stress.jpg" alt="Nozzle von Mises stress contour with stress concentrated near the flange" width="1246" height="936" caption="Pressure-only von Mises stress result. The design-review report records a peak stress of 11.90 MPa; deformation is exaggerated in the plot." %}
 
