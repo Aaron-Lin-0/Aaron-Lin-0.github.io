@@ -15,19 +15,19 @@ redirect_from:
 
 ## Engineering experience
 
-### Mechanical Engineering Intern, <a class="org-link" href="https://www.culturon.com.au/">Culturon</a>
-
-*Sydney, Australia · February–June 2026*
-
-I ran optical emission spectroscopy experiments with an HR4000 spectrometer and wrote Python tools with pandas, SciPy, and Astroquery to process spectra, locate peaks, and compare candidate lines with the NIST atomic spectra database. I documented the work in a benchmarking report for the engineering team.
-
 ### Project Engineer, <a class="org-link" href="https://burpg.org/">BU Rocket Propulsion Group</a>
 
 *Boston, MA · September 2024–present · Student engineering team*
 
-I designed and fabricated a resin rocket nozzle, evaluated its pressure loading in SolidWorks Simulation, and helped integrate it with the chamber and ignition system for a static fire. I now work on the ARGO rocket's external fairing, using ANSYS Fluent, OpenRocket, and first-principles calculations to compare aerodynamic concepts at a Mach 2.81 design condition.
+I'm designing a fairing for ARGO's external plumbing and comparing candidate shapes at a Mach 2.81 design condition using ANSYS Fluent and OpenRocket. For an earlier project, I designed and resin-printed a converging-diverging nozzle and helped integrate it with the chamber, ignition system, and data acquisition for a team static fire. I calculated 7.87 lbf (35.0 N) of thrust under optimal conditions and obtained a minimum factor of safety of 2.12 in the pressure-only simulation.
 
-[Nozzle case study]({{ '/projects/rocket-nozzle/' | relative_url }}) · [ARGO case study]({{ '/projects/argo-fairing/' | relative_url }})
+[ARGO case study]({{ '/projects/argo-fairing/' | relative_url }}) · [Nozzle case study]({{ '/projects/rocket-nozzle/' | relative_url }})
+
+### Mechanical Engineering Intern, <a class="org-link" href="https://www.culturon.com.au/">Culturon</a>
+
+*Sydney, Australia · February–June 2026*
+
+I ran optical emission spectroscopy experiments with an HR4000 spectrometer and wrote procedures to check plasma consistency and detect elemental contaminants. I built a Python workflow with pandas, SciPy, and Astroquery to locate emission peaks and compare candidate lines with the NIST Atomic Spectra Database. I benchmarked the plasma chamber against a reference chamber and documented characteristic emission lines in a report for the engineering team.
 
 ## Education
 
@@ -59,9 +59,9 @@ I tested microphone directional sensitivity across an azimuthal sweep and docume
 
 ## Selected academic projects
 
-- **[2.5-DOF Cartesian fishing game]({{ '/projects/me360/' | relative_url }}):** I led CAD and mechanical layout for our team's belt-driven gantry, motorized magnetic pickup, rotating game board, joystick, and controller enclosure. The completed classroom demonstration ran all three game rounds.
+- **[2.5-DOF Cartesian fishing game]({{ '/projects/me360/' | relative_url }}):** I led SolidWorks design for the joystick-controlled gantry and modeled and 3D-printed seven custom mounts and brackets. Magnetic pickup and release worked in all three prototype test cycles. The team demonstrated all three timed rounds in class.
+- **[The Deskinator]({{ '/projects/ek210-deskinator/' | relative_url }}):** I wrote the Arduino C++ navigation firmware and helped troubleshoot suction. The team upgraded the drivetrain from 6 V motors to 12 V, 300 RPM motors. The robot collected 72 of 95 rice grains (76%) in a hand-held suction test, and our team placed in the top four of about 20 groups.
 - **[Cartesian pen plotter exercise]({{ '/projects/me360-plotter/' | relative_url }}):** Our team developed a single lead-screw stage into a two-axis plotter. I connected my computer to the motor controller and sent square and circular G-code paths through Repetier-Host.
-- **[The Deskinator]({{ '/projects/ek210-deskinator/' | relative_url }}):** I wrote the Arduino navigation firmware and helped assemble and redesign an autonomous cleaning robot. Its final documented trial collected 72 of 95 rice grains.
 - **[Room temperature monitor]({{ '/projects/ek131-temp-sensor/' | relative_url }}):** I built an enclosed Arduino monitor that displays Celsius and Fahrenheit and signals temperatures outside 60–75°F.
 
 ## Skills

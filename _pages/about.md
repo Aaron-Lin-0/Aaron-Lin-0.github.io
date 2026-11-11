@@ -63,14 +63,14 @@ redirect_from:
   </div>
   <div class="home-experience-grid">
     <article>
-      <p class="home-experience-meta">February–June 2026 · Sydney, Australia</p>
-      <h3>Mechanical Engineering Intern · <a class="org-link" href="https://www.culturon.com.au/">Culturon</a></h3>
-      <p>I ran optical emission spectroscopy experiments and built Python analysis tools with pandas, SciPy, and Astroquery to process plasma spectra and compare candidate lines with the NIST atomic spectra database.</p>
-    </article>
-    <article>
       <p class="home-experience-meta">September 2024–present · Boston, MA</p>
       <h3>Project Engineer · <a class="org-link" href="https://burpg.org/">BU Rocket Propulsion Group</a></h3>
-      <p>I designed and fabricated a resin rocket nozzle, evaluated its pressure loading in SolidWorks Simulation, and now use ANSYS Fluent and OpenRocket to compare aerodynamic fairing concepts.</p>
+      <p>I'm comparing fairing shapes for ARGO's external plumbing using ANSYS Fluent and OpenRocket. I also designed and resin-printed a rocket nozzle and helped integrate it for a team static fire.</p>
+    </article>
+    <article>
+      <p class="home-experience-meta">February–June 2026 · Sydney, Australia</p>
+      <h3>Mechanical Engineering Intern · <a class="org-link" href="https://www.culturon.com.au/">Culturon</a></h3>
+      <p>I ran optical emission spectroscopy experiments, built a Python workflow to identify candidate emission lines, and benchmarked a plasma chamber against a reference chamber.</p>
     </article>
   </div>
 </section>

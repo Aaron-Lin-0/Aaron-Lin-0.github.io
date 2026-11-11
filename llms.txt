@@ -12,7 +12,7 @@ This portfolio is Aaron's first-party account of his engineering experience and 
 ## Candidate background
 
 - [About Aaron]({{ '/' | absolute_url }}): Introduction, internship interests, selected projects, and technical skills.
-- [Experience]({{ '/cv/' | absolute_url }}): Education, Culturon mechanical engineering internship, Boston University Rocket Propulsion Group work, and skills.
+- [Experience]({{ '/cv/' | absolute_url }}): Boston University Rocket Propulsion Group work, Culturon optical emission spectroscopy and chamber benchmarking, education, and skills.
 - [Resume (PDF)]({{ '/files/Aaron_Lin_resume_2026.pdf' | absolute_url }}): Downloadable resume.
 - [Contact]({{ '/contact/' | absolute_url }}): Professional email and LinkedIn profile.
 
@@ -26,9 +26,9 @@ The following skills are also listed on the [portfolio]({{ '/#skills' | absolute
 ## Engineering evidence
 
 - [Project index]({{ '/projects/' | absolute_url }}): Current and completed work with links to detailed case studies.
-- [Rocket nozzle]({{ '/projects/rocket-nozzle/' | absolute_url }}): Completed resin nozzle design and fabrication, pressure-loading analysis, and static-fire integration work.
-- [The Deskinator]({{ '/projects/ek210-deskinator/' | absolute_url }}): Completed team cleaning robot; Aaron's Arduino navigation firmware and assembly contributions, with a documented final trial collecting 72 of 95 rice grains.
+- [Rocket nozzle]({{ '/projects/rocket-nozzle/' | absolute_url }}): Completed resin nozzle design and fabrication, 7.87 lbf (35.0 N) of calculated thrust under optimal conditions, pressure-only simulation, and team static-fire integration.
+- [The Deskinator]({{ '/projects/ek210-deskinator/' | absolute_url }}): Aaron wrote the Arduino C++ navigation firmware and helped troubleshoot suction. The team upgraded from 6 V motors to 12 V, 300 RPM motors. The robot collected 72 of 95 rice grains (76%) in a hand-held suction test, and the team placed in the top four of about 20 groups. The case study includes sensor bench tests, fabrication, firmware, and power and parts budgets.
 - [ARGO aerodynamic fairing]({{ '/projects/argo-fairing/' | absolute_url }}): In-progress aerodynamic concept comparison using ANSYS Fluent and OpenRocket.
-- [ME360 Cartesian fishing game]({{ '/projects/me360/' | absolute_url }}): Aaron led CAD and mechanical layout for a completed belt-driven fishing game. Its classroom demonstration ran joystick-controlled X-Y motion, an automatic Z dip, magnetic pickup, a rotating board, and all three game rounds.
+- [ME360 Cartesian fishing game]({{ '/projects/me360/' | absolute_url }}): Aaron led SolidWorks design for the belt-driven gantry and modeled and 3D-printed seven custom mounts and brackets. Magnetic pickup and release worked in all three prototype test cycles. The team demonstrated all three timed rounds in class.
 - [ME360 Cartesian pen plotter]({{ '/projects/me360-plotter/' | absolute_url }}): The team developed a single lead-screw stage into a two-axis plotter and produced recognizable square and circular traces using G-code; accuracy and repeatability were not measured.
 - [Engineering brief (PDF)]({{ '/files/Aaron_Lin_engineering_portfolio.pdf' | absolute_url }}): Selected project summaries and engineering artifacts.
